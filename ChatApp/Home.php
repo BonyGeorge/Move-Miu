@@ -29,10 +29,12 @@ $(document).ready(function()
 
 {
 
+
     $('#chat').keyup(function(e)
     {
         if(e.keyCode == 13)
         {
+            
             var chats = $('#chat').val();
             
             $.ajax({
@@ -48,16 +50,21 @@ $(document).ready(function()
                 }
 
             })
+            $('#text').load('pages/DisplayChat.php');
+            setTimeout(function() {
+                var objDiv = $('#text');
+    if (objDiv.length > 0){
+        objDiv[0].scrollTop = objDiv[0].scrollHeight;
+    }
+
+},500)
         }
     })
 $('#text').load('pages/DisplayChat.php');
-$('#text').scrollTop($('#text')[0].scrollHeight);
-
-
-
 setInterval(function()
 {
    $('#text').load('pages/DisplayChat.php');
+   
 }, 500);
 
 })
@@ -86,7 +93,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id']))
 </div>
    
    <div id='container' style='width:100%; border:1px solid #87c197;'>
-    <textarea class="form-control"  placeholder="Enter Your Reply" style='border-style:none none  none; border-color:black; width:100%; display:block;box-sizing:border-box;border-width:1px; margin-bottom:1px;'></textarea>
+    <textarea class="form-control" id = "chat" placeholder="Enter Your Reply" style='border-style:none none  none; border-color:black; width:100%; display:block;box-sizing:border-box;border-width:1px; margin-bottom:1px;'></textarea>
     <div style='width:100%; box-sizing:border-box; height:35px;padding:5px;'>
         <button style='float:right'><i class="fa fa-paper-plane read-more" aria-hidden="true"></i>
         </button>
