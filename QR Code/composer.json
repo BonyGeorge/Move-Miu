@@ -1,0 +1,6 @@
+{
+    "require": 
+    {
+        "endroid/qrcode":"3.7"
+    }
+}
