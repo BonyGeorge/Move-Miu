@@ -1,6 +1,7 @@
 <?php
 session_start();
-include 'header.php';
+if($_SESSION['type']!='admin'){header('location:index.php');}
+include 'admin_header.php';
 include 'Database.php';
 $DB = new Database();
 ?>
@@ -14,14 +15,18 @@ $DB = new Database();
     <title>Document</title>
     <style type="text/css">
     select {
-        background-color: Green;
-        color: #3bde40;
+        background-color: #3bde40;
+        color: black;
         height: 5%;
-        padding: 8px 16px;
         border: 1px solid transparent;
         border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
         cursor: pointer;
         user-select: none;
+        text-color: black;
+    }
+
+    select-text {
+        color: black;
     }
 
     #mcontent,
@@ -47,7 +52,7 @@ $DB = new Database();
     }
 
     #mcontent {
-        border: 1px solid Green;
+        border: 2px solid #13d600;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
@@ -55,11 +60,21 @@ $DB = new Database();
     }
 
     #msubject {
-        border: 1px solid Green;
+        border: 2px solid #13d600;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
         padding: 4px;
+    }
+
+    .mbutton {
+        width: 0%;
+        display: inline-flex;
+        display: table;
+        text-align: center;
+        align: center;
+        position: relative;
+        left: 40%
     }
     </style>
 </head>
@@ -68,19 +83,23 @@ $DB = new Database();
     <br>
     <br>
     <h1 style=''>Send mail</h1>
-    <label style='position : relative; left :33%'>User :</label>
-    <select style='width :25%; position : relative; left :33%' class="massmsgdrpdwn" id="mailone">
-        <?php try {
+
+
+    <form method='post' action='sendmailinf.php'>
+        <label style='position : relative; left :33%'>User :</label>
+        <select style='width :25%; position : relative; left :33%' class="massmsgdrpdwn" id="mailone" name="selection"
+            required>
+            <?php try {
                     /* Creating the dropdown empty option */
-                    echo ('<option value = "$i" disabled selected>'." ".'</option>');
+                    //echo ('<option value = "$i" disabled selected>'." ".'</option>');
                     /* SQL query to get the data from the DB */
-                    $sql = "SELECT * FROM users";
+                    $sql = "SELECT * FROM users where id <> ".$_SESSION['id']."";
                     $DB->query($sql); /* Using the query function made in DB/Database.php */
                     $DB->execute(); /* Using the excute function made in DB/Database.php */
                     $x=$DB->getdata(); /* creates an array of the output result */
                     for ($i=0; $i<$DB->numRows(); $i++) { /* iterating the results by the num of rows */
                         /* Creating the dropdown options from DB */
-                        echo ('<option value = "' . $x[$i]->email . '">' . $x[$i]->id . " - " . $x[$i]->name . " - " . $x[$i]->email . '</option>');
+                        echo ('<option value = "' . $x[$i]->id . '">' . $x[$i]->id . " - " . $x[$i]->name . " - " . $x[$i]->email . '</option>');
                     }
                 }
                 catch(Exception $e)
@@ -88,12 +107,12 @@ $DB = new Database();
                     $_SESSION['error'] = 'error in sql';
                     error_log("error in massmsgs page");
                 }?>
-    </select>
-    <form method='post'>
+        </select>
         <!-- The mail form, functions are in backend.js using ajax -->
         <!-- Getting the mail 'from' from the session -->
         <br>
-        <legend style='text-align:center;'>From: <?php echo($_SESSION["name"] . ' from move');?></legend>
+        <legend style='text-align:center;'>From:
+            <?php if(isset($_SESSION["name"])){echo($_SESSION["name"] . ' from move');}?></legend>
         <br>
         <legend style='text-align:center;'>Mail subject:</legend>
         <div id='tarea'>
@@ -106,13 +125,16 @@ $DB = new Database();
         </div>
         <br><br>
         <?php if(isset ($_SESSION['error'])) {if ($_SESSION['error'] == 'error in sql') { echo "<div class='alert alert-danger' style='text-align: center;'>ERROR! Please try again later</div>"; } }?>
-        <input type="button" class="" id="" value="Send to selected user"
-            <?php if(isset ($_SESSION['error'])) { if ($_SESSION['error'] == 'error in sql') { echo "style='display: none;'"; }} ?>>
-        <input type="button" class="" id="" value="Send to all users"
-            <?php if(isset ($_SESSION['error'])) { if ($_SESSION['error'] == 'error in sql') { echo "style='display: none;'"; }} ?>>
+        <div class='mbutton'><input type="submit" class="send1" id="send1" name="send1" value="Send to selected user"
+                <?php if(isset ($_SESSION['error'])) { if ($_SESSION['error'] == 'error in sql') { echo "style='display: none;'"; }} ?>>
+        </div>
+        <br>
+        <div class='mbutton' style='left:42%'><input type="submit" class="send0" id="send0" name="send0"
+                value="Send to all users"
+                <?php if(isset ($_SESSION['error'])) { if ($_SESSION['error'] == 'error in sql') { echo "style='display: none;'"; }} ?>>
+        </div>
     </form>
 
 </body>
-<?php include 'header.php'; ?>
 
 </html>

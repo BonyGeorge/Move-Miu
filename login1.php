@@ -26,6 +26,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $_SESSION['username']=$x[0]->username;
         $_SESSION['email']=$x[0]->email;
         $_SESSION['type']=$x[0]->type;
+        $_SESSION['id']=$x[0]->id;
         
 
 
