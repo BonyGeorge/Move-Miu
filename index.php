@@ -62,12 +62,12 @@ $mail->send(); */
     <?php if(isset($_SESSION["type"])){
 
     if($_SESSION["type"]=="admin"){
-        include("./admin_header.php");
+        include("Operations/admin_header.php");
     }else 
-    include("./header.php");
+    include("Template/header.php");
 }
         else
-            include("./header.php");?>
+            include("Template/header.php");?>
 
     <!--   Header END   -->
     <!--      -->
@@ -134,7 +134,7 @@ $mail->send(); */
             nibh. Mauris velit ligula, gravida quis accumsan ut, interdum a lacus.
 
         </div>
-        <div class="r-cont"><a href="./about.php">
+        <div class="r-cont"><a href="./Pages/about.php">
                 <div class="read-more">Read More</div>
             </a></div>
 
@@ -163,7 +163,7 @@ $mail->send(); */
                             src="https://scontent-cai1-1.xx.fbcdn.net/v/t1.0-9/41368493_10215026007037160_7613683814040076288_n.jpg?_nc_cat=110&_nc_ht=scontent-cai1-1.xx&oh=10127f77bdc3e6b5f30a76e5d21b5c3e&oe=5C69FAC5">
                     </div>
                     <div class="team-member-text">
-                        <h3>Karim Ehab</h3>
+                        <h3>Omar Nasr</h3>
                         <p>President</p>
                     </div>
                 </a>
@@ -179,9 +179,10 @@ $mail->send(); */
                 </a>
             </div>
         </div>
-        <div class="r-cont r-cont-center"><a href="./team.php">
+        <div class="r-cont r-cont-center"><a href="./Pages/team.php">
                 <div class="read-more">View All</div>
             </a></div>
+            <br><br>
         <div class="shape1">
             <img src="./images/shapes/2.png">
         </div>
@@ -213,7 +214,7 @@ $mail->send(); */
                 </div>
             </div>
         </div>
-        <div class="r-cont r-cont-center"><a href="./events.php">
+        <div class="r-cont r-cont-center"><a href="./Pages/events.php">
                 <div class="read-more">View All</div>
             </a></div>
 
@@ -238,17 +239,7 @@ $mail->send(); */
         </div>
     </div>
     <!-- Sponsors END -->
-
-    <!-- Footer START -->
-    <div class="footer">
-        © 2018 <span class="f-m">Move</span><span class="f-l-m"><a href="./"><img
-                    src="./images/logo.png"></a></span><br>
-        <div>- Designed by <a href="https://www.fb.com/Mhmd.Ashf" rel="noopener noreferrer">xTrimy</a></div>
-        <div class="shape1">
-            <img src="./images/shapes/3.png">
-        </div>
-    </div>
-    <!-- Footer END -->
+    <?php include("Template/footer.html");?>
     <!-- Body END -->
     <script type="text/javascript" src="./js/slider.js"></script>
 </body>

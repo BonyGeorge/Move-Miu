@@ -68,7 +68,7 @@ button:hover {
     position: relative;
 }
 
-img.avatar {
+Logo.avatar {
     width: 40%;
     border-radius: 50%;
 }
@@ -174,7 +174,6 @@ span.psw {
     visibility: hidden;
 }
 </style>
-
 <head>
 
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
@@ -186,22 +185,21 @@ span.psw {
     <!--
 <link rel="stylesheet" href="css/normalize.css">
 -->
-    <link rel="stylesheet" href="style.css">
 </head>
 <div id="header">
     <div class="logo-cont">
         <div class="logo"><a href="./">
-                <img src="./images/logo.png"></a>
+                <img class="Logo"src="./images/logo.png"></a>
         </div>
     </div>
     <div class="nav-buttons-cont">
         <?php if (!isset($_SESSION["type"])){ ?>
-        <a href="login.php">
-            <div class="nav-button nav-button-sl">login</div>
+        <a href="Login & Register/login.php">
+            <div class="nav-button nav-button-sl">Login</div>
         </a>
         <?php } else { ?>
-        <a href="logout.php">
-            <div class="nav-button nav-button-sl">logout</div>
+        <a href="Login & Register/logout.php">
+            <div class="nav-button nav-button-sl">Logout</div>
         </a>
         <?php } ?>
         <div class="nav-button nav-button-about">About <i class="fas fa-user-tie"></i>
@@ -209,7 +207,7 @@ span.psw {
 
             <div class="about-buttons-cont">
                 <!--  -->
-                <a href="./about.php">
+                <a href="Pages/about.php">
                     <div class="about-button">
                         <div class="about-button-icon-cont">
                             <div class="about-button-icon">
@@ -220,7 +218,7 @@ span.psw {
                             <div class="about-button-text">
                                 About Us<br>
                                 <div class="about-button-text-small">
-                                    Get to know about the club
+                                    Get to know more about the club.
                                 </div>
                             </div>
                         </div>
@@ -228,7 +226,7 @@ span.psw {
                 </a>
                 <!--  -->
                 <!--  -->
-                <a href="./team.php">
+                <a href="Pages/team.php">
                     <div class="about-button">
                         <div class="about-button-icon-cont">
                             <div class="about-button-icon">
@@ -237,9 +235,9 @@ span.psw {
                         </div>
                         <div class="about-button-text-cont">
                             <div class="about-button-text">
-                                Team<br>
+                                Our Team<br>
                                 <div class="about-button-text-small">
-                                    Get to know about the club members
+                                    Get to know about the club members.
                                 </div>
                             </div>
                         </div>
@@ -248,10 +246,10 @@ span.psw {
                 <!--  -->
             </div>
         </div>
-        <a href="./events.php">
+        <a href="Pages/events.php">
             <div class="nav-button">Events <i class="fas fa-calendar"></i></div>
         </a>
-        <a href="./index.php">
+        <a href="index.php">
             <div class="nav-button">Home <i class="fas fa-home"></i></div>
         </a>
     </div>
@@ -264,35 +262,30 @@ span.psw {
 <div class="marg"></div>
 <div class="sidebar" id="sidebar">
     <div class="nav-sidebar-buttons">
-
-
         <?php if (!isset($_SESSION["type"])){ ?>
-        <a href="login.php">
-            <div class="nav-sidebar-button">login <i class="fas fa-user-plus"></i> </div>
+        <a href="Login & Register/login.php">
+            <div class="nav-sidebar-button">Login <i class="fas fa-user-plus"></i> </div>
         </a>
         <?php } else { ?>
-        <a href="logout.php">
-            <div class="nav-sidebar-button">logout <i class="fas fa-user-plus"></i> </div>
+        <a href="Login & Register/logout.php">
+            <div class="nav-sidebar-button">Logout <i class="fas fa-user-plus"></i> </div>
         </a>
         <?php } ?>
 
         <a href="./">
             <div class="nav-sidebar-button">Home<i class="fas fa-home"></i> </div>
         </a>
-        <a href="./team.php">
+        <a href="Pages/team.php">
             <div class="nav-sidebar-button">Meet The Team <i class="fas fa-users"></i> </div>
         </a>
-        <a href="./about.php">
+        <a href="Pages/about.php">
             <div class="nav-sidebar-button">About The Club <i class="fas fa-info-circle"></i> </div>
         </a>
-        <a href="./events.php">
+        <a href="Pages/events.php">
             <div class="nav-sidebar-button">Our Events <i class="fas fa-calendar"></i> </div>
         </a>
     </div>
 
 </div>
 <div class="sidebar-overlay" onclick="menu()" id="sidebar-overlay"></div>
-
-
-
 </div>

@@ -1,37 +1,29 @@
 <html >
     <head>
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login & Register</title>
-        <script src="js/Register_validation.js"> </script>
-        <script src="js/jquery-3.3.1.min.js" ></script>
+        <script src="../js/Register_validation.js"> </script>
+        <script src="../js/jquery-3.3.1.min.js" ></script>
+        <link rel="stylesheet" href="../css/style.css">
     </head>
-
     <body>
-        <?php include("./header.php");?>
+        <?php include("../Template/header.php");?>
         <div class="form" style="margin-top:5%">
 
             <ul class="tab-group">
                 <li class="tab  "><a href="#signup">Register</a></li>
                 <li class="tab active"><a href="#login">Log In</a></li>
             </ul>
-
             <div class="tab-content">
-
-
-
-
-
                 <div id="login">   
                     <h1>Welcome Mover!</h1>
                     <span style="color:red; font-weight:bold; position:relative; bottom:15px;" ><?php if( !empty( $_REQUEST['Message'] )     ){echo $_REQUEST['Message'];} ?></span>
-
                     <form action="login1.php" method="post">
 
                         <div class="field-wrap">
                             <label>
-                                UserName<span class="req"></span>
+                                User Name<span class="req"></span>
                             </label>
                             <input name="Username" type="text"required autocomplete="off"/>
                         </div>
@@ -46,11 +38,9 @@
                             <input type="checkbox" name="remember_me" id="remember_me"><label style="top:-30px;left:100px;font-size: 40px;">Remember Me</label>
                         </div>
                         <br>
-                        <button class="button button-block"/>Log In</button>
+                        <button class="button button-block">Log In</button>
                     </form>
             </div>
-
-
 
             <div id="signup">   
                 <h1>Join Us! </h1>
@@ -113,15 +103,7 @@
     </div> <!-- /form -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="script.js"></script>
-
-<!-- Footer START -->
-<div class="footer">
-    © 2018 <span class="f-m">Move</span><span class="f-l-m"><a href="./"><img src="./images/logo.png"></a></span><br><div>- Designed by <a href="https://www.fb.com/Mhmd.Ashf" rel="noopener noreferrer">xTrimy</a></div>
-    <div class="shape1">
-        <img src="./images/shapes/3.png">
-    </div>
-</div>
-<!-- Footer END -->
+<?php include('../Template/footer.html');?>
 <!-- Body END -->
 <script type="text/javascript" src="./js/slider.js"></script>
 </body>

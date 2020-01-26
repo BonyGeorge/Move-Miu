@@ -14,11 +14,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $DB->query($sql);
             $DB->execute();
         
-       
       }catch (Exception $e) {
             header('Location:login.php');
         }
-
         header('Location:login.php');
 }
 ?>

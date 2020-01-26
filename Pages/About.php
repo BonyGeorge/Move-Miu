@@ -7,7 +7,7 @@ session_start(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="We're Movers">
     <meta name="keywords" content="Move Club,Move,MIU Club,Movers">
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="icon" sizes="128x128" href="./images/fav.png">
     <meta name="theme-color" content="#93ff91">
@@ -17,10 +17,10 @@ session_start(); ?>
 <!--   Header START   -->
 <?php if(isset($_SESSION["type"])){
         if($_SESSION["type"]=="admin"){
-        include("./admin_header.php"); }
-        else include("./header.php");}
+        include("../Operations/admin_header.php"); }
+        else include("./Template/header.php");}
         else
-        include("./header.php");?>  
+        include("../Template/header.php");?>  
 <!--   Header END   -->
 <!--      -->
 <!--      -->
@@ -56,16 +56,7 @@ session_start(); ?>
   </div>
 </div>
 <!-- About Us END -->
-
-
-<!-- Footer START -->
-<div class="footer">
-© 2018 <span class="f-m">Move</span><span class="f-l-m"><a href="./"><img src="./images/logo.png"></a></span><br><div>- Designed by <a href="https://www.fb.com/Mhmd.Ashf" rel="noopener noreferrer">xTrimy</a></div>
-<div class="shape1">
-  <img src="./images/shapes/3.png">
-</div>
-</div>
-<!-- Footer END -->
+<?php include("../Template/footer.html");?>
 <!-- Body END -->
 <script type="text/javascript" src="./js/slider.js"></script>
   </body>

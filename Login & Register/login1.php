@@ -1,7 +1,4 @@
 <?php
-
-
-
 session_start();
 include('Database.php');
 $DB = new Database();
@@ -16,20 +13,15 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $Message = "wrong username or password. ";
         header("Location:login.php?Message={$Message}");
 
-
     }
     else {
-
         $x=$DB->getdata();
-
         $_SESSION['name']=$x[0]->name;
         $_SESSION['username']=$x[0]->username;
         $_SESSION['email']=$x[0]->email;
         $_SESSION['type']=$x[0]->type;
         $_SESSION['id']=$x[0]->id;
         
-
-
         if(!empty($_POST['remember'])){
             setcookie("username", $_POST['Username'], time()+(10 * 365 * 24 * 60 * 60));
             setcookie("password", $_POST['Password'], time()+(10 * 365 * 24 * 60 * 60));
@@ -41,10 +33,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             if(ISSET($_COOKIE['password'])){
                 setcookie("password", "");
             }
-
-
         }
-        header('Location:index.php');   
+        header('Location:./index.php');   
 
     }
 }
