@@ -150,6 +150,7 @@ label .req {
   color: #1ab188;
 }
 
+
 label.active {
   -webkit-transform: translateY(50px);
           transform: translateY(50px);

@@ -1,4 +1,74 @@
 <html >
+<style>
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px; 
+  width: 100%;
+  height: 50px;  
+  
+}
+#user{
+
+  color: Green;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 200%;
+  font: italic  27px/30px;
+  top:-23px;
+  
+}
+#pass{
+
+color: Green;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 200%;
+font: italic  27px/30px;
+top:-23px;
+
+}
+
+h1 {
+  text-shadow: 2px 2px #7CFC00;
+  color: Green;
+  font-family: verdana;
+  font-size: 300%;
+  font: italic bold 12px/30px Georgia, serif;
+
+}
+
+#remember_me {
+width: 45px;
+height: 15px;
+background: #555;
+margin: 20px 80px;
+left:305px;
+top:0px;
+
+position: relative;
+border-radius: 5px;
+}
+#remember {
+
+  color: Green;
+  font-family: verdana;
+  font-size: 300%;
+  font: italic bold 12px/30px Georgia, serif;
+
+}
+#square {
+
+    margin-top:7%;
+    margin-left:900px;
+    height: 620px;
+  width: 40%;
+
+}
+
+
+
+
+
+</style>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +79,7 @@
     </head>
     <body>
         <?php include("../Template/header.php");?>
-        <div class="form" style="margin-top:5%">
+        <div class="form" id="square" >
 
             <ul class="tab-group">
                 <li class="tab  "><a href="#signup">Register</a></li>
@@ -17,25 +87,28 @@
             </ul>
             <div class="tab-content">
                 <div id="login">   
-                    <h1>Welcome Mover!</h1>
+                    <h1>Welcome Movers!</h1>
                     <span style="color:red; font-weight:bold; position:relative; bottom:15px;" ><?php if( !empty( $_REQUEST['Message'] )     ){echo $_REQUEST['Message'];} ?></span>
                     <form action="login1.php" method="post">
 
                         <div class="field-wrap">
-                            <label>
-                                User Name<span class="req"></span>
+                            <label id="user">
+                                User Name:<span  class="req"></span>
+                               
                             </label>
-                            <input name="Username" type="text"required autocomplete="off"/>
+                            </br>
+                            <input name="Username" id="rcorners2" placeholder="User Name" type="text"required autocomplete="off"/>
                         </div>
 
                         <div class="field-wrap">
-                            <label>
-                                Password<span class="req"></span>
+                            <label id="pass">
+                                Password:<span class="req"></span>
                             </label>
-                            <input name="Password" type="password"required autocomplete="off"/>
+                            </br>
+                            <input name="Password" id="rcorners2" placeholder="Password" type="password"required autocomplete="off"/>
                         </div>
                         <div class="field-wrap">
-                            <input type="checkbox" name="remember_me" id="remember_me"><label style="top:-30px;left:100px;font-size: 40px;">Remember Me</label>
+                            <input type="checkbox"  name="remember_me" id="remember_me"><label id="remember" style="top:-15px;left:245px;font-size: 20px;">Remember Me</label>
                         </div>
                         <br>
                         <button class="button button-block">Log In</button>
