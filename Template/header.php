@@ -208,7 +208,7 @@ span.psw {
 
             <div class="about-buttons-cont">
                 <!--  -->
-                <a href="Pages/about.php">
+                <a href="../Pages/about.php">
                     <div class="about-button">
                         <div class="about-button-icon-cont">
                             <div class="about-button-icon">
@@ -227,7 +227,7 @@ span.psw {
                 </a>
                 <!--  -->
                 <!--  -->
-                <a href="Pages/team.php">
+                <a href="../Pages/team.php">
                     <div class="about-button">
                         <div class="about-button-icon-cont">
                             <div class="about-button-icon">
