@@ -49,7 +49,7 @@ $mail->send(); */
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="We're Movers">
     <meta name="keywords" content="Move Club,Move,MIU Club,Movers">
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="icon" sizes="128x128" href="./images/fav.png">
@@ -122,7 +122,7 @@ $mail->send(); */
     <!-- About Us START -->
     <div class="sec-cont">
         <div class="h-text">
-            <div class="h-emoji-cont"><img src="./images/fav.png"></div>About Us
+            <div class="h-emoji-cont"><img src="../images/fav.png"></div>About Us
         </div>
         <div class="sec-text-cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur imperdiet
             nibh, ut vestibulum diam sollicitudin sit amet. Nam faucibus sollicitudin erat, quis efficitur justo
@@ -134,7 +134,7 @@ $mail->send(); */
             nibh. Mauris velit ligula, gravida quis accumsan ut, interdum a lacus.
 
         </div>
-        <div class="r-cont"><a href="./Pages/about.php">
+        <div class="r-cont"><a href="../Pages/about.php">
                 <div class="read-more">Read More</div>
             </a></div>
 
@@ -144,19 +144,8 @@ $mail->send(); */
     <!-- Team START -->
     <div class="sec-cont ">
         <div class="h-text">
-            <div class="h-emoji-cont"><img src="./images/fav.png"></div>Meet The Team
+            <div class="h-emoji-cont"><img src="../images/fav.png"></div>Meet The Team
         </div>
-        <div class="team-members-cont">
-            <div class="team-member">
-                <a href="#">
-                    <div class="team-member-img">Image</div>
-                    <div class="team-member-text">
-                        <h3>Name</h3>
-                        <p>Vice President</p>
-                    </div>
-                </a>
-            </div>
-
             <div class="team-member">
                 <a href="#">
                     <div class="team-member-img"><img
@@ -179,7 +168,7 @@ $mail->send(); */
                 </a>
             </div>
         </div>
-        <div class="r-cont r-cont-center"><a href="./Pages/team.php">
+        <div class="r-cont r-cont-center"><a href="../Pages/team.php">
                 <div class="read-more">View All</div>
             </a></div>
         <br><br>
@@ -191,7 +180,7 @@ $mail->send(); */
     <!-- Events START -->
     <div class="sec-cont ">
         <div class="h-text">
-            <div class="h-emoji-cont"><img src="./images/fav.png"></div>Our Events
+            <div class="h-emoji-cont"><img src="../images/fav.png"></div>Our Events
         </div>
         <div class="events-cont">
             <!-- <h1>unfortunately, We don't have any events right now.</h1> -->
@@ -214,7 +203,7 @@ $mail->send(); */
                 </div>
             </div>
         </div>
-        <div class="r-cont r-cont-center"><a href="./Pages/events.php">
+        <div class="r-cont r-cont-center"><a href="../Pages/events.php">
                 <div class="read-more">View All</div>
             </a></div>
 
@@ -223,7 +212,7 @@ $mail->send(); */
     <!-- Sponsors START -->
     <div class="sec-cont spnsrs-sec">
         <div class="h-text">
-            <div class="h-emoji-cont"><img src="./images/fav.png"></div>Our Sponsors
+            <div class="h-emoji-cont"><img src="../images/fav.png"></div>Our Sponsors
         </div>
         <div class="sponsors-cont">
             <div class="sponsor">
@@ -239,9 +228,9 @@ $mail->send(); */
         </div>
     </div>
     <!-- Sponsors END -->
-    <?php include("Template/footer.html");?>
+    <?php include("../Template/footer.html");?>
     <!-- Body END -->
-    <script type="text/javascript" src="./js/slider.js"></script>
+    <script type="text/javascript" src="../js/slider.js"></script>
 </body>
 
 </html>

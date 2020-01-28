@@ -190,7 +190,7 @@ span.psw {
 <div id="header">
     <div class="logo-cont">
         <div class="logo"><a href="./">
-                <img class="Logo" src="./images/logo.png"></a>
+                <img class="Logo" src="../images/logo.png"></a>
         </div>
     </div>
     <div class="nav-buttons-cont">
