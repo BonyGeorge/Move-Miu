@@ -1,8 +1,8 @@
 <?php
 session_start();
-if($_SESSION['type']!='admin'){header('location:index.php');}
+if($_SESSION['type']!='admin'){header('location:../index.php');}
 include 'admin_header.php';
-include 'Database.php';
+include '../DataBase/Database.php';
 $DB = new Database();
 ?>
 <!DOCTYPE html>

@@ -178,7 +178,7 @@ span.psw {
 <head>
 
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="icon" sizes="128x128" href="./images/fav.png">
@@ -186,7 +186,7 @@ span.psw {
     <!--
         <link rel="stylesheet" href="css/normalize.css">
 -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <div id="header">
     <div class="logo-cont">
@@ -201,7 +201,7 @@ span.psw {
         <div class="nav-button nav-button-about">About <i class="fas fa-user-tie"></i>
             <div class="about-buttons-cont">
                 <!--  -->
-                <a href="./about.php">
+                <a href="../Pages/about.php">
                     <div class="about-button">
                         <div class="about-button-icon-cont">
                             <div class="about-button-icon">
@@ -220,7 +220,7 @@ span.psw {
                 </a>
                 <!--  -->
                 <!--  -->
-                <a href="./team.php">
+                <a href="../Pages/team.php">
                     <div class="about-button">
                         <div class="about-button-icon-cont">
                             <div class="about-button-icon">
@@ -240,7 +240,7 @@ span.psw {
                 <!--  -->
             </div>
         </div>
-        <a href="./events.php">
+        <a href="../pages/Events.php">
             <div class="nav-button">Events <i class="fas fa-calendar"></i></div>
         </a>
         <a onclick="document.getElementById('id99').style.display='block'" style="width:auto;">
@@ -249,7 +249,7 @@ span.psw {
         <a onclick="document.getElementById('id100').style.display='block'" style="width:auto;">
             <div class="nav-button">Add Event <i class="fas fa-plus"></i></div>
         </a> <!-- Add event-->
-        <a href='sendmail.php' style="width:auto;">
+        <a href='../Operations/sendmail.php' style="width:auto;">
             <div class="nav-button">Send Mail <i class="fas fa-plus"></i></div>
         </a>
     </div>
@@ -262,19 +262,19 @@ span.psw {
 <div class="marg"></div>
 <div class="sidebar" id="sidebar">
     <div class="nav-sidebar-buttons">
-        <a href="login.php">
+        <a href="../Login & Register/login.php">
             <div class="nav-sidebar-button">login <i class="fas fa-user-plus"></i> </div>
         </a>
-        <a href="./">
+        <a href="../pages/">
             <div class="nav-sidebar-button">Home<i class="fas fa-home"></i> </div>
         </a>
-        <a href="./team.php">
+        <a href="../pages/Team.php">
             <div class="nav-sidebar-button">Meet The Team <i class="fas fa-users"></i> </div>
         </a>
-        <a href="./about.php">
+        <a href="../pages/About.php">
             <div class="nav-sidebar-button">About The Club <i class="fas fa-info-circle"></i> </div>
         </a>
-        <a href="./events.php">
+        <a href="../pages/Events.php">
             <div class="nav-sidebar-button">Our Events <i class="fas fa-calendar"></i> </div>
         </a>
     </div>

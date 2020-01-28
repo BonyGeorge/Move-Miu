@@ -62,12 +62,12 @@ $mail->send(); */
     <?php if(isset($_SESSION["type"])){
 
     if($_SESSION["type"]=="admin"){
-        include("Operations/admin_header.php");
+        include("../Operations/admin_header.php");
     }else 
-    include("Template/header.php");
+    include("../Template/header.php");
 }
         else
-            include("Template/header.php");?>
+            include("../Template/header.php");?>
 
     <!--   Header END   -->
     <!--      -->
@@ -182,7 +182,7 @@ $mail->send(); */
         <div class="r-cont r-cont-center"><a href="./Pages/team.php">
                 <div class="read-more">View All</div>
             </a></div>
-            <br><br>
+        <br><br>
         <div class="shape1">
             <img src="./images/shapes/2.png">
         </div>
