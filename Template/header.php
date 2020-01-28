@@ -174,13 +174,14 @@ span.psw {
     visibility: hidden;
 }
 </style>
+
 <head>
 
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="icon" sizes="128x128" href="./images/fav.png">
+    <link rel="icon" sizes="128x128" href="../images/fav.png">
     <meta name="theme-color" content="#93ff91">
     <!--
 <link rel="stylesheet" href="css/normalize.css">
@@ -189,16 +190,16 @@ span.psw {
 <div id="header">
     <div class="logo-cont">
         <div class="logo"><a href="./">
-                <img class="Logo"src="./images/logo.png"></a>
+                <img class="Logo" src="./images/logo.png"></a>
         </div>
     </div>
     <div class="nav-buttons-cont">
         <?php if (!isset($_SESSION["type"])){ ?>
-        <a href="Login & Register/login.php">
+        <a href="../Login & Register/login.php">
             <div class="nav-button nav-button-sl">Login</div>
         </a>
         <?php } else { ?>
-        <a href="Login & Register/logout.php">
+        <a href="../Login & Register/logout.php">
             <div class="nav-button nav-button-sl">Logout</div>
         </a>
         <?php } ?>
@@ -246,10 +247,10 @@ span.psw {
                 <!--  -->
             </div>
         </div>
-        <a href="Pages/events.php">
+        <a href="../Pages/events.php">
             <div class="nav-button">Events <i class="fas fa-calendar"></i></div>
         </a>
-        <a href="index.php">
+        <a href="../pages/index.php">
             <div class="nav-button">Home <i class="fas fa-home"></i></div>
         </a>
     </div>
@@ -263,25 +264,25 @@ span.psw {
 <div class="sidebar" id="sidebar">
     <div class="nav-sidebar-buttons">
         <?php if (!isset($_SESSION["type"])){ ?>
-        <a href="Login & Register/login.php">
+        <a href="../Login & Register/login.php">
             <div class="nav-sidebar-button">Login <i class="fas fa-user-plus"></i> </div>
         </a>
         <?php } else { ?>
-        <a href="Login & Register/logout.php">
+        <a href="../Login & Register/logout.php">
             <div class="nav-sidebar-button">Logout <i class="fas fa-user-plus"></i> </div>
         </a>
         <?php } ?>
 
-        <a href="./">
+        <a href="../pages/">
             <div class="nav-sidebar-button">Home<i class="fas fa-home"></i> </div>
         </a>
-        <a href="Pages/team.php">
+        <a href="../Pages/team.php">
             <div class="nav-sidebar-button">Meet The Team <i class="fas fa-users"></i> </div>
         </a>
-        <a href="Pages/about.php">
+        <a href="../Pages/about.php">
             <div class="nav-sidebar-button">About The Club <i class="fas fa-info-circle"></i> </div>
         </a>
-        <a href="Pages/events.php">
+        <a href="../Pages/events.php">
             <div class="nav-sidebar-button">Our Events <i class="fas fa-calendar"></i> </div>
         </a>
     </div>

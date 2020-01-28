@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 setcookie("password", "");
             }
         }
-        header('Location:../index.php');   
+        header('Location:../pages/index.php');   
 
     }
 }
