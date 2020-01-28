@@ -146,29 +146,28 @@ $mail->send(); */
         <div class="h-text">
             <div class="h-emoji-cont"><img src="../images/fav.png"></div>Meet The Team
         </div>
+        <div class="team-members-cont">
             <div class="team-member">
                 <a href="#">
-                    <div class="team-member-img"><img
-                            src="https://scontent-cai1-1.xx.fbcdn.net/v/t1.0-9/41368493_10215026007037160_7613683814040076288_n.jpg?_nc_cat=110&_nc_ht=scontent-cai1-1.xx&oh=10127f77bdc3e6b5f30a76e5d21b5c3e&oe=5C69FAC5">
-                    </div>
+                    <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
                     <div class="team-member-text">
                         <h3>Omar Nasr</h3>
-                        <p>President</p>
+                        <p>President.</p>
                     </div>
                 </a>
             </div>
 
             <div class="team-member">
                 <a href="#">
-                    <div class="team-member-img">Image</div>
+                    <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
                     <div class="team-member-text">
-                        <h3>Name</h3>
-                        <p>Vice President</p>
+                        <h3>Essra Mahamed</h3>
+                        <p>Vice President.</p>
                     </div>
                 </a>
             </div>
         </div>
-        <div class="r-cont r-cont-center"><a href="../Pages/team.php">
+        <div class="r-cont r-cont-center"><a href="./Pages/team.php">
                 <div class="read-more">View All</div>
             </a></div>
         <br><br>
@@ -178,7 +177,7 @@ $mail->send(); */
     </div>
     <!-- Team END -->
     <!-- Events START -->
-    <div class="sec-cont ">
+    <div class="sec ">
         <div class="h-text">
             <div class="h-emoji-cont"><img src="../images/fav.png"></div>Our Events
         </div>
@@ -199,38 +198,16 @@ $mail->send(); */
                     <div class="r-cont"><a href="#">
                             <div class="read-more">Read More</div>
                         </a></div>
-
                 </div>
             </div>
         </div>
         <div class="r-cont r-cont-center"><a href="../Pages/events.php">
                 <div class="read-more">View All</div>
             </a></div>
-
-    </div>
+            </div>
     <!-- Events END -->
-    <!-- Sponsors START -->
-    <div class="sec-cont spnsrs-sec">
-        <div class="h-text">
-            <div class="h-emoji-cont"><img src="../images/fav.png"></div>Our Sponsors
-        </div>
-        <div class="sponsors-cont">
-            <div class="sponsor">
-                <img src="http://logok.org/wp-content/uploads/2014/07/Samsung-logo-2015-Nobg-1024x768.png">
-            </div>
-            <div class="sponsor">
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/LG_logo_%282015%29.svg/2000px-LG_logo_%282015%29.svg.png">
-            </div>
-            <div class="sponsor">
-                <img src="https://dataquestuk.com/wp-content/uploads/new-lenovo-logo.png">
-            </div>
-        </div>
-    </div>
-    <!-- Sponsors END -->
     <?php include("../Template/footer.html");?>
     <!-- Body END -->
     <script type="text/javascript" src="../js/slider.js"></script>
 </body>
-
 </html>
