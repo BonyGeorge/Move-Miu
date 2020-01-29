@@ -189,7 +189,7 @@ span.psw {
 </head>
 <div id="header">
     <div class="logo-cont">
-        <div class="logo"><a href="./">
+        <div class="logo"><a href="../Pages/index.php">
                 <img class="Logo" src="../images/logo.png"></a>
         </div>
     </div>

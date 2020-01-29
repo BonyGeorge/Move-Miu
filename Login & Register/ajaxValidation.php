@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include('Database.php');
+include('../DataBase/Database.php');
 $DB = new Database();
 
 if(isset($_POST['username'])){
@@ -14,13 +14,12 @@ if(isset($_POST['username'])){
             $DB->execute();
             if($DB->numRows()>0)
             {
-                echo"username already exists.";
+                echo"Username already exists.";
 
             }
 
             else{
-                echo'valid username';
-
+                echo'Valid Username';
             }
         }catch (Exception $e) {
 
@@ -29,8 +28,7 @@ if(isset($_POST['username'])){
 
     }
     else{
-
-        echo"invalid username";
+        echo"Invalid Username";
     }
 
 }
@@ -45,28 +43,21 @@ if(isset($_POST['mail'])){
             $DB->execute();
             if($DB->numRows()>0)
             {
-                echo"email already exists.";
-
+                echo"Email already exists.";
             }
-
             else{
-                echo'valid mail';
+                echo'Valid mail';
 
             }
         }catch (Exception $e) {
 
 
         }
-
     }
-
-
     else{
 
         echo"invalid mail";
     }
-
-
 }
 
 

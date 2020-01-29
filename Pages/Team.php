@@ -24,8 +24,8 @@ if(isset($_SESSION["type"])){
 ?>  
 
 <!-- About Us START -->
-<div class="sec-cont">
- 
+<div class="sec">
+ <br>
 <div class="sec-text-cont" >
 <div class="h-text" style="left:260px;">Our Teams.</div>
 <div class="team-members-cont">

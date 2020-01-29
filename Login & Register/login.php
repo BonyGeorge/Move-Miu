@@ -1,4 +1,4 @@
-<html >
+<html>
 <style>
 #rcorners2 {
   border-radius: 25px;
@@ -63,11 +63,6 @@ border-radius: 5px;
   width: 40%;
 
 }
-
-
-
-
-
 </style>
     <head>
         <meta charset="UTF-8">
@@ -77,8 +72,8 @@ border-radius: 5px;
         <script src="../js/jquery-3.3.1.min.js" ></script>
         <link rel="stylesheet" href="../css/style.css">
     </head>
+    <?php include("../Template/header.php");?>
     <body>
-        <?php include("../Template/header.php");?>
         <div class="form" id="square" >
 
             <ul class="tab-group">
@@ -88,13 +83,11 @@ border-radius: 5px;
             <div class="tab-content">
                 <div id="login">   
                     <h1>Welcome Movers!</h1>
-                    <span style="color:red; font-weight:bold; position:relative; bottom:15px;" ><?php if( !empty( $_REQUEST['Message'] )     ){echo $_REQUEST['Message'];} ?></span>
+                    <span style="color:red; font-weight:bold; position:relative; bottom:15px;" ><?php if( !empty( $_REQUEST['Message'] )){echo $_REQUEST['Message'];} ?></span>
                     <form action="login1.php" method="post">
-
                         <div class="field-wrap">
                             <label id="user">
                                 User Name:<span  class="req"></span>
-                               
                             </label>
                             </br>
                             <input name="Username" id="rcorners2" placeholder="User Name" type="text"required autocomplete="off"/>
@@ -113,54 +106,7 @@ border-radius: 5px;
                         <br>
                         <button class="button button-block">Log In</button>
                     </form>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Register</title>
-    <script src="../js/Register_validation.js"> </script>
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-
-<body>
-    <?php include("../Template/header.php");?>
-    <div class="form" style="margin-top:5%">
-
-        <ul class="tab-group">
-            <li class="tab  "><a href="#signup">Register</a></li>
-            <li class="tab active"><a href="#login">Log In</a></li>
-        </ul>
-        <div class="tab-content">
-            <div id="login">
-                <h1>Welcome Mover!</h1>
-                <span
-                    style="color:red; font-weight:bold; position:relative; bottom:15px;"><?php if( !empty( $_REQUEST['Message'] )     ){echo $_REQUEST['Message'];} ?></span>
-                <form action="login1.php" method="post">
-
-                    <div class="field-wrap">
-                        <label>
-                            User Name<span class="req"></span>
-                        </label>
-                        <input name="Username" type="text" required autocomplete="off" />
-                    </div>
-
-                    <div class="field-wrap">
-                        <label>
-                            Password<span class="req"></span>
-                        </label>
-                        <input name="Password" type="password" required autocomplete="off" />
-                    </div>
-                    <div class="field-wrap">
-                        <input type="checkbox" name="remember_me" id="remember_me"><label
-                            style="top:-30px;left:100px;font-size: 40px;">Remember Me</label>
-                    </div>
-                    <br>
-                    <button class="button button-block">Log In</button>
-                </form>
             </div>
-
             <div id="signup">
                 <h1>Join Us! </h1>
 
@@ -217,21 +163,15 @@ border-radius: 5px;
 
                 </form>
 
-            </div>
+                </div>
+                </div>
 
 
         </div><!-- tab-content -->
-
     </div> <!-- /form -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="../js/script.js"></script>
-    <?php include('../Template/footer.html');?>
-    <!-- Body END -->
-    <script type="text/javascript" src="./js/slider.js"></script>
-</body>
-
-</html>
-
-</body>
+    <script type="text/javascript" src="../js/slider.js"></script>
+ </body>
+ <?php include('../Template/footer.html');?>
 
 </html>
