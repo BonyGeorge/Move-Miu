@@ -63,6 +63,26 @@ session_start(); ?>
 
                     </div>
                 </div>
+
+                <?php 
+                $conn = mysqli_connect('localhost', 'root', '', 'move');
+                $query = "SELECT * FROM event";
+                $result = mysqli_query($conn,$query);
+                while ($value = mysqli_fetch_array($result)) {
+                    echo 
+                        "
+                        <div class='event'>
+                        <div class='img-side'>
+                        <img src='http://placekitten.com/g/1200/1200'>
+                        </div>
+                        <div class='text-side'>
+                        <h2>
+                         $value[name]  $value[date]</h2>
+                         $value[body]
+                        <div class='r-cont'><a href='#'><div class='read-more'>Read More</div></a></div>
+                        </div>
+                        </div> <br> <br> <br>";
+                        }?>
             </div>
         </div>
         <!-- About Us END -->
