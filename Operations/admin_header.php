@@ -40,18 +40,18 @@ input[type=submit]:hover {
 }
 
 /* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+//button {
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
 }
 
-button:hover {
-    opacity: 0.8;
+//button:hover {
+opacity: 0.8;
 }
 
 /* Extra styles for the cancel button */
@@ -251,6 +251,9 @@ span.psw {
         </a> <!-- Add event-->
         <a href='../Operations/sendmail.php' style="width:auto;">
             <div class="nav-button">Send Mail <i class="fas fa-plus"></i></div>
+        </a>
+        <a href='../ChatApp/Home.php' style="width:auto;">
+            <div class="nav-button">Chat <i class="fas fa-plus"></i></div>
         </a>
     </div>
     <div class="menu-button" id="menu-button" onclick="menu()">

@@ -58,18 +58,18 @@ class Chat
     public function DisplayChat()
     {
         include('Db.php');
-        $sql = "SELECT users.name,chat.chatText,users.id,chat.user_id FROM chat INNER JOIN users on chat.user_id=users.id order by chat.id";
+        $sql = "SELECT users.name,users.username,chat.chatText,users.id,chat.user_id FROM chat INNER JOIN users on chat.user_id=users.id order by chat.id";
         $result = $pdo->query($sql);
         session_start();
         while($row = $result->fetch(PDO::FETCH_ASSOC))
         {
              
-if($row['name'] == $_SESSION['user']){
+if($row['user_id'] == $_SESSION['id']){
             echo "<h4 style='margin-left:150px; padding:8px;background-color: #3ed45e;width: 50%;border-radius: 15px; font-family: monospace;
     font-size: 15px;'>You : {$row['chatText']}</h4>";
 }else{
     echo "<h4 style='padding:8px;background-color: #b2d5ba;width: 50%;border-radius: 15px; font-family: monospace;
-    font-size: 15px;'>{$row['name']} : {$row['chatText']}</h4>";
+    font-size: 15px;'>{$row['username']} : {$row['chatText']}</h4>";
 }
         }
     }
