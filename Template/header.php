@@ -40,18 +40,18 @@ input[type=submit]:hover {
 }
 
 /* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+//button {
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
 }
 
-button:hover {
-    opacity: 0.8;
+//button:hover {
+opacity: 0.8;
 }
 
 /* Extra styles for the cancel button */
@@ -253,6 +253,11 @@ span.psw {
         <a href="../pages/index.php">
             <div class="nav-button">Home <i class="fas fa-home"></i></div>
         </a>
+        <?php if(isset($_SESSION['type'])) { ?>
+        <a href='../ChatApp/Home.php' style="width:auto;">
+            <div class="nav-button">Chat <i class="fas fa-plus"></i></div>
+        </a>
+        <?php } ?>
     </div>
     <div class="menu-button" id="menu-button" onclick="menu()">
         <div class="menu-button-bar"></div>

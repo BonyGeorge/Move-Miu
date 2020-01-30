@@ -195,7 +195,7 @@ span.psw {
         </div>
     </div>
     <div class="nav-buttons-cont">
-        <a href="logout.php">
+        <a href="../Login & Register/logout.php">
             <div class="nav-button nav-button-sl">Logout</div>
         </a>
         <div class="nav-button nav-button-about">About <i class="fas fa-user-tie"></i>
@@ -252,9 +252,11 @@ span.psw {
         <a href='../Operations/sendmail.php' style="width:auto;">
             <div class="nav-button">Send Mail <i class="fas fa-plus"></i></div>
         </a>
+        <?php if(isset($_SESSION['type'])) { ?>
         <a href='../ChatApp/Home.php' style="width:auto;">
             <div class="nav-button">Chat <i class="fas fa-plus"></i></div>
         </a>
+        <?php } ?>
     </div>
     <div class="menu-button" id="menu-button" onclick="menu()">
         <div class="menu-button-bar"></div>

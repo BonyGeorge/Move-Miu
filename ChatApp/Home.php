@@ -101,13 +101,16 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id']))
     echo '';
 }else
 {
-    header('location:index.php');
+    header('location:../pages/index.php');
 }
 if(isset($_SESSION['type']))
 {
     if($_SESSION['type'] == 'admin')
      include('../Operations/admin_header.php');
+    else if($_SESSION['type'] == 'user')
+     include('../Template/header.php');
 }
+    
 ?>
 
 <center>
