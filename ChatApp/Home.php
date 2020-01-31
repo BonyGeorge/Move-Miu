@@ -22,9 +22,20 @@ button {
 </style>
 <script src="js/jQuery.js"></script>
 <script>
+//$(window).load(function() {
+//alert();
+//});
 $(document).ready(function()
 
     {
+        window.onload = function init() {
+            var objDiv = $('#text');
+            if (objDiv.length > 0) {
+                objDiv[0].scrollTop = objDiv[0].scrollHeight;
+            }
+        }
+
+
 
 
         $('#chat').keyup(function(e) {
@@ -41,10 +52,7 @@ $(document).ready(function()
                     success: function() {
                         console.log('ok');
                         $('#chat').val('');
-
-
                     }
-
                 })
                 $('#text').load('pages/DisplayChat.php');
                 setTimeout(function() {
@@ -52,7 +60,6 @@ $(document).ready(function()
                     if (objDiv.length > 0) {
                         objDiv[0].scrollTop = objDiv[0].scrollHeight;
                     }
-
                 }, 500)
             }
         })

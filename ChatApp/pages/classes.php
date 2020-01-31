@@ -58,7 +58,10 @@ class Chat
     public function DisplayChat()
     {
         include('Db.php');
-        $sql = "SELECT users.name,users.username,chat.chatText,users.id,chat.user_id FROM chat INNER JOIN users on chat.user_id=users.id order by chat.id";
+        $sql = "SELECT * FROM (
+            SELECT users.name,users.username,chat.chatText,users.id,chat.user_id,chat.id 'x' FROM chat INNER JOIN users on chat.user_id=users.id order by chat.id desc LIMIT 35
+           )Var1
+           ORDER BY Var1.x ASC";
         $result = $pdo->query($sql);
         session_start();
         while($row = $result->fetch(PDO::FETCH_ASSOC))
