@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2020 at 10:30 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.4
+-- Generation Time: Jan 31, 2020 at 09:42 PM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -118,7 +118,14 @@ INSERT INTO `chat` (`id`, `user_id`, `chatText`) VALUES
 (72, 4, 'lol\n'),
 (73, 4, 'damn\n'),
 (74, 4, 'this chat app is great\n'),
-(75, 4, 'hhhh\n');
+(75, 4, 'hhhh\n'),
+(76, 2, 'what is this\n'),
+(77, 2, 'sorrry maan\n'),
+(78, 6, 'bro\n'),
+(79, 6, 'okay dont worry bro iam here dont worry believe me every thing is gonna be alright\n'),
+(80, 6, ';;;\n'),
+(81, 6, '5alas ya 3am fhmt\n'),
+(82, 6, 'mt2l2sh okay msh sh;3al\n');
 
 -- --------------------------------------------------------
 
@@ -130,15 +137,17 @@ CREATE TABLE `event` (
   `id` int(11) NOT NULL,
   `name` varchar(225) COLLATE utf8_bin NOT NULL,
   `date` text COLLATE utf8_bin NOT NULL,
-  `body` text COLLATE utf8_bin NOT NULL
+  `body` text COLLATE utf8_bin NOT NULL,
+  `image` varchar(250) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `event`
 --
 
-INSERT INTO `event` (`id`, `name`, `date`, `body`) VALUES
-(3, 'hello', '21/1/2020', 'ufgwirbuiehrnoiw');
+INSERT INTO `event` (`id`, `name`, `date`, `body`, `image`) VALUES
+(142, 'Job Fair', '30/4/2020', 'We will be there At MIU', 'a:4:{i:0;s:10:\"barrel.png\";i:1;s:7:\"Img.png\";i:2;s:8:\"Img2.png\";i:3;s:10:\"tetra2.PNG\";}'),
+(143, '00A Event', '2/2/2020', 'Miu Misr International University', 'a:4:{i:0;s:14:\"2k_neptune.jpg\";i:1;s:19:\"8k_earth_daymap.jpg\";i:2;s:11:\"8k_mars.jpg\";i:3;s:10:\"8k_sun.jpg\";}');
 
 -- --------------------------------------------------------
 
@@ -212,13 +221,13 @@ ALTER TABLE `active members`
 -- AUTO_INCREMENT for table `chat`
 --
 ALTER TABLE `chat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
 
 --
 -- AUTO_INCREMENT for table `users`

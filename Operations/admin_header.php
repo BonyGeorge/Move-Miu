@@ -40,18 +40,18 @@ input[type=submit]:hover {
 }
 
 /* Set a style for all buttons */
-//button {
-background-color: #4CAF50;
-color: white;
-padding: 14px 20px;
-margin: 8px 0;
-border: none;
-cursor: pointer;
-width: 100%;
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }
 
-//button:hover {
-opacity: 0.8;
+button:hover {
+    opacity: 0.8;
 }
 
 /* Extra styles for the cancel button */
@@ -195,7 +195,7 @@ span.psw {
         </div>
     </div>
     <div class="nav-buttons-cont">
-        <a href="../Login & Register/logout.php">
+        <a href="logout.php">
             <div class="nav-button nav-button-sl">Logout</div>
         </a>
         <div class="nav-button nav-button-about">About <i class="fas fa-user-tie"></i>
@@ -252,11 +252,6 @@ span.psw {
         <a href='../Operations/sendmail.php' style="width:auto;">
             <div class="nav-button">Send Mail <i class="fas fa-plus"></i></div>
         </a>
-        <?php if(isset($_SESSION['type'])) { ?>
-        <a href='../ChatApp/Home.php' style="width:auto;">
-            <div class="nav-button">Chat <i class="fas fa-plus"></i></div>
-        </a>
-        <?php } ?>
     </div>
     <div class="menu-button" id="menu-button" onclick="menu()">
         <div class="menu-button-bar"></div>
@@ -319,7 +314,7 @@ span.psw {
 </div>
 
 <div id="id100" class="modal">
-    <form class="modal-content animate" method="POST" action="addEvent.php">
+    <form class="modal-content animate" method="POST" action="../Operations/addEvent.php" enctype="multipart/form-data">
         <div class="imgcontainer">
             <script>
             var modal2 = document.getElementById('id100');
@@ -345,9 +340,10 @@ span.psw {
 
             <input id="date" type="text" placeholder="Enter Date" name="date" required>
             <textarea id="details" type="message" placeholder="Enter Event Details" name="details" required></textarea>
+                  <input type="file" id = "image" name="image[]" multiple>
             <center><input type='submit' id='btn' name='submitEvent' class='btn btn-appoint' value='ADD'></center>
         </div>
 
 
     </form>
-</div>
+</div> 
