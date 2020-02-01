@@ -28,15 +28,13 @@ button {
 $(document).ready(function()
 
     {
-        window.onload = function init() {
+        setTimeout(function() {
             var objDiv = $('#text');
             if (objDiv.length > 0) {
                 objDiv[0].scrollTop = objDiv[0].scrollHeight;
             }
-        }
 
-
-
+        }, 100);
 
         $('#chat').keyup(function(e) {
             if (e.keyCode == 13) {
