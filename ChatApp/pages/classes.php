@@ -41,8 +41,6 @@ class User
         }
     }
 }
-
-
 class Chat
 {
     public $UserId;

@@ -18,15 +18,9 @@ session_start(); ?>
 <?php if(isset($_SESSION["type"])){
         if($_SESSION["type"]=="admin"){
         include("../Operations/admin_header.php"); }
-        else include("./Template/header.php");}
+        else include("../Template/header.php");}
         else
         include("../Template/header.php");?>  
-<!--   Header END   -->
-<!--      -->
-<!--      -->
-<!--  -->
-<!-- Body START -->
-<!-- About Us START -->
 <div class="sec-cont sec-cont-s">
   <div class="h-text">About Us</div>
   <div class="events-cont about-us-cont">
@@ -37,8 +31,7 @@ session_start(); ?>
       </div>
       <div class="text-side">
         <h2>Vision</h2>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur imperdiet nibh, ut vestibulum diam sollicitudin sit amet. Nam faucibus sollicitudin erat, quis efficitur justo bibendum vitae. Quisque ornare malesuada lorem sit amet posuere. Curabitur interdum, nisi at porta scelerisque, mauris enim blandit quam, ut volutpat justo enim et libero. Aenean vel massa nisi. Quisque at tempor mi, et rhoncus arcu. Vivamus convallis nibh vitae ex auctor tempus. Donec faucibus mi eu mauris tempus egestas.
-
+        To become a role model for student activities in Egyptian universities by developing our club members as well as the community.
       </div>
     </div>
 
@@ -48,16 +41,19 @@ session_start(); ?>
       </div>
       <div class="text-side">
         <h2>Mission</h2>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur imperdiet nibh, ut vestibulum diam sollicitudin sit amet. Nam faucibus sollicitudin erat, quis efficitur justo bibendum vitae. Quisque ornare malesuada lorem sit amet posuere. Curabitur interdum, nisi at porta scelerisque, mauris enim blandit quam, ut volutpat justo enim et libero. Aenean vel massa nisi. Quisque at tempor mi, et rhoncus arcu. Vivamus convallis nibh vitae ex auctor tempus. Donec faucibus mi eu mauris tempus egestas.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur imperdiet nibh, ut vestibulum diam sollicitudin sit amet. Nam faucibus sollicitudin erat, quis efficitur justo bibendum vitae. Quisque ornare malesuada lorem sit amet posuere. Curabitur interdum, nisi at porta scelerisque, mauris enim blandit quam, ut volutpat justo enim et libero. Aenean vel massa nisi. Quisque at tempor mi, et rhoncus arcu. Vivamus convallis nibh vitae ex auctor tempus. Donec faucibus mi eu mauris tempus egestas.
-
+        To develop all of our targets: MOVE members, MIU students and members of the Egyptian community, through shifting their lives to more productive ones, raising our social responsibility towards the community.
       </div>
     </div>
 
+    <div class="event">
+      <div class="text-side">
+        <h2>Founding date</h2>
+        18/ 2/ 2008
+    </div>
   </div>
-</div>
-<!-- About Us END -->
-<?php include("../Template/footer.html");?>
-<!-- Body END -->
-<script type="text/javascript" src="./js/slider.js"></script>
+</div></div>
+
+<script type="text/javascript" src="../js/slider.js"></script>
   </body>
 </html>
+<?php include("../Template/footer.html");?>

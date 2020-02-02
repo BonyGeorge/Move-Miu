@@ -291,7 +291,6 @@ span.psw {
             <div class="nav-sidebar-button">Our Events <i class="fas fa-calendar"></i> </div>
         </a>
     </div>
-
 </div>
 <div class="sidebar-overlay" onclick="menu()" id="sidebar-overlay"></div>
 </div>

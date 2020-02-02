@@ -1,6 +1,4 @@
 <?php
-
-
 try
 {
     $pdo = new PDO('mysql:host=localhost;dbname=move','root','');
@@ -11,6 +9,4 @@ try
 {
     echo 'Error : ' . $e->getMessage();
 }
-
-
 ?>

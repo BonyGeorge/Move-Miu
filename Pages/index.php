@@ -1,45 +1,6 @@
 <?php 
 session_start();
-/*
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception; 
-
-require 'composer/vendor/autoload.php'; 
-
-date_default_timezone_set('Etc/UTC'); 
-
-$mail = new PHPMailer(TRUE);
-$mail->SMTPOptions = array('ssl'=>array('verify_peer'=>false, 'verify_peer_name'=>false, 'allow_self_signed'=>true));
-$mail->isSMTP(); 
-$mail->Host = 'smtp.gmail.com'; 
-$mail->Port = 587; 
-$mail->SMTPAuth = true; 
-$mail->SMTPSecure = 'tls'; 
-$mail->Username = 'move20miu2020@gmail.com'; 
-$mail->Password = 'rywuqlxruswomhuj'; 
-$mail->setFrom('move20miu2020@gmail.com', 'lol'. ' from move'); 
-$mail->CharSet = 'utf-8';
-$mail->isHTML(true);
-$uname = 'islam';
-$mailsubject = 'lol';
-$mailcontent = 'lol';
-$mail->Subject = 'lol';
-$email_vars = array(
-    'name' => $uname,
-    'content' => $mailcontent,
-);
-$body = file_get_contents('htmlemail.html');
-if(isset($email_vars)){
-    foreach($email_vars as $k=>$v){
-        $body = str_replace('{'.strtoupper($k).'}', $v, $body);
-    }
-}
-$mail->MsgHTML($body);
-//$mail->Body = "$mailcontent";
-$mail->addAddress("dashadeshozz@gmail.com", "$uname");
-$mail->send(); */
 ?>
-
 
 <!DOCTYPE HTML>
 <html>
@@ -124,15 +85,13 @@ $mail->send(); */
         <div class="h-text">
             <div class="h-emoji-cont"><img src="../images/fav.png"></div>About Us
         </div>
-        <div class="sec-text-cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur imperdiet
-            nibh, ut vestibulum diam sollicitudin sit amet. Nam faucibus sollicitudin erat, quis efficitur justo
-            bibendum vitae. Quisque ornare malesuada lorem sit amet posuere. Curabitur interdum, nisi at porta
-            scelerisque, mauris enim blandit quam, ut volutpat justo enim et libero. Aenean vel massa nisi. Quisque at
-            tempor mi, et rhoncus arcu. Vivamus convallis nibh vitae ex auctor tempus. Donec faucibus mi eu mauris
-            tempus egestas. Curabitur a nisi vitae elit dignissim facilisis sit amet quis dolor. Nulla convallis purus
-            elit, quis feugiat lorem interdum at. Phasellus dolor eros, hendrerit ut est tincidunt, iaculis pulvinar
-            nibh. Mauris velit ligula, gravida quis accumsan ut, interdum a lacus.
+        <div class="sec-text-cont">BE THE CHANGE YOU WANT TO SEE"
 
+“MOVE” is based on development which is divided into:
+1.Community Service Program
+2. Student Development Program.
+
+Our Color is Green: Generous, Adaptable, Understanding, Compassionate, And Practical.
         </div>
         <div class="r-cont"><a href="../Pages/about.php">
                 <div class="read-more">Read More</div>

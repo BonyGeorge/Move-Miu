@@ -1,5 +1,13 @@
+<!DOCTYPE HTML>
 <html>
-<style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login & Register</title>
+        <script src="../js/Register_validation.js"> </script>
+        <script src="../js/jquery-3.3.1.min.js" ></script>
+        <link rel="stylesheet" href="../css/style.css">
+        <style>
 #rcorners2 {
   border-radius: 25px;
   border: 2px solid #73AD21;
@@ -64,16 +72,10 @@ border-radius: 5px;
 
 }
 </style>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login & Register</title>
-        <script src="../js/Register_validation.js"> </script>
-        <script src="../js/jquery-3.3.1.min.js" ></script>
-        <link rel="stylesheet" href="../css/style.css">
     </head>
-    <?php include("../Template/header.php");?>
+    
     <body>
+    <?php include("../Template/header.php");?>
         <div class="form" id="square" >
 
             <ul class="tab-group">
@@ -166,12 +168,12 @@ border-radius: 5px;
                 </div>
                 </div>
 
-
+                
         </div><!-- tab-content -->
     </div> <!-- /form -->
+    <br><br><br>
     <script src="../js/script.js"></script>
     <script type="text/javascript" src="../js/slider.js"></script>
  </body>
- <?php include('../Template/footer.html');?>
-
 </html>
+<?php include('../Template/footer.html');?>
