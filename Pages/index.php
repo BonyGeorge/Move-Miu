@@ -142,31 +142,66 @@ Our Color is Green: Generous, Adaptable, Understanding, Compassionate, And Pract
         </div>
         <div class="events-cont">
             <!-- <h1>unfortunately, We don't have any events right now.</h1> -->
-            <div class="event">
-                <div class="img-side">
-                    <img src="http://placekitten.com/g/1200/1200">
-                </div>
-                <div class="text-side">
-                    <h2>Event Name (2019/01/01)</h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur imperdiet nibh, ut vestibulum
-                    diam sollicitudin sit amet. Nam faucibus sollicitudin erat, quis efficitur justo bibendum vitae.
-                    Quisque ornare malesuada lorem sit amet posuere. Curabitur interdum, nisi at porta scelerisque,
-                    mauris enim blandit quam, ut volutpat justo enim et libero. Aenean vel massa nisi. Quisque at tempor
-                    mi, et rhoncus arcu. Vivamus convallis nibh vitae ex auctor tempus. Donec faucibus mi eu mauris
-                    tempus egestas.
-                    <div class="r-cont"><a href="#">
-                            <div class="read-more">Read More</div>
-                        </a></div>
-                </div>
+            <?php 
+                $conn = mysqli_connect('localhost', 'root', '', 'move');
+                $query = "select *from event ORDER BY id DESC LIMIT 1;";
+                $result = mysqli_query($conn,$query);
+
+                $noOfEvents =  mysqli_num_rows($result);
+                $y=0;
+                while ($value = mysqli_fetch_array($result)) {
+
+                $imgs_arr = [];
+                $imgs_arr=unserialize($value['image']);
+                $count = count($imgs_arr);
+                    echo 
+                        "<div class='event'>
+      <div class='img-side'>";
+             for ($i=0;$i<$count;$i++){
+                 echo"<img class='mySlides{$y} img-rounded' src='../Operations/images/{$imgs_arr[$i]}' style = 'width:50%;'>";
+             }
+                $y += 1;
+            
+echo"
+      </div>
+      <div class='text-side'>
+        <h2>
+          $value[name]  $value[date]</h2>
+          $value[body]
+
+      </div>
+    </div> <br> <br> <br><div class='r-cont r-cont-center'><a href='../Pages/events.php'>
+                <div class='read-more'>View All</div>
+            </a></div>
+";
+}?>
             </div>
         </div>
-        <div class="r-cont r-cont-center"><a href="../Pages/events.php">
-                <div class="read-more">View All</div>
-            </a></div>
+        
             </div>
     <!-- Events END -->
     <?php include("../Template/footer.html");?>
     <!-- Body END -->
     <script type="text/javascript" src="../js/slider.js"></script>
+           <script type="text/javascript">
+    <?php  for($p=0;$p<$noOfEvents;$p++){  
+    echo"
+     var myIndex{$p} = 0;
+     carousel{$p}();
+    function carousel{$p}() {
+  var i;
+
+  var x = document.getElementsByClassName('mySlides{$p}');
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none';  
+  }
+  myIndex{$p}++;
+  if (myIndex{$p} > x.length) {myIndex{$p} = 1}    
+  x[myIndex{$p}-1].style.display = 'block';  
+  setTimeout(carousel{$p}, 2000); // Change image every 2 seconds
+}";
+            } ?>
+
+    </script>
 </body>
 </html>

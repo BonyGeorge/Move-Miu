@@ -53,12 +53,15 @@ body {
   display: flex;
   height: 100%;
   float: left;
+  width: 17%;
 }
 .logo {
   float: left;
   height: calc(100% - 20px);
+  position: relative;
   margin: 0 20px;
   align-self: center;
+  left: 17%;
 }
 .logo img {
   max-height: 100%;
@@ -186,7 +189,6 @@ body {
   background: #888;
   position: absolute;
   transition: opacity 0.3s, top 0.3s, bottom 0.3s, transform 0.3s;
-  display: none;
 }
 .menu-button-bar:nth-of-type(1) {
   top: 0;
