@@ -294,3 +294,4 @@ span.psw {
 </div>
 <div class="sidebar-overlay" onclick="menu()" id="sidebar-overlay"></div>
 </div>
+<script type="text/javascript" src="../js/menu.js"></script>
