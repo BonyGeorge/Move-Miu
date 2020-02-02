@@ -251,6 +251,9 @@ body {
   border-bottom: 1px solid #e4e4e4;
   color: #000;
 }
+.nav-sidebar-button:hover {
+  background-color: #d1cfcf;
+}
 .nav-sidebar-button i {
   float: left;
   margin: 0 15px;
