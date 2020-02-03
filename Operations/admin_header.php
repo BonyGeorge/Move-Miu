@@ -270,9 +270,15 @@ span.psw {
 <div class="marg"></div>
 <div class="sidebar" id="sidebar">
     <div class="nav-sidebar-buttons">
+        <?php if (!isset($_SESSION["type"])){ ?>
         <a href="../Login & Register/login.php">
-            <div class="nav-sidebar-button">login <i class="fas fa-user-plus"></i> </div>
+            <div class="nav-sidebar-button">Login <i class="fas fa-user-plus"></i> </div>
         </a>
+        <?php } else { ?>
+        <a href="../Login & Register/logout.php">
+            <div class="nav-sidebar-button">Logout <i class="fas fa-user-plus"></i> </div>
+        </a>
+        <?php } ?>
         <a href="../pages/">
             <div class="nav-sidebar-button">Home<i class="fas fa-home"></i> </div>
         </a>

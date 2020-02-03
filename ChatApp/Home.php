@@ -1,8 +1,10 @@
 <?php 
 session_start();
-if(!isset($_SESSION['username'])){
+if(!isset($_SESSION['username']))
+{
     header('location:../pages/');
 }
+else
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,8 +19,7 @@ if(!isset($_SESSION['username'])){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <style type="text/css">
-button
-{
+button {
     border: none;
     outline: 0;
     display: inline-block;
