@@ -11,6 +11,7 @@ $DB = new Database();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" sizes="128x128" href="../images/fav.png">
     <title>Mailing</title>
     <style type="text/css">
     select {
@@ -75,6 +76,17 @@ $DB = new Database();
         position: relative;
         left: 40%
     }
+    @media only screen and (max-width: 850px)
+    {
+        .mbutton 
+        {
+            left:10%;
+        }
+        #m
+        {
+            margin-left:-25%;
+        }
+    }
     </style>
 </head> 
 
@@ -127,7 +139,7 @@ $DB = new Database();
                 <?php if(isset ($_SESSION['error'])) { if ($_SESSION['error'] == 'error in sql') { echo "style='display: none;'"; }} ?>>
         </div>
         <br>
-        <div class='mbutton' style='left:42%'><input type="submit" class="send0" id="send0" name="send0"
+        <div class='mbutton' style='left:42%' id="m"><input type="submit" class="send0" id="send0" name="send0"
                 value="Send to all users"
                 <?php if(isset ($_SESSION['error'])) { if ($_SESSION['error'] == 'error in sql') { echo "style='display: none;'"; }} ?>>
         </div>

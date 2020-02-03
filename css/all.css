@@ -600,46 +600,6 @@ body {
 }
 /* Evenets Section END */
 /*  */
-/* Sponsors Section START */
-.spnsrs-sec {
-  border: 0;
-  text-align: center;
-}
-.spnsrs-sec .h-text {
-  margin-top: 30px;
-  font-size: 30px;
-  padding: 0;
-}
-.spnsrs-sec .h-text .h-emoji-cont {
-  height: 25px;
-  width: 25px;
-  line-height: 0px;
-  margin: 0 10px;
-}
-.sponsors-cont {
-  width: 80%;
-  padding: 5px;
-  margin: 0 auto;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-.sponsor {
-  width: 15%;
-  margin: 0 20px;
-  box-sizing: border-box;
-  padding: 5px;
-  text-align: center;
-}
-.sponsor img {
-  max-width: 100%;
-  max-height: 200px;
-}
-/* Sponsors Section END */
-
 /* Home END */
 /*  */
 
@@ -651,6 +611,9 @@ body {
   }
   .nav-buttons-cont {
     display: none;
+  }
+  #TeamHead{
+    margin-left: -55%;
   }
   .logo-cont {
     width: 100%;
