@@ -291,6 +291,12 @@ span.psw {
         <a href="../pages/Events.php">
             <div class="nav-sidebar-button">Our Events <i class="fas fa-calendar"></i> </div>
         </a>
+        <a href="../Operations/sendmail.php">
+            <div class="nav-sidebar-button">Send Mail <i class="fas fa-envelope"></i> </div>
+        </a>
+        <a href="../ChatApp/Home.php">
+            <div class="nav-sidebar-button">Chat room <i class="fas fa-comments"></i> </div>
+        </a>
     </div>
 
 </div>
