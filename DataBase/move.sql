@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2020 at 09:42 PM
--- Server version: 10.4.10-MariaDB
--- PHP Version: 7.3.12
+-- Generation Time: Feb 03, 2020 at 02:33 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -35,6 +35,24 @@ CREATE TABLE `active members` (
   `team` varchar(225) COLLATE utf8_bin NOT NULL,
   `faculty` varchar(225) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `attendance`
+--
+
+CREATE TABLE `attendance` (
+  `userid` varchar(25) COLLATE utf8_bin NOT NULL,
+  `date` varchar(50) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `attendance`
+--
+
+INSERT INTO `attendance` (`userid`, `date`) VALUES
+('111', 'Feb-Mon');
 
 -- --------------------------------------------------------
 
@@ -187,6 +205,12 @@ INSERT INTO `users` (`id`, `name`, `email`, `universityid`, `team`, `username`, 
 --
 ALTER TABLE `active members`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `attendance`
+--
+ALTER TABLE `attendance`
+  ADD PRIMARY KEY (`userid`,`date`);
 
 --
 -- Indexes for table `chat`

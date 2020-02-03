@@ -250,12 +250,9 @@ span.psw {
         <a href="../Pages/events.php">
             <div class="nav-button">Events <i class="fas fa-calendar"></i></div>
         </a>
-        <a href="../pages/index.php">
-            <div class="nav-button">Home <i class="fas fa-home"></i></div>
-        </a>
         <?php if(isset($_SESSION['type'])) { ?>
         <a href='../ChatApp/Home.php' style="width:auto;">
-            <div class="nav-button">Chat <i class="fas fa-plus"></i></div>
+            <div class="nav-button">Chat room <i class="fas fa-comments"></i></div>
         </a>
         <?php } ?>
     </div>
@@ -264,7 +261,7 @@ span.psw {
         <div class="menu-button-bar"></div>
         <div class="menu-button-bar"></div>
     </div>
-</div>
+</div>  
 <div class="marg"></div>
 <div class="sidebar" id="sidebar">
     <div class="nav-sidebar-buttons">
@@ -277,10 +274,6 @@ span.psw {
             <div class="nav-sidebar-button">Logout <i class="fas fa-user-plus"></i> </div>
         </a>
         <?php } ?>
-
-        <a href="../pages/">
-            <div class="nav-sidebar-button">Home<i class="fas fa-home"></i> </div>
-        </a>
         <a href="../Pages/team.php">
             <div class="nav-sidebar-button">Meet The Team <i class="fas fa-users"></i> </div>
         </a>
@@ -292,7 +285,7 @@ span.psw {
         </a>
         <?php if(isset($_SESSION['username'])) { ?>
         <a href="../ChatApp/Home.php">
-            <div class="nav-sidebar-button">Chat <i class="fas fa-comments"></i> </div>
+            <div class="nav-sidebar-button">Chat room<i class="fas fa-comments"></i> </div>
         </a>
         <?php } ?>
     </div>

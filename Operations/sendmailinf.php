@@ -1,11 +1,11 @@
 <?php
 session_start();
-include 'Database.php';
+include '../DataBase/Database.php';
 $DB = new Database();
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception; 
 
-require 'composer/vendor/autoload.php'; 
+require '../composer/vendor/autoload.php'; 
 
 date_default_timezone_set('Etc/UTC'); 
 
@@ -18,7 +18,7 @@ $mail->SMTPAuth = true;
 $mail->SMTPSecure = 'tls'; 
 $mail->Username = 'move20miu2020@gmail.com'; 
 $mail->Password = 'rywuqlxruswomhuj'; 
-$mail->setFrom('move20miu2020@gmail.com', $_SESSION['name']. ' from move'); 
+$mail->setFrom('move20miu2020@gmail.com', $_SESSION['name']. ' from Move'); 
 $mail->CharSet = 'utf-8';
 $mail->isHTML(true);
 
@@ -73,8 +73,6 @@ if (isset($_POST['send0'])){
         $mail->send();
 
     }
-    
-
 }
 header('location:sendmail.php');
 ?>

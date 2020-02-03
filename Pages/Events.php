@@ -55,46 +55,46 @@ hr.botm-line {
                 $count = count($imgs_arr);
                     echo 
                         "<div class='event'>
-      <div class='img-side'>";
+                        <div class='img-side'>";
              for ($i=0;$i<$count;$i++){
                  echo"<img class='mySlides{$y} img-rounded' src='../Operations/images/{$imgs_arr[$i]}' style = 'width:50%;'>";
              }
                 $y += 1;
             
-echo"
-      </div>
-      <div class='text-side'>
-        <h2>
-          $value[name]  $value[date]</h2>
-          $value[body]
+            echo"
+            </div>
+            <div class='text-side'>
+                <h2>
+                $value[name]  $value[date]</h2>
+                $value[body]
 
-      </div>
-    </div> <br> <br> <br>        <center>  <hr class='botm-line'></center>
-";
+            </div>
+            </div> <br> <br> <br>        <center>  <hr class='botm-line'></center>
+        ";
 }?>
             </div>
         </div>
         <!-- About Us END -->
         <?php include('../Template/footer.html');?>
         <!-- Body END -->
-        <script type="text/javascript" src="./js/slider.js"></script>
+        <script type="text/javascript" src="../js/slider.js"></script>
         <script type="text/javascript">
     <?php  for($p=0;$p<$noOfEvents;$p++){  
     echo"
-     var myIndex{$p} = 0;
-     carousel{$p}();
-    function carousel{$p}() {
-  var i;
+                var myIndex{$p} = 0;
+            carousel{$p}();
+            function carousel{$p}() {
+        var i;
 
-  var x = document.getElementsByClassName('mySlides{$p}');
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';  
-  }
-  myIndex{$p}++;
-  if (myIndex{$p} > x.length) {myIndex{$p} = 1}    
-  x[myIndex{$p}-1].style.display = 'block';  
-  setTimeout(carousel{$p}, 2000); // Change image every 2 seconds
-}";
+        var x = document.getElementsByClassName('mySlides{$p}');
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = 'none';  
+        }
+        myIndex{$p}++;
+        if (myIndex{$p} > x.length) {myIndex{$p} = 1}    
+        x[myIndex{$p}-1].style.display = 'block';  
+        setTimeout(carousel{$p}, 2000); // Change image every 2 seconds
+        }"; 
             } ?>
 
     </script>
