@@ -1,3 +1,9 @@
+<?php 
+if(!isset($_SESSION['username'])){
+    header('location:../pages/');
+}
+else
+?>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/all.css">
 <link rel="icon" type="image/png" href="img/titleBar.png" />

@@ -290,6 +290,11 @@ span.psw {
         <a href="../Pages/events.php">
             <div class="nav-sidebar-button">Our Events <i class="fas fa-calendar"></i> </div>
         </a>
+        <?php if(isset($_SESSION['username'])) { ?>
+        <a href="../ChatApp/Home.php">
+            <div class="nav-sidebar-button">Chat <i class="fas fa-comments"></i> </div>
+        </a>
+        <?php } ?>
     </div>
 </div>
 <div class="sidebar-overlay" onclick="menu()" id="sidebar-overlay"></div>
