@@ -195,7 +195,7 @@ span.psw {
         </div>
     </div>
     <div class="nav-buttons-cont">
-        <a href="../Login & Register/logout.php">
+        <a href="../Login%20&%20Register/logout.php">
             <div class="nav-button nav-button-sl">Logout</div>
         </a>
         <div class="nav-button nav-button-about">About <i class="fas fa-user-tie"></i>
@@ -252,6 +252,9 @@ span.psw {
         <a href='../Operations/sendmail.php' style="width:auto;">
             <div class="nav-button">Send Mail <i class="fas fa-plus"></i></div>
         </a>
+         <a href='../Operations/scanQR.php' style="width:auto;">
+            <div class="nav-button">Take Attendance <i class="fas fa-plus"></i></div>
+        </a>
         <?php if(isset($_SESSION['type'])) { ?>
         <a href='../ChatApp/Home.php' style="width:auto;">
             <div class="nav-button">Chat <i class="fas fa-plus"></i></div>
@@ -267,15 +270,9 @@ span.psw {
 <div class="marg"></div>
 <div class="sidebar" id="sidebar">
     <div class="nav-sidebar-buttons">
-        <?php if (!isset($_SESSION["type"])){ ?>
         <a href="../Login & Register/login.php">
-            <div class="nav-sidebar-button">Login <i class="fas fa-user-plus"></i> </div>
+            <div class="nav-sidebar-button">login <i class="fas fa-user-plus"></i> </div>
         </a>
-        <?php } else { ?>
-        <a href="../Login & Register/logout.php">
-            <div class="nav-sidebar-button">Logout <i class="fas fa-user-plus"></i> </div>
-        </a>
-        <?php } ?>
         <a href="../pages/">
             <div class="nav-sidebar-button">Home<i class="fas fa-home"></i> </div>
         </a>
@@ -287,12 +284,6 @@ span.psw {
         </a>
         <a href="../pages/Events.php">
             <div class="nav-sidebar-button">Our Events <i class="fas fa-calendar"></i> </div>
-        </a>
-        <a href="../Operations/sendmail.php">
-            <div class="nav-sidebar-button">Send Mail <i class="fas fa-envelope"></i> </div>
-        </a>
-        <a href="../ChatApp/Home.php">
-            <div class="nav-sidebar-button">Chat <i class="fas fa-comments"></i> </div>
         </a>
     </div>
 
