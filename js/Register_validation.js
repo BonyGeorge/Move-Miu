@@ -68,7 +68,7 @@ function checkuserr() {
         data:'username='+$("#UserNamee").val(),
         type:"POST",
 
-        success:function(data)
+        success:function(data)``
         {
             $("#usernamE").html(data);
 
