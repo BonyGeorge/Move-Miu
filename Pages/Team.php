@@ -27,7 +27,7 @@ if(isset($_SESSION["type"])){
 <div class="sec">
  <br>
 <div class="sec-text-cont" >
-<div class="h-text" style="left:260px;">Our Teams.</div>
+<div class="h-text" id="" >Our Teams.</div>
 <div class="team-members-cont">
     <div class="team-member">
         <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>

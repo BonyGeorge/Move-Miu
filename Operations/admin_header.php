@@ -190,7 +190,7 @@ span.psw {
 </head>
 <div id="header">
     <div class="logo-cont">
-        <div class="logo"><a href="./" style="">
+        <div class="logo"><a href="../" style="">
                 <img src="../images/logo.png"></a>
         </div>
     </div>
@@ -250,14 +250,14 @@ span.psw {
             <div class="nav-button">Add Event <i class="fas fa-plus"></i></div>
         </a> <!-- Add event-->
         <a href='../Operations/sendmail.php' style="width:auto;">
-            <div class="nav-button">Send Mail <i class="fas fa-plus"></i></div>
+            <div class="nav-button">Send Mail <i class="fas fa fa-envelope"></i></div>
         </a>
          <a href='../Operations/scanQR.php' style="width:auto;">
-            <div class="nav-button">Take Attendance <i class="fas fa-plus"></i></div>
+            <div class="nav-button">Take Attendance <i class="fas fa fa-qrcode"></i></div>
         </a>
         <?php if(isset($_SESSION['type'])) { ?>
         <a href='../ChatApp/Home.php' style="width:auto;">
-            <div class="nav-button">Chat <i class="fas fa-plus"></i></div>
+            <div class="nav-button">Chat room<i class="fas fa-comments"></i></div>
         </a>
         <?php } ?>
     </div>

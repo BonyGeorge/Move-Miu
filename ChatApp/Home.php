@@ -1,14 +1,6 @@
 <?php 
-<<<<<<< HEAD
 session_start();
 if(!isset($_SESSION['username'])){
-||||||| merged common ancestors
-if(!isset($_SESSION['username'])){
-=======
-session_start();
-if(!isset($_SESSION['username']))
-{
->>>>>>> 785095e78b0158a5723eacb3cb4408cec549e76d
     header('location:../pages/');
 }
 ?>
@@ -112,7 +104,6 @@ $(document).ready(function()
 
     })
 </script>
-<?php session_start() ?>
 <?php
 
 if(isset($_SESSION['id']) && !empty($_SESSION['id']))
