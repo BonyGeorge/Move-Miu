@@ -252,7 +252,7 @@ span.psw {
         <a href='../Operations/sendmail.php' style="width:auto;">
             <div class="nav-button">Send Mail <i class="fas fa fa-envelope"></i></div>
         </a>
-         <a href='../Operations/scanQR.php' style="width:auto;">
+        <a href='../Operations/scanQR.php' style="width:auto;">
             <div class="nav-button">Take Attendance <i class="fas fa fa-qrcode"></i></div>
         </a>
         <?php if(isset($_SESSION['type'])) { ?>
@@ -270,15 +270,6 @@ span.psw {
 <div class="marg"></div>
 <div class="sidebar" id="sidebar">
     <div class="nav-sidebar-buttons">
-        <?php if (!isset($_SESSION["type"])){ ?>
-        <a href="../Login & Register/login.php">
-            <div class="nav-sidebar-button">Login <i class="fas fa-user-plus"></i> </div>
-        </a>
-        <?php } else { ?>
-        <a href="../Login & Register/logout.php">
-            <div class="nav-sidebar-button">Logout <i class="fas fa-user-plus"></i> </div>
-        </a>
-        <?php } ?>
         <a href="../pages/">
             <div class="nav-sidebar-button">Home<i class="fas fa-home"></i> </div>
         </a>
@@ -288,6 +279,7 @@ span.psw {
         <a onclick="document.getElementById('id99').style.display='block'" style="width:auto;">
             <div class="nav-sidebar-button">Add Admin <i class="fas fa-user"></i></div>
         </a>
+
         <a href="../pages/Team.php">
             <div class="nav-sidebar-button">Meet The Team <i class="fas fa-users"></i> </div>
         </a>
@@ -306,6 +298,15 @@ span.psw {
         <a href="../ChatApp/Home.php">
             <div class="nav-sidebar-button">Chat room <i class="fas fa-comments"></i> </div>
         </a>
+        <?php if (!isset($_SESSION["type"])){ ?>
+        <a href="../Login & Register/login.php">
+            <div class="nav-sidebar-button">Login <i class="fa fa-sign-in-alt fa-sm icon-button"></i> </div>
+        </a>
+        <?php } else { ?>
+        <a href="../Login & Register/logout.php">
+            <div class="nav-sidebar-button">Logout <i class="fa fa-sign-out-alt fa-sm icon-button"></i> </div>
+        </a>
+        <?php } ?>
     </div>
 
 </div>
