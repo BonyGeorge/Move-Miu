@@ -124,6 +124,7 @@ label .req {
   margin: 2px;
   color: #1ab188;
 }
+ 
 label.active .req {
   opacity: 0;
 }
@@ -188,6 +189,8 @@ textarea {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-appearance: none;
+  width: -50%;
+
 }
 .button:hover, .button:focus {
   background: #179b77;
@@ -195,10 +198,160 @@ textarea {
 
 .button-block {
   display: block;
-  width: 100%;
+  width: -50%;
+  height: 10px;
 }
 
 .forgot {
   margin-top: -20px;
   text-align: right;
 }
+        /* Regiseer */
+        #font{  
+          color: Green;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 150%;
+          font: italic  27px/30px;
+          top:-23px;
+          
+          }
+          
+                  #UserNamee {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 20px; 
+            width: 100%;
+            height: 50px;  
+            
+          }
+          #fullname {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 20px; 
+            width: 100%;
+            height: 50px;  
+            
+          }
+          #Email {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 20px; 
+            width: 100%;
+            height: 20px;  
+          
+            
+          }
+          #id {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 15px; 
+            width:100%;
+            height: 20px;  
+            
+          }
+          #passReg {
+            border-radius: 20px;
+            border: 2px solid #73AD21;
+            padding: 10px; 
+            width: 100%;
+            height: 50px;  
+          
+            
+          }
+          
+          /* Login css */
+          #rcorners2 {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 20px; 
+            width: 100%;
+            height: 50px;  
+            
+          }
+          #user{
+          
+            color: Green;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 200%;
+            font: italic  27px/30px;
+            top:-23px;
+            
+          }
+          #pass{
+          
+          color: Green;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 200%;
+          font: italic  27px/30px;
+          top:-23px;
+          
+          }
+          
+          h1 {
+            text-shadow: 2px 2px #7CFC00;
+            color: Green;
+            font-family: verdana;
+            font-size: 300%;
+             height:100%;
+          
+            font: italic bold 40px/30px Georgia, serif;
+          
+          
+          }
+          
+          #remember_me {
+          width: 45px;
+          height: 15px;
+          background: #555;
+          margin: 20px 80px;
+          left:305px;
+          top:0px;
+          
+          position: relative;
+          border-radius: 5px;
+          }
+          #remember {
+          
+            color: Green;
+            font-family: verdana;
+            font-size: 300%;
+            font: italic bold 12px/30px Georgia, serif;
+          
+          }
+          #image {
+          
+          /* margin-bottom:-20%; */
+          margin-top:10%;
+          margin-left:200px;
+          height: 620px;
+          width: 50%;
+          
+          }
+          #square {
+          
+              margin-top:-50%;
+              margin-left:1070px;
+              height: 622px;
+            width: 30%;
+          
+          }
+          
+          #buttonLog {
+          
+          margin-top:-10%;
+          margin-left:100px;
+          height: 10%;
+          width: 300px;
+          
+          }
+          #forgetPass{
+              margin-top:-50px;
+          
+              font-size: 20px;
+          
+          
+          height: 50px;
+          width: 100px;
+          }
+          
+          
