@@ -7,12 +7,11 @@ $DB = new Database();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Mailing</title>
     <style type="text/css">
     select {
         background-color: #3bde40;
@@ -77,13 +76,12 @@ $DB = new Database();
         left: 40%
     }
     </style>
-</head>
+</head> 
 
 <body>
     <br>
     <br>
     <h1 style=''>Send mail</h1>
-
 
     <form method='post' action='sendmailinf.php'>
         <label style='position : relative; left :33%'>User :</label>
@@ -111,15 +109,15 @@ $DB = new Database();
         <!-- The mail form, functions are in backend.js using ajax -->
         <!-- Getting the mail 'from' from the session -->
         <br>
-        <legend style='text-align:center;'>From:
-            <?php if(isset($_SESSION["name"])){echo($_SESSION["name"] . ' from move');}?></legend>
+        <legend style='text-align:center;'>From :
+            <?php if(isset($_SESSION["name"])){echo($_SESSION["name"] . ' From Move');}?></legend>
         <br>
-        <legend style='text-align:center;'>Mail subject:</legend>
+        <legend style='text-align:center;'>Mail subject :</legend>
         <div id='tarea'>
             <input type="text" name="mailsubject" class="" id="msubject" required>
         </div>
         <br>
-        <legend style='text-align:center;'>Mail content:</legend>
+        <legend style='text-align:center;'>Mail content :</legend>
         <div id='tareaa'>
             <textarea name="mailcontent" rows="8" cols="50" class="" id="mcontent" required></textarea>
         </div>
@@ -134,7 +132,6 @@ $DB = new Database();
                 <?php if(isset ($_SESSION['error'])) { if ($_SESSION['error'] == 'error in sql') { echo "style='display: none;'"; }} ?>>
         </div>
     </form>
-
 </body>
-
 </html>
+<?php include('../Template/footer.html');?>

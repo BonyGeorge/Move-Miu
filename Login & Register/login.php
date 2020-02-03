@@ -161,14 +161,12 @@ border-radius: 5px;
                             autocomplete="off" />
                         <span style="color:red; display:block; margin-bottom:20px;" id="password"></span>
                     </div>
-                    <button type="submit" onclick="return check();" class="button button-block" />Register</button>
+                    <button type="submit" onclick="return check();" class="button button-block">Register</button>
 
                 </form>
 
                 </div>
-                </div>
-
-                
+                </div>                
         </div><!-- tab-content -->
     </div> <!-- /form -->
     <br><br><br>
