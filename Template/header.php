@@ -264,15 +264,6 @@ span.psw {
 <div class="marg"></div>
 <div class="sidebar" id="sidebar">
     <div class="nav-sidebar-buttons">
-        <?php if (!isset($_SESSION["type"])){ ?>
-        <a href="../Login & Register/login.php">
-            <div class="nav-sidebar-button">Login <i class="fas fa-user-plus"></i> </div>
-        </a>
-        <?php } else { ?>
-        <a href="../Login & Register/logout.php">
-            <div class="nav-sidebar-button">Logout <i class="fas fa fa-sign-out"></i> </div>
-        </a>
-        <?php } ?>
         <a href="../Pages/team.php">
             <div class="nav-sidebar-button">Meet The Team <i class="fas fa-users"></i> </div>
         </a>
@@ -288,6 +279,15 @@ span.psw {
         </a>
         <a href="../Operations/scanQR.php">
             <div class="nav-sidebar-button">Scan for Attendance<i class="fas fa-comments"></i> </div>
+        </a>
+        <?php } ?>
+         <?php if (!isset($_SESSION["type"])){ ?>
+        <a href="../Login & Register/login.php">
+            <div class="nav-sidebar-button">Login <i class="fa fa-sign-in-alt fa-sm icon-button"></i> </div>
+        </a>
+        <?php } else { ?>
+        <a href="../Login & Register/logout.php">
+            <div class="nav-sidebar-button">Logout <i class="fa fa-sign-out-alt fa-sm icon-button"></i> </div>
         </a>
         <?php } ?>
     </div>
