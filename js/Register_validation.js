@@ -26,7 +26,7 @@ function validateFName(text){
 
     if(text.value==""){
 
-        document.getElementById("name").innerHTML="full name can't be empty";
+        document.getElementById("name").innerHTML="Name can't be empty";
         fullname= false;
 
 
@@ -35,7 +35,7 @@ function validateFName(text){
 
     else if(text.value.match(regex)){
 
-        document.getElementById("name").innerHTML="name must be letters only";
+        document.getElementById("name").innerHTML="Name must be letters only";
         fullname= false;
     }
     else
@@ -72,7 +72,7 @@ function checkuserr() {
         {
             $("#usernamE").html(data);
 
-            if(data=="valid username"){
+            if(data=="Valid username"){
                 Username=true;
             }
             else{
@@ -94,7 +94,7 @@ function checkmail() {
         {
             $("#mail").html(data);
 
-            if(data=="valid mail"){
+            if(data=="Valid mail"){
                 Email=true;
             }
             else{

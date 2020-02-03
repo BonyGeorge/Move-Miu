@@ -56,7 +56,7 @@ if(isset($_POST['mail'])){
     }
     else{
 
-        echo"invalid mail";
+        echo"Invalid mail";
     }
 }
 

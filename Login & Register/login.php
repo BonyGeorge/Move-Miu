@@ -118,7 +118,7 @@ border-radius: 5px;
                     <div class="top-row">
                         <div class="field-wrap">
                             <label>
-                                Name<span class="req">*</span>
+                                Full Name<span class="req">*</span>
                             </label>
                             <input onblur="validateFName(this)" name="fullname" id="fullname" type="text" required
                                 autocomplete="off" />
