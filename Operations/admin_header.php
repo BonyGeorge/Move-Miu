@@ -252,12 +252,12 @@ span.psw {
         <a href='../Operations/sendmail.php' style="width:auto;">
             <div class="nav-button">Send Mail <i class="fas fa-plus"></i></div>
         </a>
-         <a href='../Operations/scanQR.php' style="width:auto;">
+        <a href='../Operations/scanQR.php' style="width:auto;">
             <div class="nav-button">Take Attendance <i class="fas fa-plus"></i></div>
         </a>
         <?php if(isset($_SESSION['type'])) { ?>
         <a href='../ChatApp/Home.php' style="width:auto;">
-            <div class="nav-button">Chat <i class="fas fa-plus"></i></div>
+            <div class="nav-button">Chat Room<i class="fas fa-plus"></i></div>
         </a>
         <?php } ?>
     </div>
@@ -270,9 +270,15 @@ span.psw {
 <div class="marg"></div>
 <div class="sidebar" id="sidebar">
     <div class="nav-sidebar-buttons">
+        <?php if (!isset($_SESSION["type"])){ ?>
         <a href="../Login & Register/login.php">
-            <div class="nav-sidebar-button">login <i class="fas fa-user-plus"></i> </div>
+            <div class="nav-sidebar-button">Login <i class="fas fa-user-plus"></i> </div>
         </a>
+        <?php } else { ?>
+        <a href="../Login & Register/logout.php">
+            <div class="nav-sidebar-button">Logout <i class="fas fa-user-plus"></i> </div>
+        </a>
+        <?php } ?>
         <a href="../pages/">
             <div class="nav-sidebar-button">Home<i class="fas fa-home"></i> </div>
         </a>

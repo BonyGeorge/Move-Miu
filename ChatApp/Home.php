@@ -1,16 +1,10 @@
 <?php 
-<<<<<<< HEAD
-session_start();
-if(!isset($_SESSION['username'])){
-||||||| merged common ancestors
-if(!isset($_SESSION['username'])){
-=======
 session_start();
 if(!isset($_SESSION['username']))
 {
->>>>>>> 785095e78b0158a5723eacb3cb4408cec549e76d
     header('location:../pages/');
 }
+else
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,8 +19,7 @@ if(!isset($_SESSION['username']))
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <style type="text/css">
-button
-{
+button {
     border: none;
     outline: 0;
     display: inline-block;
