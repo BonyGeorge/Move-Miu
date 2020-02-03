@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="icon" sizes="128x128" href="../images/fav.png">
     <meta name="theme-color" content="#93ff91">
-    <title>Move</title>
+    <title>Teams</title>
   </head>
   <body>
 
@@ -27,7 +27,7 @@ if(isset($_SESSION["type"])){
 <div class="sec">
  <br>
 <div class="sec-text-cont" >
-<div class="h-text" id="" >Our Teams.</div>
+<div class="h-text" id="TeamHead"style="left:260px;">Our Teams.</div>
 <div class="team-members-cont">
     <div class="team-member">
         <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>

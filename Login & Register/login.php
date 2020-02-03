@@ -7,6 +7,7 @@
         <script src="../js/Register_validation.js"> </script>
         <script src="../js/jquery-3.3.1.min.js" ></script>
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="icon" sizes="128x128" href="../images/fav.png">
         <style>
         /* Regiseer */
         #font{  

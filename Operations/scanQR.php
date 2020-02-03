@@ -69,3 +69,4 @@ include("../Template/header.php");
 
     </body>
 </html>
+<?php include('../Template/footer.html');?>

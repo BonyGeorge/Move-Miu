@@ -270,16 +270,6 @@ span.psw {
 <div class="marg"></div>
 <div class="sidebar" id="sidebar">
     <div class="nav-sidebar-buttons">
-        <a href="../pages/">
-            <div class="nav-sidebar-button">Home<i class="fas fa-home"></i> </div>
-        </a>
-        <a onclick="document.getElementById('id100').style.display='block'" style="width:auto;">
-            <div class="nav-sidebar-button">Add Event <i class="fas fa-plus"></i></div>
-        </a>
-        <a onclick="document.getElementById('id99').style.display='block'" style="width:auto;">
-            <div class="nav-sidebar-button">Add Admin <i class="fas fa-user"></i></div>
-        </a>
-
         <a href="../pages/Team.php">
             <div class="nav-sidebar-button">Meet The Team <i class="fas fa-users"></i> </div>
         </a>
@@ -289,11 +279,17 @@ span.psw {
         <a href="../pages/Events.php">
             <div class="nav-sidebar-button">Our Events <i class="fas fa-calendar"></i> </div>
         </a>
+        <a onclick="document.getElementById('id100').style.display='block'" style="width:auto;">
+            <div class="nav-sidebar-button">Add Event <i class="fas fa-plus"></i></div>
+        </a>
+        <a onclick="document.getElementById('id99').style.display='block'" style="width:auto;">
+            <div class="nav-sidebar-button">Add Admin <i class="fas fa-user"></i></div>
+        </a>
         <a href="../Operations/sendmail.php">
             <div class="nav-sidebar-button">Send Mail <i class="fas fa-envelope"></i> </div>
         </a>
         <a href='../Operations/scanQR.php' style="width:auto;">
-            <div class="nav-sidebar-button">Take Attendance <i class="fas fa-plus"></i></div>
+            <div class="nav-sidebar-button">Take Attendance <i class="fas fa fa-qrcode"></i></div>
         </a>
         <a href="../ChatApp/Home.php">
             <div class="nav-sidebar-button">Chat room <i class="fas fa-comments"></i> </div>

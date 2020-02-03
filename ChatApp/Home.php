@@ -8,13 +8,12 @@ else
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/all.css">
+<link rel="stylesheet" href="../css/style.css">
 <link rel="icon" type="image/png" href="img/titleBar.png" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Chat room</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -105,6 +104,7 @@ $(document).ready(function()
 
     })
 </script>
+<body>
 <?php
 
 if(isset($_SESSION['id']) && !empty($_SESSION['id']))
@@ -136,3 +136,7 @@ if(isset($_SESSION['type']))
         </button>
     </div>
 </div>
+</body>
+</html>
+<br><br><br>
+<?php include('../Template/footer.html');?>
