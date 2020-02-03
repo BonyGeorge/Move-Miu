@@ -105,7 +105,6 @@ $(document).ready(function()
 
     })
 </script>
-<?php session_start() ?>
 <?php
 
 if(isset($_SESSION['id']) && !empty($_SESSION['id']))
