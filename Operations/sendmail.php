@@ -94,7 +94,6 @@ $DB = new Database();
     <br>
     <br>
     <h1 style=''>Send mail</h1>
-
     <form method='post' action='sendmailinf.php'>
         <label style='position : relative; left :33%'>User :</label>
         <select style='width :25%; position : relative; left :33%' class="massmsgdrpdwn" id="mailone" name="selection"

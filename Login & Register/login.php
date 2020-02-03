@@ -18,6 +18,17 @@ font: italic  27px/30px;
 top:-23px;
 
 }
+h1 {
+            text-shadow: 2px 2px #7CFC00;
+            color: Green;
+            font-family: verdana;
+            font-size: 300%;
+             height:100%;
+          
+            font: italic bold 40px/30px Georgia, serif;
+          
+          
+          }
 
         #UserNamee {
   border-radius: 25px;
@@ -107,7 +118,7 @@ width: 45px;
 height: 15px;
 background: #555;
 margin: 20px 80px;
-left:305px;
+left:200px;
 top:0px;
 
 position: relative;
@@ -119,7 +130,8 @@ border-radius: 5px;
   font-family: verdana;
   font-size: 300%;
   font: italic bold 12px/30px Georgia, serif;
-
+  text-alignment:center;
+  margin-left:-100px;
 }
 #image {
 
@@ -157,8 +169,6 @@ height: 50px;
 width: 100px;
 }
 
-
-
 </style>
     </head>
     
@@ -166,9 +176,7 @@ width: 100px;
     <img src="Move.jpeg"  id="image"> 
     <?php include("../Template/header.php");?>
 
-   
-
-        <div class="form" id="square" >
+        <div class="form" id="square" style="margin-left:1000px;bottom:50px;">
        
 
             <ul class="tab-group">
@@ -185,7 +193,7 @@ width: 100px;
                                 User Name:<span  class="req"></span>
                             </label>
                             </br>
-                            <input name="Username" id="rcorners2" placeholder="User Name" type="text"required autocomplete="off"/>
+                            <input name="Username" id="rcorners2"  type="text"required autocomplete="off"/>
                         </div>
 
                         <div class="field-wrap">
@@ -193,16 +201,13 @@ width: 100px;
                                 Password:<span class="req"></span>
                             </label>
                             </br>
-                            <input name="Password" id="rcorners2" placeholder="Password" type="password"required autocomplete="off"/>
+                            <input name="Password" id="rcorners2" type="password"required autocomplete="off"/>
                         </div>
                         <div class="field-wrap">
                             <input type="checkbox"  name="remember_me" id="remember_me"><label id="remember" style="top:-15px;left:230px;font-size: 20px;">Remember Me</label>
                         </div>
-                        <br>
-                        
-            
-                        <button class="button button-block" id="buttonLog">Log In</button>
-                        <a id="forgetPass">Forget Password</a>
+                        <a id="forgetPass" href="#" style="margin-left:23%;">Forget Your Password?!</a><br><br><br><br><br>
+                        <button class="button button-block" id="buttonLog   ">Log In</button>
                     </form>
             </div>
             <div id="signup">
@@ -212,8 +217,8 @@ width: 100px;
 
                     <div class="top-row">
                         <div class="field-wrap">
-                            <label>
-                                Full Name<span class="req">*</span>
+                            <label id="font" style="margin-top:-3%;">
+                                Full Name:<span class="req">*</span>
                             </label>
                             <input onblur="validateFName(this)" name="fullname" id="fullname" type="text" required
                                 autocomplete="off" />
@@ -244,7 +249,7 @@ width: 100px;
                         <label id="font" style="margin-top:-5%;">
                             University ID:<span class="req">*</span>
                         </label>
-                        <input onblur="validateUniID(this)" name="id" type="text" required autocomplete="off" id="id" />
+                        <input onblur="validateUniID(this)" name="id" type="text" required autocomplete="off" id="id" maxlength="9">
                         <span style="color:red; display:block; margin-bottom:20px;" id="uniID"></span>
 
                     </div>
@@ -254,20 +259,18 @@ width: 100px;
                             Password:<span class="req" style=" display: inline-block;">*Minimum 6 characters!</span>
                         </label>
                         <input onblur="validatepassword(this)" name="password" type="password" id="passReg" required
-                            autocomplete="off" />
+                            autocomplete="off">
                         <span style="color:red; display:block; margin-bottom:20px;"></span>
                     </div>
-                    <button type="submit" onclick="return check();" class="button button-block" id="buttonLog">Register</button>
-
+                    <button type="submit" onclick="return check();" class="button button-block" id="buttonLog" style="margin-left:70px;">Register</button>
                 </form>
-
                 </div>
                 </div>                
         </div><!-- tab-content -->
     </div> <!-- /form -->
     <br><br><br>
     <script src="../js/script.js"></script>
-    <script type="text/javascript" src="../js/ .js"></script>
+    <script type="text/javascript" src="../js/slider.js"></script>
  </body>
 </html>
 <?php include('../Template/footer.html');?>
