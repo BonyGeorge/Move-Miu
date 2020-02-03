@@ -50,7 +50,7 @@ cursor: pointer;
 width: 100%;
 }
 
-//button:hover {
+button:hover {
 opacity: 0.8;
 }
 
@@ -203,8 +203,7 @@ span.psw {
             <div class="nav-button nav-button-sl">Logout</div>
         </a>
         <?php } ?>
-        <div class="nav-button nav-button-about">About <i class="fas fa-user-tie"></i>
-
+        <div class="nav-button nav-button-about">About<i class="fas fa-user-tie"></i>
 
             <div class="about-buttons-cont">
                 <!--  -->
@@ -286,6 +285,9 @@ span.psw {
         <?php if(isset($_SESSION['username'])) { ?>
         <a href="../ChatApp/Home.php">
             <div class="nav-sidebar-button">Chat room<i class="fas fa-comments"></i> </div>
+        </a>
+        <a href="../Operations/scanQR.php">
+            <div class="nav-sidebar-button">Scan for Attendance<i class="fas fa-comments"></i> </div>
         </a>
         <?php } ?>
     </div>

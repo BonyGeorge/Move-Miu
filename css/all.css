@@ -716,6 +716,9 @@ body {
     padding: 10px;
     margin: 5px 5px;
   }
+  .h-text{
+    margin-left:-55%;
+  }
   .sec-cont-s h1 {
     line-height: 35px;
   }
