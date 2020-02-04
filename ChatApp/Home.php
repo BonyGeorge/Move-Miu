@@ -40,7 +40,7 @@ $(document).ready(function()
                 objDiv[0].scrollTop = objDiv[0].scrollHeight;
             }
 
-        }, 100);
+        }, 300);
 
         $('#chat').keyup(function(e) {
             if (e.keyCode == 13) {
@@ -104,8 +104,9 @@ $(document).ready(function()
 
     })
 </script>
+
 <body>
-<?php
+    <?php
 
 if(isset($_SESSION['id']) && !empty($_SESSION['id']))
 {
@@ -122,21 +123,22 @@ if(isset($_SESSION['type']))
      include('../Template/header.php');
 }  
 ?>
-<center>
-    <h1>Welcome <?php echo $_SESSION['username'];?>.</h1>
-</center>
+    <center>
+        <h1>Welcome <?php echo $_SESSION['username'];?>.</h1>
+    </center>
 
-<div id='text'></div>
+    <div id='text'></div>
 
-<div id='container' style='width:100%; border:1px solid #87c197;'>
-    <textarea class="form-control" id="chat" placeholder="Enter Your Reply..."
-        style='border-style:none none  none; border-color:black; width:100%; display:block;box-sizing:border-box;border-width:1px; margin-bottom:1px;'></textarea>
-    <div style='width:100%; box-sizing:border-box; height:35px;padding:5px;'>
-        <button style='float:right'><i class="fa fa-paper-plane read-more" aria-hidden="true"></i>
-        </button>
+    <div id='container' style='width:100%; border:1px solid #87c197;'>
+        <textarea class="form-control" id="chat" placeholder="Enter Your Reply..."
+            style='border-style:none none  none; border-color:black; width:100%; display:block;box-sizing:border-box;border-width:1px; margin-bottom:1px;'></textarea>
+        <div style='width:100%; box-sizing:border-box; height:35px;padding:5px;'>
+            <button style='float:right'><i class="fa fa-paper-plane read-more" aria-hidden="true"></i>
+            </button>
+        </div>
     </div>
-</div>
 </body>
+
 </html>
 <br><br><br>
 <?php include('../Template/footer.html');?>

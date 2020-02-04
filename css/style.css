@@ -1,42 +1,50 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-html{
-  font-family:sans-serif;
-  -ms-text-size-adjust:100%;
-  -webkit-text-size-adjust:100%
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 body {
-  margin:0}
-a {background-color:transparent
+  margin: 0;
 }
-a:active,a:hover {
-  outline:0
-}abbr[title] {
-  border-bottom:1px dotted
+a {
+  background-color: transparent;
 }
-b,strong {
-  font-weight:bold
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
 }
 dfn {
-  font-style:italic
+  font-style: italic;
 }
-h1{
-  font-size:2em;
-  margin:0.67em 0
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
 }
-mark{
-  background:#ff0;
-  color:#000
+mark {
+  background: #ff0;
+  color: #000;
 }
-small{
-  font-size:80%
+small {
+  font-size: 80%;
 }
-sub,sup{
-  font-size:75%;
-  line-height:0;
-  position:relative;
-  vertical-align:baseline
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
-*:not(.footer), *:before, *:after {
+*:not(.footer),
+*:before,
+*:after {
   box-sizing: border-box;
 }
 html {
@@ -44,13 +52,13 @@ html {
 }
 body {
   background: white;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
 }
 a {
   text-decoration: none;
   color: #1ab188;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 a:hover {
   color: #179b77;
@@ -59,7 +67,7 @@ a:hover {
 .form {
   background: white;
   padding: 20px;
-  color:black;
+  color: black;
   max-width: 700px;
   margin: 10px auto;
   border-radius: 8px;
@@ -80,14 +88,14 @@ a:hover {
   text-decoration: none;
   padding: 15px;
   background: rgba(160, 179, 176, 0.25);
-  color:green;
+  color: green;
   font-size: 20px;
   float: left;
   width: 50%;
   text-align: center;
   cursor: pointer;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 .tab-group li a:hover {
   background: #179b77;
@@ -108,11 +116,11 @@ h1 {
   font-weight: 300;
   margin: 0 0 40px;
 }
-  
+
 label {
   position: absolute;
   -webkit-transform: translateY(6px);
-          transform: translateY(6px);
+  transform: translateY(6px);
   left: 13px;
   color: black;
   -webkit-transition: all 0.25s ease;
@@ -124,7 +132,7 @@ label .req {
   margin: 2px;
   color: #1ab188;
 }
- 
+
 label.active .req {
   opacity: 0;
 }
@@ -133,7 +141,8 @@ label.highlight {
   color: black;
 }
 
-input, textarea {
+input,
+textarea {
   font-size: 22px;
   display: block;
   width: 100%;
@@ -143,10 +152,11 @@ input, textarea {
   border: 1px solid #a0b3b0;
   color: black;
   border-radius: 0;
-  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
-  transition: border-color .25s ease, box-shadow .25s ease;
+  -webkit-transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: 0;
   border-color: #1ab188;
 }
@@ -189,11 +199,12 @@ textarea {
   -webkit-appearance: none;
   width: -50%;
   cursor: pointer;
-  left:50%;
+  left: 50%;
   margin-left: 110px;
   margin-top: -50px;
 }
-.button:hover, .button:focus {
+.button:hover,
+.button:focus {
   background: #179b77;
 }
 
@@ -206,140 +217,121 @@ textarea {
   margin-top: -20px;
   text-align: right;
 }
-        /* Regiseer */
-        #font{  
-          color: Green;
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 150%;
-          font: italic  27px/30px;
-          top:-23px;
-          
-          }
-          
-                  #UserNamee {
-            border-radius: 25px;
-            border: 2px solid #73AD21;
-            padding: 20px; 
-            width: 100%;
-            height: 50px;  
-            
-          }
-          #fullname {
-            border-radius: 25px;
-            border: 2px solid #73AD21;
-            padding: 20px; 
-            width: 100%;
-            height: 50px;  
-            
-          }
-          #Email {
-            border-radius: 25px;
-            border: 2px solid #73AD21;
-            padding: 20px; 
-            width: 100%;
-            height: 20px;  
-          
-            
-          }
-          #id {
-            border-radius: 25px;
-            border: 2px solid #73AD21;
-            padding: 15px; 
-            width:100%;
-            height: 20px;  
-            
-          }
-          #passReg {
-            border-radius: 20px;
-            border: 2px solid #73AD21;
-            padding: 10px; 
-            width: 100%;
-            height: 50px;  
-          
-            
-          }
-          
-          /* Login css */
-          #rcorners2 {
-            border-radius: 25px;
-            border: 2px solid #73AD21;
-            padding: 20px; 
-            width: 100%;
-            height: 50px;  
-            
-          }
-          #user{
-          
-            color: Green;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 200%;
-            font: italic  27px/30px;
-            top:-23px;
-            
-          }
-          #pass{
-          
-          color: Green;
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 200%;
-          font: italic  27px/30px;
-          top:-23px;
-          
-          }
-          
-          #remember_me {
-          width: 45px;
-          height: 15px;
-          background: #555;
-          margin: 20px 80px;
-          left:305px;
-          top:0px;
-          
-          position: relative;
-          border-radius: 5px;
-          }
-          #remember {
-          
-            color: Green;
-            font-family: verdana;
-            font-size: 300%;
-            font: italic bold 12px/30px Georgia, serif;
-          
-          }
-          #image {
-          
-          /* margin-bottom:-20%; */
-          margin-top:10%;
-          margin-left:200px;
-          height: 620px;
-          width: 50%;
-          
-          }
-          #square {
-          
-              margin-top:-50%;
-              margin-left:1070px;
-              height: 622px;
-              width: 30%;
-          
-          }
-          
-          #buttonLog {
-          
-          margin-top:-10%;
-          margin-left:100px;
-          height: 10%;
-          width: 300px;
-          
-          }
-          #forgetPass{
-              margin-top:-50px;
-          
-              font-size: 20px;
-          
-          
-          height: 50px;
-          width: 100px;
-          }
-          
-          
+/* Regiseer */
+#font {
+  color: Green;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+  font: italic 27px/30px;
+  top: -23px;
+}
+
+#UserNamee {
+  border-radius: 25px;
+  border: 2px solid #73ad21;
+  padding: 20px;
+  width: 100%;
+  height: 50px;
+}
+#fullname {
+  border-radius: 25px;
+  border: 2px solid #73ad21;
+  padding: 20px;
+  width: 100%;
+  height: 50px;
+}
+#Email {
+  border-radius: 25px;
+  border: 2px solid #73ad21;
+  padding: 20px;
+  width: 100%;
+  height: 20px;
+}
+#id {
+  border-radius: 25px;
+  border: 2px solid #73ad21;
+  padding: 15px;
+  width: 100%;
+  height: 20px;
+}
+#passReg {
+  border-radius: 20px;
+  border: 2px solid #73ad21;
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+}
+
+/* Login css */
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73ad21;
+  padding: 20px;
+  width: 100%;
+  height: 50px;
+}
+#user {
+  color: Green;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 200%;
+  font: italic 27px/30px;
+  top: -23px;
+}
+#pass {
+  color: Green;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 200%;
+  font: italic 27px/30px;
+  top: -23px;
+}
+
+#remember_me {
+  width: 45px;
+  height: 15px;
+  background: #555;
+  margin: 20px 80px;
+  left: 305px;
+  top: 0px;
+
+  position: relative;
+  border-radius: 5px;
+}
+#remember {
+  color: Green;
+  font-family: verdana;
+  font-size: 300%;
+  font: italic bold 12px/30px Georgia, serif;
+}
+#image {
+  /* margin-bottom:-20%; */
+  margin-top: 10%;
+  margin-left: 200px;
+  height: 620px;
+  width: 50%;
+}
+#square {
+  margin-top: -50%;
+  margin-left: 1070px;
+  height: 622px;
+  width: 30%;
+}
+
+#buttonLog {
+  margin-top: -10%;
+  margin-left: 100px;
+  height: 10%;
+  width: 300px;
+}
+#forgetPass {
+  margin-top: -50px;
+
+  font-size: 20px;
+
+  height: 50px;
+  width: 100px;
+}
+#text {
+  overflow: auto;
+  position: relative;
+  height: 50%;
+}
