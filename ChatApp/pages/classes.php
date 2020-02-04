@@ -66,10 +66,10 @@ class Chat
         {
              
 if($row['user_id'] == $_SESSION['id']){
-            echo "<h4 style='margin-left:150px; padding:8px;background-color: #3ed45e;width: 50%;border-radius: 15px; font-family: monospace;
+            echo "<h4 style='margin-left:150px; padding:8px; word-wrap: break-word; background-color: #3ed45e;width: 50%;overflow-x: hidden;border-radius: 15px; font-family: monospace;
     font-size: 15px;'>You : {$row['chatText']}</h4><br>";
 }else{
-    echo "<h4 style='padding:8px;background-color: #b2d5ba;width: 50%;border-radius: 15px; font-family: monospace;
+    echo "<h4 style='padding:8px;background-color: #b2d5ba; word-wrap: break-word; width: 50%;overflow-x: hidden;border-radius: 15px; font-family: monospace;
     font-size: 15px;'>{$row['username']} : {$row['chatText']}</h4><br>";
 }
         }
