@@ -1,4 +1,7 @@
 <?php
+
+?>
+<?php
 session_start();
 include '../DataBase/Database.php';
 $DB = new Database();
@@ -23,7 +26,7 @@ $mail->CharSet = 'utf-8';
 $mail->isHTML(true);
 
 if (isset($_POST['submitCpw'])){
-    $email = filter_var($_POST['mail'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['mail'], FILTER_SANITIZE_EMAIL);
     $sql = "SELECT * FROM users where email = '$email'";
     $DB->query($sql);
     $DB->execute();

@@ -145,7 +145,6 @@
 
     #image {
 
-        /* margin-bottom:-20%; */
         margin-top: 10%;
         margin-left: 200px;
         height: 620px;
@@ -173,23 +172,37 @@
 
     #forgetPass {
         margin-top: -50px;
-
         font-size: 20px;
-
-
         height: 50px;
         width: 100px;
+    }
+    
+    @media only screen and (max-width: 850px)
+    {
+            #square 
+            {
+                height: 700px;
+                width: 90%;
+                margin-top:-1px;
+                margin-left:-500px;
+            }
+        
+            #image
+            {                
+                margin-top: 10%;
+                margin-left: 0%;
+                height: 50%;
+                width: 100%;
+            }
     }
     </style>
 </head>
 
 <body>
-    <img src="Move.jpeg" id="image">
+    <img src="Move.jpeg" id="image"><br>
     <?php include("../Template/header.php");?>
-
-    <div class="form" id="square" style="margin-left:1000px;bottom:50px;">
-
-
+    <br><br><br>    
+    <div class="form" id="square" style="margin-left:65%;bottom:50px;">
         <ul class="tab-group">
             <li class="tab  "><a href="#signup">Register</a></li>
             <li class="tab active"><a href="#login">Log In</a></li>
@@ -226,7 +239,6 @@
             </div>
             <div id="signup">
                 <h1>Join Us! </h1>
-
                 <form action="signup.php" method="post">
 
                     <div class="top-row">
@@ -316,6 +328,6 @@
     <script src="../js/script.js"></script>
     <script type="text/javascript" src="../js/slider.js"></script>
 </body>
-
+<br><br><br><br><br>
 </html>
 <?php include('../Template/footer.html');?>
