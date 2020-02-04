@@ -55,8 +55,8 @@ if (isset($_POST['send0'])){
     for ($i=0 ; $i<$DB->numRows(); $i++){
         $uname = $x[$i]->username;
         $email = $x[$i]->email;
-        $mailsubject = filtervar($_POST['mailsubject'], FILTER_SANITIZE_STRING);
-        $mailcontent = filtervar($_POST['mailcontent'], FILTER_SANITIZE_STRING);
+        $mailsubject = filter_var($_POST['mailsubject'], FILTER_SANITIZE_STRING);
+        $mailcontent = filter_var($_POST['mailcontent'], FILTER_SANITIZE_STRING);
         $mail->Subject = $mailsubject;
         $email_vars = array(
          'name' => $uname,

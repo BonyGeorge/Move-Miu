@@ -18,26 +18,26 @@ $mail->SMTPAuth = true;
 $mail->SMTPSecure = 'tls'; 
 $mail->Username = 'move20miu2020@gmail.com'; 
 $mail->Password = 'rywuqlxruswomhuj'; 
-$mail->setFrom('move20miu2020@gmail.com', $_SESSION['name']. ' from Move'); 
+$mail->setFrom('move20miu2020@gmail.com',' From Move'); 
 $mail->CharSet = 'utf-8';
 $mail->isHTML(true);
 
-if (isset($_POST['send1'])){
-    $rid = $_POST['selection'];
-    $sql = "SELECT * FROM users where id = '$rid'";
+if (isset($_POST['submitCpw'])){
+    $email = filter_var($_POST['mail'], FILTER_SANITIZE_STRING);
+    $sql = "SELECT * FROM users where email = '$email'";
     $DB->query($sql);
     $DB->execute();
     $x=$DB->getdata();
+    if($DB->numRows()>0){
     $uname = $x[0]->username;
-    $email = $x[0]->email;
-    $mailsubject = $_POST['mailsubject'];
-    $mailcontent = $_POST['mailcontent'];
+    $mailsubject = "Change Password";
+    $mailcontent = "<a href='#'>Click here to change password </a>";
     $mail->Subject = $mailsubject;
     $email_vars = array(
      'name' => $uname,
      'content' => $mailcontent,
     );
-    $body = file_get_contents('htmlemail.html');
+    $body = file_get_contents('../Operations/htmlemail.html');
     if(isset($email_vars)){
       foreach($email_vars as $k=>$v){
         $body = str_replace('{'.strtoupper($k).'}', $v, $body);
@@ -46,33 +46,7 @@ if (isset($_POST['send1'])){
     $mail->MsgHTML($body);
     $mail->addAddress("$email", "$uname");
     $mail->send();   
+  }
 }
-if (isset($_POST['send0'])){
-    $sql = "SELECT * FROM users";
-    $DB->query($sql);
-    $DB->execute();
-    $x=$DB->getdata();
-    for ($i=0 ; $i<$DB->numRows(); $i++){
-        $uname = $x[$i]->username;
-        $email = $x[$i]->email;
-        $mailsubject = filtervar($_POST['mailsubject'], FILTER_SANITIZE_STRING);
-        $mailcontent = filtervar($_POST['mailcontent'], FILTER_SANITIZE_STRING);
-        $mail->Subject = $mailsubject;
-        $email_vars = array(
-         'name' => $uname,
-         'content' => $mailcontent,
-        );
-        $body = file_get_contents('htmlemail.html');
-        if(isset($email_vars)){
-          foreach($email_vars as $k=>$v){
-            $body = str_replace('{'.strtoupper($k).'}', $v, $body);
-          }
-        }
-        $mail->MsgHTML($body);
-        $mail->addAddress("$email", "$uname");
-        $mail->send();
-
-    }
-}
-header('location:sendmail.php');
+header('location:../pages/index.php');
 ?>
