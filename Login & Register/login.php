@@ -51,12 +51,8 @@
                         <input type="checkbox" name="remember_me" id="remember_me"><label id="remember">Remember
                             Me</label>
                     </div>
-                    <br>
-
-
-                    <button class="button button-block" id="buttonLog">Log In</button>
-                    <a id="forgetPass" onclick="document.getElementById('smail').style.display='block'">Forget
-                        Password</a>
+                    < <a id="forgetPass" href="#" onclick="document.getElementById('smail').style.display='block'"
+                        style="margin-left:23%;">Forget Your Password?!</a><br><br><br><br><br><button class="button button-block" id="buttonLog">Log In</button>
                 </form>
             </div>
             <div id="signup">
