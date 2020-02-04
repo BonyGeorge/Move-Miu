@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+ <!DOCTYPE HTML>
 <html>
 
 <head>
@@ -51,12 +51,8 @@
                         <input type="checkbox" name="remember_me" id="remember_me"><label id="remember">Remember
                             Me</label>
                     </div>
-                    <br>
-
-
-                    <button class="button button-block" id="buttonLog">Log In</button>
-                    <a id="forgetPass" onclick="document.getElementById('smail').style.display='block'">Forget
-                        Password</a>
+                    < <a id="forgetPass" href="#" onclick="document.getElementById('smail').style.display='block'"
+                        style="margin-left:23%;">Forget Your Password?!</a><br><br><br><br><br><button class="button button-block" id="buttonLog">Log In</button>
                 </form>
             </div>
             <div id="signup">
@@ -67,7 +63,7 @@
                     <div class="top-row">
                         <div class="field-wrap">
                             <label id="fontname" style="margin-top:-3%;">
-                                Name:<span class="req">*</span>
+                               Full Name:<span class="req" >*</span>
                             </label>
                             <input onblur="validateFName(this)" name="fullname" id="fullname" type="text" required
                                 autocomplete="off" />
@@ -76,8 +72,8 @@
                         </div>
 
                         <div class="field-wrap">
-                            <label id="font" style="margin-top:-3%;">
-                                User Name:<span class="req">*</span>
+                            <label id="font" style="margin-top:10%;">
+                                User Name:<span class="req" >*</span>
                             </label>
                             <input onblur="checkuserr()" id="UserNamee" name="username" type="text" required
                                 autocomplete="off" />
@@ -150,8 +146,7 @@
         </form>
     </div>
     <script src="../js/script.js"></script>
-    <script type="text/javascript" src="../js/ .js"></script>
-</body>
-
+    <script type="text/javascript" src="../js/slider.js"></script>
+ </body>
 </html>
 <?php include('../Template/footer.html');?>
