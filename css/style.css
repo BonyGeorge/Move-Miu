@@ -224,6 +224,7 @@ textarea {
   font-size: 150%;
   font: italic 27px/30px;
   top: -23px;
+  display: inline-block;
 }
 
 #UserNamee {
@@ -290,7 +291,7 @@ textarea {
   height: 15px;
   background: #555;
   margin: 20px 80px;
-  left: 305px;
+  left: 45%;
   top: 0px;
 
   position: relative;
@@ -301,6 +302,9 @@ textarea {
   font-family: verdana;
   font-size: 300%;
   font: italic bold 12px/30px Georgia, serif;
+  top:-100%;
+  left:30%;
+  font-size: 20px;
 }
 #image {
   /* margin-bottom:-20%; */
@@ -311,16 +315,16 @@ textarea {
 }
 #square {
   margin-top: -50%;
-  margin-left: 1070px;
+  margin-left: 68%;
   height: 622px;
   width: 30%;
 }
 
 #buttonLog {
   margin-top: -10%;
-  margin-left: 100px;
+  margin-left: 15%;
   height: 10%;
-  width: 300px;
+  width: 70%;
 }
 #forgetPass {
   margin-top: -50px;
@@ -334,4 +338,66 @@ textarea {
   overflow: auto;
   position: relative;
   height: 50%;
+}
+#fontname {
+  color: Green;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+  font: italic 27px/30px;
+  top: -23px;
+  display: inline-block;
+}
+
+#headercss{
+  font-family:verdana;
+    color: green;
+    text-shadow: 2px 2px #7CFC00;
+    font-size: 300%;font: italic bold 40px/30px Georgia, serif ; 
+
+    height: 100%;
+
+}
+@media only screen and (max-width: 850px) {
+
+  #image {
+    /* margin-bottom:-20%; */
+    margin-top: 20%;
+    margin-left: 30%; 
+    height: 620px;
+    width: 50%;
+  }
+  #square {
+    margin-top: 10%;
+    margin-left: 20%;
+    height: 80%;
+    width: 70%;
+  }
+  #remember {
+    color: Green;
+    font-family: verdana;
+    font-size: 300%;
+    font: italic bold 12px/30px Georgia, serif;
+    top:-100%;
+    left:20%;
+    font-size: 20px;
+  }
+
+
+    #font {
+      color: Green;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 150%;
+      font: italic 27px/30px;
+      top: -55%;
+      display: inline-block;
+    }
+    #fontname {
+      color:green;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 150%;
+      font: italic 27px/30px;
+      top: -30%;
+      display: inline-block;
+    }
+
 }
