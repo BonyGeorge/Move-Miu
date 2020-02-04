@@ -35,41 +35,37 @@ session_start();
     <!--   Top Slider START   -->
     <div class="slider-cont">
         <div class="sliders" id="sliders">
-            <div class="slider">
-                <img src="http://placekitten.com/g/1600/900" />
 
+             <?php 
+                $conn = mysqli_connect('localhost', 'root', '', 'move');
+                $query = "select *from event ORDER BY id DESC LIMIT 2;";
+                $result = mysqli_query($conn,$query);
+
+                $noOfEvents =  mysqli_num_rows($result);
+                $y =0;
+                while ($value = mysqli_fetch_array($result)) {
+
+                $imgs_arr = [];
+                $imgs_arr=unserialize($value['image']);
+                $count = count($imgs_arr);
+                
+                    echo 
+                        "<div class='slider' style = 'left:$y%'>";
+                for ($i=0;$i<1;$i++){
+           echo"<img src='../Operations/images/{$imgs_arr[$i]}'>";
+
+                }
+echo "
                 <h1>Lorem ipsum</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua.</p>
-                <div class="r-cont"><a href="#">
-                        <div class="read-more">Read More</div>
+                <div class='r-cont'><a href='#''>
+                        <div class='read-more'>Read More</div>
                     </a></div>
 
-            </div>
-            <div class="slider" style="left:100%;">
-                <img src="http://placekitten.com/g/1300/500" />
-
-                <h1>Hey</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
-                <div class="r-cont"><a href="#">
-                        <div class="read-more">Read More</div>
-                    </a></div>
-
-            </div>
-
-            <div class="slider" style="left:200%;">
-                <img src="http://placekitten.com/g/1600/800" />
-
-                <h1>Lorem ipsum</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
-                <div class="r-cont"><a href="#">
-                        <div class="read-more">Read More</div>
-                    </a></div>
-
-            </div>
-
+            </div>"; $y +=100;
+}?>
+            
 
         </div>
 
