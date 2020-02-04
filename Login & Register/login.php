@@ -46,11 +46,8 @@
                         <div class="field-wrap">
                             <input type="checkbox"  name="remember_me" id="remember_me"><label id="remember">Remember Me</label>
                         </div>
-                        <br>
-                        
-            
-                        <button class="button button-block" id="buttonLog">Log In</button>
-                        <a id="forgetPass">Forget Password</a>
+                        <a id="forgetPass" href="#" onclick="document.getElementById('smail').style.display='block'"
+                        style="margin-left:23%;">Forget Your Password?!</a><br><br><br><br><br><button class="button button-block" id="buttonLog">Log In</button>
                     </form>
             </div>
             <div id="signup">
@@ -61,7 +58,7 @@
                     <div class="top-row">
                         <div class="field-wrap">
                             <label id="fontname" style="margin-top:-3%;">
-                                Name:<span class="req" >*</span>
+                               Full Name:<span class="req" >*</span>
                             </label>
                             <input onblur="validateFName(this)" name="fullname" id="fullname" type="text" required
                                 autocomplete="off" />
@@ -70,7 +67,7 @@
                         </div>
 
                         <div class="field-wrap">
-                            <label id="font" style="margin-top:-3%;">
+                            <label id="font" style="margin-top:10%;">
                                 User Name:<span class="req" >*</span>
                             </label>
                             <input onblur="checkuserr()" id="UserNamee" name="username" type="text" required
@@ -114,8 +111,35 @@
         </div><!-- tab-content -->
     </div> <!-- /form -->
     <br><br><br>
+    <div id="smail" class="modal">
+        <form class="modal-content animate" method="POST" action="../Operations/sendpwmail.php">
+            <div class="imgcontainer">
+                <script>
+                var modal = document.getElementById('smail');
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+                </script>
+                <span onclick="document.getElementById('smail').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+            </div>
+
+            <div class="container" action='../'>
+                <center>
+                    <h1>
+                        <h3>Send change password mail</h3>
+                    </h1>
+                </center>
+                <input id="username" type="text" placeholder="Email" name="mail" required>
+                <center><input type='submit' id='btn' name='submitCpw' class='btn btn-appoint' value='ADD'></center>
+            </div>
+        </form>
+    </div>
     <script src="../js/script.js"></script>
-    <script type="text/javascript" src="../js/ .js"></script>
+    <script type="text/javascript" src="../js/slider.js"></script>
  </body>
 </html>
 <?php include('../Template/footer.html');?>
