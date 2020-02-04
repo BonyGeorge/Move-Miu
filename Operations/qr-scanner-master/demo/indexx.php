@@ -27,13 +27,13 @@ session_start(); ?>
                 margin-bottom: 16px;
             }
         </style>
-        <div style="text-align:center; " >
+        <div  >
         <img width ="20%"src="../../../images/logo.png">
            <br>
             <b>Device has camera: </b>
             <span id="cam-has-camera"></span>
             <br>
-            <video muted width="25%" position="center" playsinline id="qr-video"></video>
+            <video muted  playsinline id="qr-video"></video>
             <br>
             <span id="test" style="color: green; font-weight: bold;"></span>
              <br>
