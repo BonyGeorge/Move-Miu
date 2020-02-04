@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+	 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+  
+   <div style="text-align:center; " >
+        <img width ="20%"src="../images/logo.png">
+    <br>
+    <video id="preview"></video>
+    <br>
+    <br>
+    <span id="test"></span>
+    </div>
+    <script type="text/javascript">
+      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+      scanner.addListener('scan', function (content) {
+        scan(content);
+      });
+      Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+          scanner.start(cameras[0]);
+        } else {
+          console.error('No cameras found.');
+        }
+      }).catch(function (e) {
+        console.error(e);
+      });
+        
+        
+            function scan(content) { 
+
+                jQuery.ajax({
+                    url: "ajax.php",
+                    data:'id='+content,
+                    type:"POST",
+                    success:function(data)
+                    {
+                        document.getElementById('test').innerHTML=data;
+                    }
+                });
+            }
+    </script>
+   
+</body>
+</html>

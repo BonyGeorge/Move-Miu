@@ -252,7 +252,7 @@ span.psw {
         <a href='../Operations/sendmail.php' style="width:auto;">
             <div class="nav-button">Send Mail <i class="fas fa fa-envelope"></i></div>
         </a>
-        <a href='../Operations/qr-scanner-master/demo/indexx.php' style="width:auto;">
+        <a href='../Operations/test.html' style="width:auto;">
             <div class="nav-button">Take Attendance <i class="fas fa fa-qrcode"></i></div>
         </a>
         <?php if(isset($_SESSION['type'])) { ?>
@@ -288,7 +288,7 @@ span.psw {
         <a href="../Operations/sendmail.php">
             <div class="nav-sidebar-button">Send Mail <i class="fas fa-envelope"></i> </div>
         </a>
-        <a href='../Operations/qr-scanner-master/demo/indexx.php' style="width:auto;">
+        <a href='../Operations/test.html' style="width:auto;">
             <div class="nav-sidebar-button">Take Attendance <i class="fas fa fa-qrcode"></i></div>
         </a>
         <a href="../ChatApp/Home.php">
