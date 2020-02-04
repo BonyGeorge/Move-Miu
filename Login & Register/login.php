@@ -286,10 +286,8 @@
     </div><!-- tab-content -->
     </div> <!-- /form -->
     <br><br><br>
-    <script src="../js/script.js"></script>
-    <script type="text/javascript" src="../js/slider.js"></script>
     <div id="smail" class="modal">
-        <form class="modal-content animate" method="POST" action="changeToAdmin.php">
+        <form class="modal-content animate" method="POST" action="../Operations/sendpwmail.php">
             <div class="imgcontainer">
                 <script>
                 var modal = document.getElementById('smail');
@@ -304,14 +302,14 @@
                     title="Close Modal">&times;</span>
             </div>
 
-            <div class="container">
+            <div class="container" action='../'>
                 <center>
                     <h1>
                         <h3>Send change password mail</h3>
                     </h1>
                 </center>
-                <input id="username" type="text" placeholder="send mail" name="username" required>
-                <center><input type='submit' id='btn' name='submitAdmin' class='btn btn-appoint' value='ADD'></center>
+                <input id="username" type="text" placeholder="Email" name="mail" required>
+                <center><input type='submit' id='btn' name='submitCpw' class='btn btn-appoint' value='ADD'></center>
             </div>
         </form>
     </div>
