@@ -302,8 +302,8 @@ textarea {
   font-family: verdana;
   font-size: 300%;
   font: italic bold 12px/30px Georgia, serif;
-  top:-100%;
-  left:30%;
+  top: -100%;
+  left: 30%;
   font-size: 20px;
 }
 #image {
@@ -337,6 +337,7 @@ textarea {
 #text {
   overflow: auto;
   position: relative;
+  padding: 100px 0px;
   height: 50%;
 }
 #fontname {
@@ -348,28 +349,24 @@ textarea {
   display: inline-block;
 }
 
-#headercss{
-  font-family:verdana;
-    color: green;
-    text-shadow: 2px 2px #7CFC00;
-    font-size: 300%;font: italic bold 40px/30px Georgia, serif ; 
+#headercss {
+  font-family: verdana;
+  color: green;
+  text-shadow: 2px 2px #7cfc00;
+  font-size: 300%;
+  font: italic bold 40px/30px Georgia, serif;
 
-    height: 100%;
-
+  height: 100%;
 }
 @media only screen and (max-width: 850px) {
-
-  
   #image {
-
     margin-top: 10%;
     margin-left: 5px;
     height: 400px;
     width: 100%;
-
-}
+  }
   #square {
-    margin-top:-1px;
+    margin-top: -1px;
     margin-left: 5%;
     height: 95%;
     width: 90%;
@@ -379,27 +376,25 @@ textarea {
     font-family: verdana;
     font-size: 300%;
     font: italic bold 12px/30px Georgia, serif;
-    top:-100%;
-    left:20%;
+    top: -100%;
+    left: 20%;
     font-size: 20px;
   }
 
-
-    #font {
-      color: Green;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 150%;
-      font: italic 27px/30px;
-      top: -55%;
-      display: inline-block;
-    }
-    #fontname {
-      color:green;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 150%;
-      font: italic 27px/30px;
-      top: -30%;
-      display: inline-block;
-    }
-
+  #font {
+    color: Green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    font: italic 27px/30px;
+    top: -55%;
+    display: inline-block;
+  }
+  #fontname {
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    font: italic 27px/30px;
+    top: -30%;
+    display: inline-block;
+  }
 }

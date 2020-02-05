@@ -34,39 +34,32 @@ button {
 $(document).ready(function()
 
     {
-        setTimeout(function() {
-            var objDiv = $('#text');
-            if (objDiv.length > 0) {
-                objDiv[0].scrollTop = objDiv[0].scrollHeight;
-            }
 
-        }, 300);
+        /* $('#chat').keyup(function(e) {
+             if (e.keyCode == 13) {
 
-        $('#chat').keyup(function(e) {
-            if (e.keyCode == 13) {
+                 var chats = $('#chat').val();
 
-                var chats = $('#chat').val();
-
-                $.ajax({
-                    method: 'POST',
-                    url: 'pages/InsertChat.php',
-                    data: {
-                        chats: chats
-                    },
-                    success: function() {
-                        console.log('ok');
-                        $('#chat').val('');
-                    }
-                })
-                $('#text').load('pages/DisplayChat.php');
-                setTimeout(function() {
-                    var objDiv = $('#text');
-                    if (objDiv.length > 0) {
-                        objDiv[0].scrollTop = objDiv[0].scrollHeight;
-                    }
-                }, 500)
-            }
-        })
+                 $.ajax({
+                     method: 'POST',
+                     url: 'pages/InsertChat.php',
+                     data: {
+                         chats: chats
+                     },
+                     success: function() {
+                         console.log('ok');
+                         $('#chat').val('');
+                     }
+                 })
+                 $('#text').load('pages/DisplayChat.php');
+                 setTimeout(function() {
+                     var objDiv = $('#text');
+                     if (objDiv.length > 0) {
+                         objDiv[0].scrollTop = objDiv[0].scrollHeight;
+                     }
+                 }, 500)
+             }
+         }) */
         $('button').click(function() {
             var chats = $('#chat').val();
 
@@ -85,18 +78,14 @@ $(document).ready(function()
 
             })
             $('#text').load('pages/DisplayChat.php');
-            setTimeout(function() {
-                var objDiv = $('#text');
-                if (objDiv.length > 0) {
-                    objDiv[0].scrollTop = objDiv[0].scrollHeight;
-                }
-
-            }, 500)
-
-
-
         })
-        $('#text').load('pages/DisplayChat.php');
+        $('#text').load('pages/DisplayChat.php', function() {
+            var objDiv = $('#text');
+            if (objDiv.length > 0) {
+                objDiv[0].scrollTop = objDiv[0].scrollHeight;
+            }
+
+        });
         setInterval(function() {
             $('#text').load('pages/DisplayChat.php');
 
