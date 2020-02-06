@@ -19,14 +19,8 @@ else
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <style type="text/css">
 button {
+    background-color: white;
     border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: #fff;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 4px;
 }
 </style>
 <script src="js/jQuery.js"></script>
@@ -121,13 +115,13 @@ if(isset($_SESSION['type']))
     <div id='container' style='width:100%; border:1px solid #87c197;'>
         <textarea class="form-control" id="chat" placeholder="Enter Your Reply..."
             style='border-style:none none  none; border-color:black; width:100%; display:block;box-sizing:border-box;border-width:1px; margin-bottom:1px;'></textarea>
-        <div style='width:100%; box-sizing:border-box; height:35px;padding:5px;'>
-            <button style='float:right'><i class="fa fa-paper-plane read-more" aria-hidden="true"></i>
+        <div style='position:relative;width:100%; height:22px; right:1%'>
+            <button style='float:right'><i class="fa fa-paper-plane read-more"></i>
             </button>
         </div>
     </div>
 </body>
 
 </html>
-<br><br><br>
+
 <?php include('../Template/footer.html');?>
