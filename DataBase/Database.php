@@ -54,7 +54,4 @@ class Database
     }
 
 }
-
-
-
 ?>

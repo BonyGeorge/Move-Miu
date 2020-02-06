@@ -5,12 +5,12 @@ $DB = new Database();
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     $username = filter_var($_POST["Username"], FILTER_SANITIZE_STRING);
-    $sql="SELECT * FROM users where username= '".$username."' and password = '".$_POST["Password"]."' ";
+    $sql="SELECT * FROM users where username= '".$username."' and password = '".$_POST["Password"]."';";
     $DB->query($sql);
     $DB->execute();
     if($DB->numRows()==0)
     {  
-        $Message = "wrong username or password. ";
+        $Message = "Wrong username or password. ";
         header("Location:login.php?Message={$Message}");
 
     }
@@ -21,6 +21,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $_SESSION['email']=$x[0]->email;
         $_SESSION['type']=$x[0]->type;
         $_SESSION['id']=$x[0]->id;
+        $_SESSION['universityid']=$x[0]->universityid;
         
         if(!empty($_POST['remember'])){
             setcookie("username", $_POST['Username'], time()+(10 * 365 * 24 * 60 * 60));
