@@ -38,7 +38,7 @@ session_start();
 
              <?php 
                 $conn = mysqli_connect('localhost', 'root', '', 'move');
-                $query = "select *from event ORDER BY id DESC LIMIT 2;";
+                $query = "select *from event ORDER BY id DESC LIMIT 3;";
                 $result = mysqli_query($conn,$query);
 
                 $noOfEvents =  mysqli_num_rows($result);
@@ -59,10 +59,7 @@ echo "
                 <h1>Lorem ipsum</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua.</p>
-                <div class='r-cont'><a href='#''>
-                        <div class='read-more'>Read More</div>
                     </a></div>
-
             </div>"; $y +=100;
 }?>
             
