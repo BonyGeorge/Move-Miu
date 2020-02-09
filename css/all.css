@@ -583,13 +583,12 @@ body {
   overflow: auto;
   font-size: larger;
   text-align: center;
-  margin-left:170px;
+  margin-left: 170px;
   box-sizing: border-box;
   padding: 15px 30px;
 }
-.events-cont .event h2
-{ 
-  margin-left:40%;
+.events-cont .event h2 {
+  margin-left: 40%;
 }
 .about-us-cont .event .text-side {
   max-height: inherit !important;
@@ -613,11 +612,11 @@ body {
 @media only screen and (max-width: 850px) {
   /* About US*/
   .events-cont .event .text-side {
-      margin-left:0%;
+    margin-left: 0%;
   }
   .events-cont .event .text-side h2 {
-      margin-left:0%;
-  }  
+    margin-left: 0%;
+  }
   /* Header Mobile START */
   .menu-button-bar {
     display: block;
@@ -625,7 +624,7 @@ body {
   .nav-buttons-cont {
     display: none;
   }
-  #TeamHead{
+  #TeamHead {
     margin-left: -55%;
   }
   .logo-cont {

@@ -36,7 +36,7 @@ session_start();
     <div class="slider-cont">
         <div class="sliders" id="sliders">
 
-             <?php 
+            <?php 
                 $conn = mysqli_connect('localhost', 'root', '', 'move');
                 $query = "select *from event ORDER BY id DESC LIMIT 3;";
                 $result = mysqli_query($conn,$query);
@@ -56,13 +56,11 @@ session_start();
 
                 }
 echo "
-                <h1>Lorem ipsum</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
+                <h1>$value[name]</h1>
                     </a></div>
             </div>"; $y +=100;
 }?>
-            
+
 
         </div>
 
@@ -79,11 +77,11 @@ echo "
         </div>
         <div class="sec-text-cont">BE THE CHANGE YOU WANT TO SEE"
 
-“MOVE” is based on development which is divided into:
-1.Community Service Program
-2. Student Development Program.
+            “MOVE” is based on development which is divided into:
+            1.Community Service Program
+            2. Student Development Program.
 
-Our Color is Green: Generous, Adaptable, Understanding, Compassionate, And Practical.
+            Our Color is Green: Generous, Adaptable, Understanding, Compassionate, And Practical.
         </div>
         <div class="r-cont"><a href="../Pages/about.php">
                 <div class="read-more">Read More</div>
@@ -167,33 +165,54 @@ echo"
             </a></div>
 ";
 }?>
-            </div>
         </div>
-        
-            </div>
+    </div>
+
+    </div>
     <!-- Events END -->
     <?php include("../Template/footer.html");?>
     <!-- Body END -->
     <script type="text/javascript" src="../js/slider.js"></script>
-           <script type="text/javascript">
-    <?php  for($p=0;$p<$noOfEvents;$p++){  
-    echo"
-     var myIndex{$p} = 0;
-     carousel{$p}();
-    function carousel{$p}() {
-  var i;
+    <script type="text/javascript">
+    < ? php
+    for ($p = 0; $p < $noOfEvents; $p++) {
+        echo "
+        var myIndex {
+            $p
+        } = 0;
+        carousel {
+            $p
+        }();
 
-  var x = document.getElementsByClassName('mySlides{$p}');
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';  
-  }
-  myIndex{$p}++;
-  if (myIndex{$p} > x.length) {myIndex{$p} = 1}    
-  x[myIndex{$p}-1].style.display = 'block';  
-  setTimeout(carousel{$p}, 2000); // Change image every 2 seconds
-}";
-            } ?>
+        function carousel {
+            $p
+        }() {
+            var i;
 
+            var x = document.getElementsByClassName('mySlides{$p}');
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'none';
+            }
+            myIndex {
+                $p
+            }++;
+            if (myIndex {
+                    $p
+                } > x.length) {
+                myIndex {
+                    $p
+                } = 1
+            }
+            x[myIndex {
+                $p
+            } - 1].style.display = 'block';
+            setTimeout(carousel {
+                $p
+            }, 2000); // Change image every 2 seconds
+        }
+        ";
+    } ? >
     </script>
 </body>
+
 </html>
