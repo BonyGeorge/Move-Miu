@@ -3,7 +3,8 @@ include('../DataBase/Database.php');
 $DB = new Database();
 
 if(isset($_POST['id'])){
-    $today=  date('M-D');
+    date_default_timezone_set('Africa/Cairo');
+    $today=  date('M-d');
     $id=$_POST['id'];
     $filteredid = filter_var($_POST["id"], FILTER_SANITIZE_STRING);
     if($filteredid == $id && strlen($filteredid)>2){
