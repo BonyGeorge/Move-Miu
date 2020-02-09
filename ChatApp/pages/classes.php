@@ -1,5 +1,5 @@
 <?php
-class User
+/*class User
 {
     public $UserId;
     public $UserName;
@@ -40,7 +40,7 @@ class User
             header('location:../');
         }
     }
-}
+}*/
 class Chat
 {
     public $UserId;
@@ -54,10 +54,13 @@ class Chat
     }
 
     public function DisplayChat()
-    {
+    {   $cctr = 35;
+        if(isset($_POST['cctr'])){
+            $cctr += $_POST['cctr'];
+        }
         include('Db.php');
         $sql = "SELECT * FROM (
-            SELECT users.name,users.username,chat.chatText,users.id,chat.user_id,chat.id 'x' FROM chat INNER JOIN users on chat.user_id=users.id order by chat.id desc LIMIT 35
+            SELECT users.name,users.username,chat.chatText,users.id,chat.user_id,chat.id 'x' FROM chat INNER JOIN users on chat.user_id=users.id order by chat.id desc LIMIT ".$cctr."
            )Var1
            ORDER BY Var1.x ASC";
         $result = $pdo->query($sql);

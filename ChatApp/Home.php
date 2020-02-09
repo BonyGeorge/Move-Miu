@@ -25,6 +25,7 @@ button {
 </style>
 <script src="js/jQuery.js"></script>
 <script>
+var cctr = 0;
 $(document).ready(function()
 
     {
@@ -71,19 +72,46 @@ $(document).ready(function()
                 }
 
             })
-            $('#text').load('pages/DisplayChat.php');
+            // $('#text').load('pages/DisplayChat.php');
+        })
+        //alert($('#text').height())
+        $('#text').scroll(function() {
+            scroller = $('#text');
+            scrollX = $('#text').scrollTop();
+            scrollH = $('#text')[0].scrollHeight;
+            if ($(this).scrollTop() == 0) {
+                cctr += 10;
+                $.ajax({
+                    method: 'POST',
+                    url: 'pages/DisplayChat.php',
+                    data: {
+                        cctr: cctr
+                    },
+                    success: function(msg) {
+                        $('#text').html(msg);
+                        $('#text')[0].scrollTop = $('#text')[0].scrollHeight - scrollH;
+                    }
+
+
+                })
+            }
         })
         $('#text').load('pages/DisplayChat.php', function() {
+
             var objDiv = $('#text');
             if (objDiv.length > 0) {
                 objDiv[0].scrollTop = objDiv[0].scrollHeight;
             }
 
         });
-        setInterval(function() {
-            $('#text').load('pages/DisplayChat.php');
 
-        }, 500);
+
+        /*setInterval(function() {
+            $('#text').load('pages/DisplayChat.php');
+        }, 500);*/
+
+
+
 
     })
 </script>
