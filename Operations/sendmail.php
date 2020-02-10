@@ -1,23 +1,25 @@
 <?php
 session_start();
 if($_SESSION['type']!='admin'){header('location:../index.php');}
-include 'admin_header.php';
 include '../DataBase/Database.php';
 $DB = new Database();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="We're Movers">
+    <meta name="keywords" content="Move Club,Move,MIU Club,Movers">
     <link rel="icon" sizes="128x128" href="../images/fav.png">
     <title>Mailing</title>
     <style type="text/css">
-    select {
+    #mailone {
         background-color: #3bde40;
+        position: relative;
         color: black;
-        height: 5%;
+        height: 30px;
         border: 1px solid transparent;
         border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
         cursor: pointer;
@@ -25,7 +27,7 @@ $DB = new Database();
         text-color: black;
     }
 
-    select-text {
+    #mailone-text {
         color: black;
     }
 
@@ -76,21 +78,23 @@ $DB = new Database();
         position: relative;
         left: 40%
     }
-    @media only screen and (max-width: 850px)
-    {
-        .mbutton 
-        {
-            left:10%;
+
+    @media only screen and (max-width: 850px) {
+        .mbutton {
+            left: 10%;
         }
-        #m
-        {
-            margin-left:-25%;
+
+        #m {
+            margin-left: -25%;
         }
     }
     </style>
-</head> 
+</head>
 
 <body>
+    <?php
+include 'admin_header.php'; 
+?>
     <br>
     <br>
     <h1 style=''>Send mail</h1>
@@ -144,5 +148,6 @@ $DB = new Database();
         </div>
     </form>
 </body>
+
 </html>
 <?php include('../Template/footer.html');?>

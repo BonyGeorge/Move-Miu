@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,9 +36,9 @@ session_start();
     <div class="slider-cont">
         <div class="sliders" id="sliders">
 
-            <?php 
+             <?php 
                 $conn = mysqli_connect('localhost', 'root', '', 'move');
-                $query = "select *from event ORDER BY id DESC LIMIT 3;";
+                $query = "select *from event ORDER BY id DESC LIMIT 2;";
                 $result = mysqli_query($conn,$query);
 
                 $noOfEvents =  mysqli_num_rows($result);
@@ -56,10 +57,14 @@ session_start();
                 }
 echo "
                 <h1>$value[name]</h1>
+                
+                <div class='r-cont'><a href='#''>
+                        <div class='read-more'>Read More</div>
                     </a></div>
+
             </div>"; $y +=100;
 }?>
-
+            
 
         </div>
 
@@ -76,11 +81,11 @@ echo "
         </div>
         <div class="sec-text-cont">BE THE CHANGE YOU WANT TO SEE"
 
-            “MOVE” is based on development which is divided into:
-            1.Community Service Program
-            2. Student Development Program.
+“MOVE” is based on development which is divided into:
+1.Community Service Program
+2. Student Development Program.
 
-            Our Color is Green: Generous, Adaptable, Understanding, Compassionate, And Practical.
+Our Color is Green: Generous, Adaptable, Understanding, Compassionate, And Practical.
         </div>
         <div class="r-cont"><a href="../Pages/about.php">
                 <div class="read-more">Read More</div>
@@ -96,6 +101,7 @@ echo "
         </div>
         <div class="team-members-cont">
             <div class="team-member">
+                <a href="#">
                     <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
                     <div class="team-member-text">
                         <h3>Omar Nasr</h3>
@@ -105,6 +111,7 @@ echo "
             </div>
 
             <div class="team-member">
+                <a href="#">
                     <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
                     <div class="team-member-text">
                         <h3>Essra Mahamed</h3>
@@ -162,54 +169,33 @@ echo"
             </a></div>
 ";
 }?>
+            </div>
         </div>
-    </div>
-
-    </div>
+        
+            </div>
     <!-- Events END -->
     <?php include("../Template/footer.html");?>
     <!-- Body END -->
     <script type="text/javascript" src="../js/slider.js"></script>
-    <script type="text/javascript">
-    <?php
-    for ($p = 0; $p < $noOfEvents; $p++) {
-        echo "
-        var myIndex {
-            $p
-        } = 0;
-        carousel {
-            $p
-        }();
+           <script type="text/javascript">
+    <?php  for($p=0;$p<$noOfEvents;$p++){  
+    echo"
+     var myIndex{$p} = 0;
+     carousel{$p}();
+    function carousel{$p}() {
+  var i;
 
-        function carousel {
-            $p
-        }() {
-            var i;
+  var x = document.getElementsByClassName('mySlides{$p}');
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none';  
+  }
+  myIndex{$p}++;
+  if (myIndex{$p} > x.length) {myIndex{$p} = 1}    
+  x[myIndex{$p}-1].style.display = 'block';  
+  setTimeout(carousel{$p}, 2000); // Change image every 2 seconds
+}";
+            } ?>
 
-            var x = document.getElementsByClassName('mySlides{$p}');
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = 'none';
-            }
-            myIndex {
-                $p
-            }++;
-            if (myIndex {
-                    $p
-                } > x.length) {
-                myIndex {
-                    $p
-                } = 1
-            }
-            x[myIndex {
-                $p
-            } - 1].style.display = 'block';
-            setTimeout(carousel {
-                $p
-            }, 2000); // Change image every 2 seconds
-        }
-        ";
-    } ?>
     </script>
 </body>
-
 </html>

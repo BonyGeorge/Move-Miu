@@ -26,6 +26,9 @@ session_start(); ?>
   <div class="events-cont about-us-cont">
     <!-- <h1>unfortunately, We don't have any events right now.</h1> -->
     <div class="event">
+      <div class="img-side">
+        <img src="http://placekitten.com/g/1200/1200">
+      </div>
       <div class="text-side">
         <h2>Vision</h2>
         To become a role model for student activities in Egyptian universities by developing our club members as well as the community.
@@ -33,15 +36,19 @@ session_start(); ?>
     </div>
 
     <div class="event">
+      <div class="img-side">
+        <img src="http://placekitten.com/g/1200/1200">
+      </div>
       <div class="text-side">
         <h2>Mission</h2>
         To develop all of our targets: MOVE members, MIU students and members of the Egyptian community, through shifting their lives to more productive ones, raising our social responsibility towards the community.
       </div>
     </div>
+
     <div class="event">
       <div class="text-side">
         <h2>Founding date</h2>
-        18 / 02 / 2008
+        18/ 2/ 2008
     </div>
   </div>
 </div></div>

@@ -57,7 +57,9 @@ hr.botm-line {
                         "<div class='event'>
                         <div class='img-side'>";
              for ($i=0;$i<$count;$i++){
-                 echo"<img class='mySlides{$y} img-rounded' src='../Operations/images/{$imgs_arr[$i]}' style = 'width:50%;'>";
+
+                            echo"<img class='mySlides{$y} img-rounded' src='../Operations/images/{$imgs_arr[$i]}'>";
+
              }
                 $y += 1;
             
