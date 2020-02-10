@@ -22,6 +22,24 @@ button {
     background-color: white;
     border: none;
 }
+
+.loader {
+    position: relative;
+    left: 50%;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto 1em;
+    vertical-align: top;
+    display: none;
+}
+
+/*
+  Set the color of the icon
+*/
+svg path,
+svg rect {
+    fill: #46db33;
+}
 </style>
 <script src="js/jQuery.js"></script>
 <script>
@@ -68,8 +86,6 @@ $(document).ready(function()
                     success: function() {
                         console.log('ok');
                         $('#chat').val('');
-
-
                     }
 
                 })
@@ -81,7 +97,12 @@ $(document).ready(function()
             scroller = $('#text');
             scrollX = $('#text').scrollTop();
             scrollH = $('#text')[0].scrollHeight;
+
             if ($(this).scrollTop() == 0) {
+                window.clearInterval(cid);
+                var clone = $('.loader').clone();
+                clone.prependTo($('#text'));
+                clone.css('display', 'inline-block');
                 cctr += 10;
                 $.ajax({
                     method: 'POST',
@@ -90,12 +111,31 @@ $(document).ready(function()
                         cctr: cctr
                     },
                     success: function(msg) {
+                        // setTimeout(function() {
+                        clone.remove();
+                        cid = setInterval(function() {
+                            $.ajax({
+                                method: 'POST',
+                                url: 'pages/DisplayChat.php',
+                                data: {
+                                    cctr: cctr
+                                },
+                                success: function(msg) {
+                                    $('#text').html(msg);
+                                }
+
+
+                            })
+                        }, 500)
                         $('#text').html(msg);
-                        $('#text')[0].scrollTop = $('#text')[0].scrollHeight - scrollH;
+                        $('#text')[0].scrollTop = $('#text')[0].scrollHeight -
+                            scrollH;
+                        //}, 2000)
                     }
 
 
                 })
+
             }
         })
         $('#text').load('pages/DisplayChat.php', function() {
@@ -108,7 +148,7 @@ $(document).ready(function()
         });
 
 
-        setInterval(function() {
+        var cid = setInterval(function() {
             $.ajax({
                 method: 'POST',
                 url: 'pages/DisplayChat.php',
@@ -121,7 +161,24 @@ $(document).ready(function()
 
 
             })
-        }, 500);
+        }, 500)
+
+        function chatint() {
+            setInterval(function() {
+                $.ajax({
+                    method: 'POST',
+                    url: 'pages/DisplayChat.php',
+                    data: {
+                        cctr: cctr
+                    },
+                    success: function(msg) {
+                        $('#text').html(msg);
+                    }
+
+
+                })
+            }, 500)
+        }
 
 
 
@@ -160,6 +217,17 @@ if(isset($_SESSION['type']))
             <button style='float:right'><i class="fa fa-paper-plane read-more"></i>
             </button>
         </div>
+    </div>
+    <div class='loader' title="2">
+        <svg version='1.1' id='loader-1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
+            x='0px' y='0px' width='40px' height='40px' viewBox='0 0 50 50' style='enable-background:new 0 0 50 50;'
+            xml:space='preserve'>
+            <path fill='#000'
+                d='M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z'>
+                <animateTransform attributeType='xml' attributeName='transform' type='rotate' from='0 25 25'
+                    to='360 25 25' dur='0.6s' repeatCount='indefinite' />
+            </path>
+        </svg>
     </div>
 </body>
 
