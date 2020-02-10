@@ -56,22 +56,24 @@ $(document).ready(function()
              }
          }) */
         $('button').click(function() {
+
             var chats = $('#chat').val();
+            if (chats != '') {
+                $.ajax({
+                    method: 'POST',
+                    url: 'pages/InsertChat.php',
+                    data: {
+                        chats: chats
+                    },
+                    success: function() {
+                        console.log('ok');
+                        $('#chat').val('');
 
-            $.ajax({
-                method: 'POST',
-                url: 'pages/InsertChat.php',
-                data: {
-                    chats: chats
-                },
-                success: function() {
-                    console.log('ok');
-                    $('#chat').val('');
 
+                    }
 
-                }
-
-            })
+                })
+            }
             // $('#text').load('pages/DisplayChat.php');
         })
         //alert($('#text').height())
@@ -106,9 +108,20 @@ $(document).ready(function()
         });
 
 
-        /*setInterval(function() {
-            $('#text').load('pages/DisplayChat.php');
-        }, 500);*/
+        setInterval(function() {
+            $.ajax({
+                method: 'POST',
+                url: 'pages/DisplayChat.php',
+                data: {
+                    cctr: cctr
+                },
+                success: function(msg) {
+                    $('#text').html(msg);
+                }
+
+
+            })
+        }, 500);
 
 
 
