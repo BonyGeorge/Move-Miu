@@ -3,7 +3,6 @@ session_start();
 ?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,7 +96,6 @@ echo "
         </div>
         <div class="team-members-cont">
             <div class="team-member">
-                <a href="#">
                     <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
                     <div class="team-member-text">
                         <h3>Omar Nasr</h3>
@@ -107,7 +105,6 @@ echo "
             </div>
 
             <div class="team-member">
-                <a href="#">
                     <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
                     <div class="team-member-text">
                         <h3>Essra Mahamed</h3>
@@ -174,7 +171,7 @@ echo"
     <!-- Body END -->
     <script type="text/javascript" src="../js/slider.js"></script>
     <script type="text/javascript">
-    < ? php
+    <?php
     for ($p = 0; $p < $noOfEvents; $p++) {
         echo "
         var myIndex {
@@ -211,7 +208,7 @@ echo"
             }, 2000); // Change image every 2 seconds
         }
         ";
-    } ? >
+    } ?>
     </script>
 </body>
 

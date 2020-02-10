@@ -229,8 +229,9 @@ if(isset($_SESSION['type']))
             </path>
         </svg>
     </div>
+    <br><br><br>
+    <br><br>
 </body>
-
 </html>
 
 <?php include('../Template/footer.html');?>

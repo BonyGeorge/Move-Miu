@@ -145,6 +145,7 @@
             </div>
         </form>
     </div>
+    <br><br>
     <script src="../js/script.js"></script>
     <script type="text/javascript" src="../js/slider.js"></script>
  </body>
