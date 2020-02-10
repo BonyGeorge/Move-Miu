@@ -79,13 +79,19 @@ $DB = new Database();
         left: 40%
     }
 
+    .mailer {
+        position: relative;
+        left: 42%
+    }
+
     @media only screen and (max-width: 850px) {
         .mbutton {
-            left: 10%;
+            left: 16%;
         }
 
-        #m {
-            margin-left: -25%;
+        .mailer {
+            position: relative;
+            left: 23%;
         }
     }
     </style>
@@ -142,7 +148,7 @@ include 'admin_header.php';
                 <?php if(isset ($_SESSION['error'])) { if ($_SESSION['error'] == 'error in sql') { echo "style='display: none;'"; }} ?>>
         </div>
         <br>
-        <div class='mbutton' style='left:42%' id="m"><input type="submit" class="send0" id="send0" name="send0"
+        <div class='mbutton mailer' style='' id="m"><input type="submit" class="send0" id="send0" name="send0"
                 value="Send to all users"
                 <?php if(isset ($_SESSION['error'])) { if ($_SESSION['error'] == 'error in sql') { echo "style='display: none;'"; }} ?>>
         </div>
