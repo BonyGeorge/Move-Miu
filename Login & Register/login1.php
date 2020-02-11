@@ -5,14 +5,13 @@ $DB = new Database();
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     $username = filter_var($_POST["Username"], FILTER_SANITIZE_STRING);
-    $sql="SELECT * FROM users where username= '".$username."' and password = '".$_POST["Password"]."';";
+    $sql="SELECT * FROM users where username= '".$username."' and password = '".sha1($_POST["password"])."';";
     $DB->query($sql);
     $DB->execute();
     if($DB->numRows()==0)
     {  
-        $Message = "Wrong username or password. ";
+        $Message = "Opps...Wrong username or password. ";
         header("Location:login.php?Message={$Message}");
-
     }
     else {
         $x=$DB->getdata();
@@ -36,10 +35,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             }
         }
         header('Location:../pages/index.php');   
-
     }
 }
-
-
-
 ?>

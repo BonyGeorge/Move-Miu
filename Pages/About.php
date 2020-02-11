@@ -22,7 +22,7 @@ session_start(); ?>
         else
         include("../Template/header.php");?>  
 <div class="sec-cont sec-cont-s">
-  <div class="h-text">About Us</div>
+  <div class="h-text" id="AboutHead">About Us</div>
   <div class="events-cont about-us-cont">
     <!-- <h1>unfortunately, We don't have any events right now.</h1> -->
     <div class="event">
@@ -45,7 +45,7 @@ session_start(); ?>
     </div>
   </div>
 </div></div>
-
+<br>
 <script type="text/javascript" src="../js/slider.js"></script>
   </body>
 </html>

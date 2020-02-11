@@ -71,6 +71,8 @@ a:hover {
   max-width: 700px;
   margin: 10px auto;
   border-radius: 8px;
+  
+  justify-content: flex-start;
   box-shadow: 0 4px 10px 4px rgba(0, 255, 55, 0.945);
 }
 .tab-group {
@@ -139,21 +141,6 @@ label.active .req {
 
 label.highlight {
   color: black;
-}
-
-input,
-textarea {
-  font-size: 22px;
-  display: block;
-  width: 100%;
-  padding: 5px 10px;
-  background: none;
-  background-image: none;
-  border: 1px solid #a0b3b0;
-  color: black;
-  border-radius: 0;
-  -webkit-transition: border-color 0.25s ease, box-shadow 0.25s ease;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 input:focus,
 textarea:focus {
@@ -270,6 +257,7 @@ textarea {
   padding: 20px;
   width: 100%;
   height: 50px;
+
 }
 #user {
   color: Green;
@@ -292,8 +280,7 @@ textarea {
   background: #555;
   margin: 20px 80px;
   left: 45%;
-  top: 0px;
-
+  top: -20%;
   position: relative;
   border-radius: 5px;
 }
@@ -302,7 +289,7 @@ textarea {
   font-family: verdana;
   font-size: 300%;
   font: italic bold 12px/30px Georgia, serif;
-  top: -100%;
+  top: 10%;
   left: 30%;
   font-size: 20px;
 }
@@ -327,10 +314,7 @@ textarea {
   width: 70%;
 }
 #forgetPass {
-  margin-top: -50px;
-
   font-size: 20px;
-
   height: 50px;
   width: 100px;
 }
@@ -348,7 +332,6 @@ textarea {
   top: -23px;
   display: inline-block;
 }
-
 #headercss {
   font-family: verdana;
   color: green;
@@ -369,6 +352,7 @@ textarea {
     margin-top: -1px;
     margin-left: 5%;
     height: 95%;
+    overflow: hidden;
     width: 90%;
   }
   #remember {
@@ -377,10 +361,9 @@ textarea {
     font-size: 300%;
     font: italic bold 12px/30px Georgia, serif;
     top: -100%;
-    left: 20%;
+    margin-left:10%;
     font-size: 20px;
   }
-
   #font {
     color: Green;
     font-family: Arial, Helvetica, sans-serif;

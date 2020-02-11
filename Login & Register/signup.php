@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $id= filter_var($_POST["id"], FILTER_SANITIZE_INT);
     $password= filter_var($_POST["password"], FILTER_SANITIZE_STRING);
       try{
-            $sql="insert into users(name,email,universityid,username,password,type) values('".$name."' ,  '".$email."' ,  '".$id."' , '".$username."' , '".$password."','user' )";
+            $sql="insert into users(name,email,universityid,username,password,type) values('".$name."' ,  '".$email."' ,  '".$id."' , '".$username."' , '".sha1($_POST["password"])."','user' )";
             $DB->query($sql);
             $DB->execute();
         
