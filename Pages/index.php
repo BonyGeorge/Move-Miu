@@ -38,7 +38,7 @@ session_start();
 
              <?php 
                 $conn = mysqli_connect('localhost', 'root', '', 'move');
-                $query = "select *from event ORDER BY id DESC LIMIT 2;";
+                $query = "select *from event ORDER BY id DESC LIMIT 3;";
                 $result = mysqli_query($conn,$query);
 
                 $noOfEvents =  mysqli_num_rows($result);
@@ -57,12 +57,7 @@ session_start();
                 }
 echo "
                 <h1>$value[name]</h1>
-                
-                <div class='r-cont'><a href='#''>
-                        <div class='read-more'>Read More</div>
-                    </a></div>
-
-            </div>"; $y +=100;
+             </div>"; $y +=100;
 }?>
             
 
@@ -124,9 +119,6 @@ Our Color is Green: Generous, Adaptable, Understanding, Compassionate, And Pract
                 <div class="read-more">View All</div>
             </a></div>
         <br><br>
-        <div class="shape1">
-            <img src="./images/shapes/2.png">
-        </div>
     </div>
     <!-- Team END -->
     <!-- Events START -->
