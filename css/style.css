@@ -65,6 +65,7 @@ a:hover {
 }
 
 .form {
+  position: relative;
   background: white;
   padding: 20px;
   color: black;
@@ -396,5 +397,10 @@ textarea {
     font: italic 27px/30px;
     top: -30%;
     display: inline-block;
+  }
+  .form {
+    display: table;
+    position: relative;
+    bottom: 100px;
   }
 }
