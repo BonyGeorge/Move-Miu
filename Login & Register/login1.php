@@ -5,7 +5,7 @@ $DB = new Database();
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     $username = filter_var($_POST["Username"], FILTER_SANITIZE_STRING);
-    $sql="SELECT * FROM users where username= '".$username."' and password = '".sha1($_POST["password"])."';";
+    $sql="SELECT * FROM users where username= '".$username."' and password = '".sha1($_POST["Password"])."';";
     $DB->query($sql);
     $DB->execute();
     if($DB->numRows()==0)
