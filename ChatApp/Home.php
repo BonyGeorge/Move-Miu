@@ -123,8 +123,6 @@ $(document).ready(function()
                                 success: function(msg) {
                                     $('#text').html(msg);
                                 }
-
-
                             })
                         }, 500)
                         $('#text').html(msg);
@@ -132,8 +130,6 @@ $(document).ready(function()
                             scrollH;
                         //}, 2000)
                     }
-
-
                 })
 
             }
@@ -146,8 +142,6 @@ $(document).ready(function()
             }
 
         });
-
-
         var cid = setInterval(function() {
             $.ajax({
                 method: 'POST',
@@ -158,8 +152,6 @@ $(document).ready(function()
                 success: function(msg) {
                     $('#text').html(msg);
                 }
-
-
             })
         }, 500)
 
@@ -179,10 +171,6 @@ $(document).ready(function()
                 })
             }, 500)
         }
-
-
-
-
     })
 </script>
 
