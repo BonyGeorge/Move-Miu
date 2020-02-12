@@ -120,6 +120,7 @@ include 'admin_header.php';
                         /* Creating the dropdown options from DB */
                         echo ('<option value = "' . $x[$i]->id . '">' . $x[$i]->id . " - " . $x[$i]->name . " - " . $x[$i]->email . '</option>');
                     }
+                    $_SESSION['error']='';
                 }
                 catch(Exception $e)
                 {
