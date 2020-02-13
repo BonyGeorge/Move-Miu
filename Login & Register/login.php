@@ -104,8 +104,9 @@
 
                      <div class="field-wrap">
                          <label id="font" style="margin-top:-6%;">
-                             Password:<span class="req" style=" display: inline-block;">*Minimum 6 characters!</span>
+                             Password:
                          </label>
+                         <span class="req" id="font" style=" display: inline-block;">*Minimum 6 characters!</span>
                          <input onblur="validatepassword(this)" name="password" type="password" id="passReg" required
                              autocomplete="off" />
                          <span style="color:red; display:block; margin-bottom:20px;"></span>

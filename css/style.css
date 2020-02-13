@@ -130,7 +130,6 @@ label {
   font-size: 22px;
 }
 label .req {
-  margin: 2px;
   color: #1ab188;
 }
 
@@ -317,7 +316,7 @@ textarea {
 #square {
   margin-top: -50%;
   margin-left: 68%;
-  height: 622px;
+  height: 640px;
   width: 30%;
 }
 
