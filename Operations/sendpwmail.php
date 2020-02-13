@@ -1,5 +1,18 @@
 <?php
 
+function generatePassword($length = 6) 
+{
+  $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  $count = mb_strlen($chars);
+
+  for ($i = 0, $result = ''; $i < $length; $i++) {
+      $index = rand(0, $count - 1);
+      $result .= mb_substr($chars, $index, 1);
+  }
+
+  return $result;
+}
+
 ?>
 <?php
 session_start();
@@ -28,13 +41,16 @@ $mail->isHTML(true);
 if (isset($_POST['submitCpw'])){
     $email = filter_var($_POST['mail'], FILTER_SANITIZE_EMAIL);
     $sql = "SELECT * FROM users where email = '$email'";
+    $newpass = generatePassword();
     $DB->query($sql);
     $DB->execute();
     $x=$DB->getdata();
-    if($DB->numRows()>0){
+
+    if($DB->numRows()>0)
+    {
     $uname = $x[0]->username;
     $mailsubject = "Change Password";
-    $mailcontent = "<a href='#'>Click here to change password </a>";
+    $mailcontent = "Your New password is".$newpass;
     $mail->Subject = $mailsubject;
     $email_vars = array(
      'name' => $uname,
@@ -48,7 +64,16 @@ if (isset($_POST['submitCpw'])){
     }
     $mail->MsgHTML($body);
     $mail->addAddress("$email", "$uname");
-    $mail->send();   
+    $mail->send();
+    
+    $sql = "UPDATE users SET password = '".sha1($newpass)."' WHERE email='$email';";
+    $DB->query($sql);
+    $DB->execute();
+  }
+  else
+  { 
+        $Message = "Opps...Wrong email. ";
+        header("Location:login.php?Message={$Message}");
   }
 }
 header('location:../pages/index.php');
