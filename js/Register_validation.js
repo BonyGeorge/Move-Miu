@@ -12,6 +12,11 @@ function check() {
     uniID == false ||
     password == false
   ) {
+    alert(fullname);
+    alert(Email);
+    alert(Username);
+    alert(uniID);
+    alert(password);
     return false;
   } else return true;
 }
@@ -50,7 +55,7 @@ function checkuserr() {
     success: function(data) {
       $("#usernamE").html(data);
 
-      if (data == "Valid username") {
+      if (data == "Valid Username") {
         Username = true;
       } else {
         Username = false;

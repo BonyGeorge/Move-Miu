@@ -110,9 +110,8 @@
                              autocomplete="off" />
                          <span style="color:red; display:block; margin-bottom:20px;"></span>
                      </div>
-                     <button type="submit" onclick="return check();" class="button button-block"
-                         id="buttonLog" name="sumb">Register</button>
-
+                     <button type="submit" onclick="return check();" class="button button-block" id="buttonLog"
+                         name="sumb">Register</button>
                  </form>
 
              </div>
@@ -143,7 +142,8 @@
                      </h1>
                  </center>
                  <input id="username" type="text" placeholder="Email" name="mail" required>
-                 <center><input type='submit' id='Reset' name='submitCpw' class='btn btn-appoint' value='Reset' ></center>
+                 <center><input type='submit' id='Reset' name='submitCpw' class='btn btn-appoint' value='Reset'>
+                 </center>
              </div>
          </form>
      </div>
