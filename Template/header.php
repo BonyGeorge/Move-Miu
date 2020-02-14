@@ -283,11 +283,11 @@ span.psw {
         <?php } ?>
          <?php if (!isset($_SESSION["type"])){ ?>
         <a href="../Login & Register/login.php">
-            <div class="nav-sidebar-button">Login <i class="fa fa-sign-in-alt fa-sm icon-button"></i> </div>
+            <div class="nav-sidebar-button">Login <i class="fa fa-sign-in" aria-hidden="true"></i></div>
         </a>
         <?php } else { ?>
         <a href="../Login & Register/logout.php">
-            <div class="nav-sidebar-button">Logout <i class="fa fa-sign-out-alt fa-sm icon-button"></i> </div>
+            <div class="nav-sidebar-button">Logout <i class="fas fa fa-sign-out" aria-hidden="true"></div>
         </a>
         <?php } ?>
     </div>
