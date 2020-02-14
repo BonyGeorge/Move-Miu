@@ -365,8 +365,8 @@ span.psw {
             <input id="title" type="text" placeholder="Enter Title" name="title" required>
 
             <input id="date" type="text" placeholder="Enter Date" name="date" required>
-            <textarea id="details" type="message" placeholder="Enter Event Details" name="details" required></textarea>
-            <input type="file" id="image" name="image[]" multiple>
+            <textarea id="details" type="message" placeholder="Enter Event Details" name="details" required></textarea><br>
+            <h3>Select All Event Images :</h3><input style="height: 10%;margin-left: -0%;width: 100%;" type="file" id="image" name="image[]" multiple><br>
             <center><input type='submit' id='btn' name='submitEvent' class='btn btn-appoint' value='ADD'></center>
         </div>
 
