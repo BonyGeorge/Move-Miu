@@ -115,7 +115,7 @@ Our Color is Green: Generous, Adaptable, Understanding, Compassionate, And Pract
                 </a>
             </div>
         </div>
-        <div class="r-cont r-cont-center"><a href="./Pages/team.php">
+        <div class="r-cont r-cont-center"><a href="../Pages/team.php">
                 <div class="read-more">View All</div>
             </a></div>
         <br><br>
