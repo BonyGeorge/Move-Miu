@@ -22,9 +22,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $_SESSION['id']=$x[0]->id;
         $_SESSION['universityid']=$x[0]->universityid;
         
-        if(!empty($_POST['remember'])){
-            setcookie("username", $_POST['Username'], time()+(10 * 365 * 24 * 60 * 60));
-            setcookie("password", $_POST['Password'], time()+(10 * 365 * 24 * 60 * 60));
+        if(!empty($_POST['remember_me'])){
+            setcookie("username", $_POST['Username'], time()+(10 * 365 * 24 * 60 * 60),'/');
+            setcookie("password", $_POST['Password'], time()+(10 * 365 * 24 * 60 * 60),'/');
         }else{
             if(ISSET($_COOKIE['username'])){
                 setcookie("username", "");
