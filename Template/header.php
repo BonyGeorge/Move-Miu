@@ -51,7 +51,7 @@ width: 100%;
 }
 
 button:hover {
-opacity: 0.8;
+    opacity: 0.8;
 }
 
 /* Extra styles for the cancel button */
@@ -260,7 +260,7 @@ span.psw {
         <div class="menu-button-bar"></div>
         <div class="menu-button-bar"></div>
     </div>
-</div>  
+</div>
 <div class="marg"></div>
 <div class="sidebar" id="sidebar">
     <div class="nav-sidebar-buttons">
@@ -281,13 +281,13 @@ span.psw {
             <div class="nav-sidebar-button">Scan for Attendance<i class="fas fa fa-qrcode"></i> </div>
         </a>
         <?php } ?>
-         <?php if (!isset($_SESSION["type"])){ ?>
+        <?php if (!isset($_SESSION["type"])){ ?>
         <a href="../Login & Register/login.php">
-            <div class="nav-sidebar-button">Login <i class="fa fa-sign-in-alt fa-sm icon-button"></i> </div>
+            <div class="nav-sidebar-button">Login <i class="fas fa-sign-in-alt"></i> </div>
         </a>
         <?php } else { ?>
         <a href="../Login & Register/logout.php">
-            <div class="nav-sidebar-button">Logout <i class="fa fa-sign-out-alt fa-sm icon-button"></i> </div>
+            <div class="nav-sidebar-button">Logout <i class="fas fa-sign-out-alt"></i> </div>
         </a>
         <?php } ?>
     </div>
