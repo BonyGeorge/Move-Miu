@@ -181,12 +181,8 @@ span.psw {
     <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="icon" sizes="128x128" href="../images/fav.png">
+        <link rel="icon" sizes="128x128" href="../images/fav.png">
     <meta name="theme-color" content="#93ff91">
-    <!--
-        <link rel="stylesheet" href="css/normalize.css">
--->
-    <link rel="stylesheet" href="../css/style.css">
 </head>
 <div id="header">
     <div class="logo-cont">
@@ -212,7 +208,7 @@ span.psw {
                             <div class="about-button-text">
                                 About Us<br>
                                 <div class="about-button-text-small">
-                                    Get to know about the club
+                                    Get to know about the club.
                                 </div>
                             </div>
                         </div>
@@ -231,7 +227,7 @@ span.psw {
                             <div class="about-button-text">
                                 Team<br>
                                 <div class="about-button-text-small">
-                                    Get to know about the club members
+                                    Get to know about the club members.
                                 </div>
                             </div>
                         </div>
