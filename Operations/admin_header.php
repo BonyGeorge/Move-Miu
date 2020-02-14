@@ -300,7 +300,7 @@ span.psw {
         </a>
         <?php } else { ?>
         <a href="../Login & Register/logout.php">
-            <div class="nav-sidebar-button">Logout <i class="fas fa-sign-out-alt"></i> </div>
+            <div class="nav-sidebar-button">Logout <i class="fa fa-sign-out"></i> </div>
         </a>
         <?php } ?>
     </div>
