@@ -289,18 +289,18 @@ span.psw {
             <div class="nav-sidebar-button">Send Mail <i class="fas fa-envelope"></i> </div>
         </a>
         <a href='../Operations/scanQR.php' style="width:auto;">
-            <div class="nav-sidebar-button">Take Attendance <i class="fas fa fa-qrcode"></i></div>
+            <div class="nav-sidebar-button">Take Attendance <i class="fas fa-qrcode"></i></div>
         </a>
         <a href="../ChatApp/Home.php">
             <div class="nav-sidebar-button">Chat room <i class="fas fa-comments"></i> </div>
         </a>
         <?php if (!isset($_SESSION["type"])){ ?>
         <a href="../Login & Register/login.php">
-            <div class="nav-sidebar-button">Login <i class="fa fa-sign-in-alt fa-sm icon-button"></i> </div>
+            <div class="nav-sidebar-button">Login <i class="fas fa-sign-in-alt"></i> </div>
         </a>
         <?php } else { ?>
         <a href="../Login & Register/logout.php">
-            <div class="nav-sidebar-button">Logout <i class="fa fa-sign-out-alt fa-sm icon-button"></i> </div>
+            <div class="nav-sidebar-button">Logout <i class="fas fa-sign-out-alt"></i> </div>
         </a>
         <?php } ?>
     </div>
@@ -365,8 +365,8 @@ span.psw {
             <input id="title" type="text" placeholder="Enter Title" name="title" required>
 
             <input id="date" type="text" placeholder="Enter Date" name="date" required>
-            <textarea id="details" type="message" placeholder="Enter Event Details" name="details" required></textarea>
-            <input type="file" id="image" name="image[]" multiple>
+            <textarea id="details" type="message" placeholder="Enter Event Details" name="details" required></textarea><br>
+            <h3>Select All Event Images :</h3><input style="height: 10%;margin-left: -0%;width: 100%;" type="file" id="image" name="image[]" multiple><br>
             <center><input type='submit' id='btn' name='submitEvent' class='btn btn-appoint' value='ADD'></center>
         </div>
 

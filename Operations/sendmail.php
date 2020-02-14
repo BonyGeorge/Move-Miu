@@ -5,15 +5,15 @@ include '../DataBase/Database.php';
 $DB = new Database();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="We're Movers">
     <meta name="keywords" content="Move Club,Move,MIU Club,Movers">
-    <link rel="icon" sizes="128x128" href="../images/fav.png">
     <title>Mailing</title>
+    <link rel="stylesheet" href="../css/all.css">
     <style type="text/css">
     #mailone {
         background-color: #3bde40;
@@ -154,7 +154,7 @@ include 'admin_header.php';
                 <?php if(isset ($_SESSION['error'])) { if ($_SESSION['error'] == 'error in sql') { echo "style='display: none;'"; }} ?>>
         </div>
     </form>
+    <?php include('../Template/footer.html');?>
 </body>
 
 </html>
-<?php include('../Template/footer.html');?>

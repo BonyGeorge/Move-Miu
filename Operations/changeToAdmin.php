@@ -10,8 +10,8 @@ if(isset($_POST['submitAdmin']))
 $username = $_POST['username'];
 $update="update users set type='admin' where username='$username'";
 mysqli_query($conn, $update) or die(mysqli_error());
-$status = "Record Updated Successfully. </br></br>
-<a href='index.php'>View Updated Record</a>";
+$status = "Admin Added Successfully. </br></br>
+<a href='../pages/index.php'>Back To Home</a>";
 echo '<p style="color:#FF0000;">'.$status.'</p>';
 }
 ?>
