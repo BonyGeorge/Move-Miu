@@ -278,7 +278,7 @@ span.psw {
             <div class="nav-sidebar-button">Chat room<i class="fas fa-comments"></i> </div>
         </a>
         <a href="../Operations/scanQR.php">
-            <div class="nav-sidebar-button">Scan for Attendance<i class="fas fa fa-qrcode"></i> </div>
+            <div class="nav-sidebar-button">Scan for Attendance<i class="fas fa-qrcode"></i> </div>
         </a>
         <?php } ?>
         <?php if (!isset($_SESSION["type"])){ ?>
