@@ -25,6 +25,9 @@ session_start(); ?>
   <div class="h-text" id="AboutHead">About Us</div>
   <div class="events-cont about-us-cont">
     <!-- <h1>unfortunately, We don't have any events right now.</h1> -->
+<br><br><br>
+<br>
+    
     <div class="event">
       <div class="text-side">
         <h2>Vision</h2>
@@ -41,11 +44,13 @@ session_start(); ?>
     <div class="event">
       <div class="text-side">
         <h2>Founding date</h2>
-        18 / 02 / 2008
+        18 / 02 / 2008.
     </div>
   </div>
 </div></div>
-<br>
+<br><br><br>
+<br><br><br>
+
 <script type="text/javascript" src="../js/slider.js"></script>
   </body>
 </html>

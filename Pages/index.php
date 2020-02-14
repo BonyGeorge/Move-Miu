@@ -122,7 +122,7 @@ Our Color is Green: Generous, Adaptable, Understanding, Compassionate, And Pract
     </div>
     <!-- Team END -->
     <!-- Events START -->
-    <div class="sec ">
+    <div class="sec-cont">
         <div class="h-text">
             <div class="h-emoji-cont"><img src="../images/fav.png"></div>Our Events
         </div>
@@ -165,8 +165,18 @@ echo"
         </div>
         
             </div>
+            <div class="sec">
+        <div class="h-text">
+        <div class="h-emoji-cont"><img src="../images/fav.png"></div>Follow Us
+        </div>
+        <br><br><br>
+        <?php include("../Template/Social.html")?>
+    </div></div>
+    
+    <br><br><br>
     <!-- Events END -->
     <?php include("../Template/footer.html");?>
+
     <!-- Body END -->
     <script type="text/javascript" src="../js/slider.js"></script>
            <script type="text/javascript">
@@ -187,7 +197,6 @@ echo"
   setTimeout(carousel{$p}, 2000); // Change image every 2 seconds
 }";
             } ?>
-
     </script>
 </body>
 </html>

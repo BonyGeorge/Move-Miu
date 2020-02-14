@@ -340,7 +340,6 @@ transition: left .5s;
   max-width: 80%;
   font-weight: 500;
   text-shadow: 0px 0px 7px #333;
-
 }
 .slider .r-cont{
   width:inherit;
@@ -588,8 +587,7 @@ width:calc(22% - 10px);
   padding:5px 30px;
 }
 .about-us-cont .event .text-side{
-  max-height: inherit !important;
-}
+ }
 .events-cont .event .text-side h2{
   margin-bottom:10px;
 }
@@ -747,6 +745,4 @@ margin:0 10px;
   display: block !important;
   }
   /* Sidebar END */
-}
-
 /* Responsive END */
