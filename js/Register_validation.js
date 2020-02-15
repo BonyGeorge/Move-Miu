@@ -12,11 +12,7 @@ function check() {
     uniID == false ||
     password == false
   ) {
-    alert(fullname);
-    alert(Email);
-    alert(Username);
-    alert(uniID);
-    alert(password);
+    
     return false;
   } else return true;
 }
@@ -37,10 +33,14 @@ function validateFName(text) {
 }
 
 function validateUniID(text) {
+    var regex = "^[0-9]*$";
   if (text.value == "") {
     document.getElementById("uniID").innerHTML = "ID can't be empty";
     uniID = false;
-  } else {
+  }else if (!text.value.match(regex) || text.value.length !=9) {
+    document.getElementById("uniID").innerHTML = "InvalidID";
+    uniID = false;
+  }else {
     document.getElementById("uniID").innerHTML = "";
     uniID = true;
   }

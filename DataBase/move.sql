@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 03, 2020 at 02:33 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.4
+-- Generation Time: Feb 15, 2020 at 11:08 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,16 +25,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `active members`
+-- Table structure for table `active_members`
 --
 
-CREATE TABLE `active members` (
+CREATE TABLE `active_members` (
   `id` int(11) NOT NULL,
   `email` varchar(225) COLLATE utf8_bin NOT NULL,
-  `university id` varchar(50) COLLATE utf8_bin NOT NULL,
+  `uni_id` varchar(50) COLLATE utf8_bin NOT NULL,
   `team` varchar(225) COLLATE utf8_bin NOT NULL,
   `faculty` varchar(225) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `active_members`
+--
+
+INSERT INTO `active_members` (`id`, `email`, `uni_id`, `team`, `faculty`) VALUES
+(1, '', '201412345', '', '');
 
 -- --------------------------------------------------------
 
@@ -52,7 +59,14 @@ CREATE TABLE `attendance` (
 --
 
 INSERT INTO `attendance` (`userid`, `date`) VALUES
-('111', 'Feb-Mon');
+('111', 'Feb-Mon'),
+('1111', 'Feb-Tue'),
+('222', 'Feb-Mon'),
+('22222', 'Feb-Sun'),
+('222223', 'Feb-09'),
+('433', 'Feb-Tue'),
+('Fady', 'Feb-Tue'),
+('O494i', 'Feb-Sun');
 
 -- --------------------------------------------------------
 
@@ -194,16 +208,17 @@ INSERT INTO `users` (`id`, `name`, `email`, `universityid`, `team`, `username`, 
 (3, 'fadyyy', 'fadybassel1@mail.com', '2123', '', 'bony', '123456', '', 'user'),
 (4, 'ddd', 'ddd@d.com', '11111', '', 'dddd', '111111', '', 'user'),
 (5, 'fady bassel', 'fadybassel@ss.com', '2017/1213', '', 'fadyy', '123456', '', 'user'),
-(6, 'amr khaled', 'amr@hotmail.com', '2222/2222', '', 'Amrr', '123456', '', 'admin');
+(6, 'amr khaled', 'amr@hotmail.com', '2222/2222', '', 'Amrr', '123456', '', 'admin'),
+(7, 'FADY', 'FE@dcd.com', '34', '', 'FNQIWF', '164cbeb071628310d43d7f6074f1ccff930e5c76', '', 'user');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `active members`
+-- Indexes for table `active_members`
 --
-ALTER TABLE `active members`
+ALTER TABLE `active_members`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -236,10 +251,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `active members`
+-- AUTO_INCREMENT for table `active_members`
 --
-ALTER TABLE `active members`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `active_members`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `chat`
@@ -257,7 +272,7 @@ ALTER TABLE `event`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
