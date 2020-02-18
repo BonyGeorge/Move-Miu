@@ -100,7 +100,7 @@ echo "
         <div class="team-members-cont">
             <div class="team-member">
                 <a href="#">
-                    <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
+                    <div class="team-member-img"><img src="../images/Nasr.jpeg"></div>
                     <div class="team-member-text">
                         <h3>Omar Nasr</h3>
                         <p>President.</p>
@@ -184,7 +184,7 @@ echo"
     <!-- Body END -->
     <script type="text/javascript" src="../js/slider.js"></script>
     <script type="text/javascript">
-    < ? php
+    <?php
     for ($p = 0; $p < $noOfEvents; $p++) {
         echo "
         var myIndex {
@@ -221,7 +221,7 @@ echo"
             }, 2000); // Change image every 2 seconds
         }
         ";
-    } ? >
+    }?>
     </script>
 </body>
 

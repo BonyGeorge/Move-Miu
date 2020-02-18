@@ -522,6 +522,7 @@ text-decoration: none;
 .team-member-img img{
   width:100%;
   border-radius: 50%;
+  height: 100%;
 }
 .team-member-text{
   margin-top:20px;
