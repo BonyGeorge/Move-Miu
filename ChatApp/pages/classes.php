@@ -65,7 +65,7 @@ class Chat
            ORDER BY Var1.x ASC";
         $result = $pdo->query($sql);
         session_start();
-        ?> <div id='chatd' style='margin-bottom:30px'><?php
+        ?> <div id='chatd' style='height:100%'><?php
     while($row = $result->fetch(PDO::FETCH_ASSOC))
     {
 

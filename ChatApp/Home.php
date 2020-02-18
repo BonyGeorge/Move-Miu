@@ -8,6 +8,7 @@ else
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="../css/all.css">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" type="image/png" href="img/titleBar.png" />
 <meta charset="utf-8">
