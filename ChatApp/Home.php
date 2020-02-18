@@ -86,6 +86,13 @@ $(document).ready(function()
                     success: function() {
                         console.log('ok');
                         $('#chat').val('');
+                        setTimout(function() {
+                            var objDiv = $('#text');
+                            if (objDiv.length > 0) {
+                                objDiv[0].scrollTop = objDiv[0].scrollHeight;
+                            }
+                        }, 550)
+
                     }
 
                 })
