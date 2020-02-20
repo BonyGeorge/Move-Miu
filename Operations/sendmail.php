@@ -13,7 +13,7 @@ $DB = new Database();
     <meta name="description" content="We're Movers">
     <meta name="keywords" content="Move Club,Move,MIU Club,Movers">
     <title>Mailing</title>
-    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet">
     <style type="text/css">
     #mailone {
         background-color: #3bde40;
@@ -81,17 +81,17 @@ $DB = new Database();
 
     .mailer {
         position: relative;
-        left: 42%
+        left: 41%
     }
 
     @media only screen and (max-width: 850px) {
         .mbutton {
-            left: 16%;
+            left: 25%;
         }
 
         .mailer {
             position: relative;
-            left: 23%;
+            left: 29%;
         }
     }
     </style>
@@ -103,7 +103,8 @@ include 'admin_header.php';
 ?>
     <br>
     <br>
-    <h1 style=''>Send mail</h1>
+    <h1 style='text-align:center;'>Send mail</h1>
+    <br><br>
     <form method='post' action='sendmailinf.php'>
         <label style='position : relative; left :33%'>User :</label>
         <select style='width :25%; position : relative; left :33%' class="massmsgdrpdwn" id="mailone" name="selection"
@@ -153,6 +154,8 @@ include 'admin_header.php';
                 value="Send to all users"
                 <?php if(isset ($_SESSION['error'])) { if ($_SESSION['error'] == 'error in sql') { echo "style='display: none;'"; }} ?>>
         </div>
+        <br><br><br>
+        <br><br><br>
     </form>
     <?php include('../Template/footer.html');?>
 </body>

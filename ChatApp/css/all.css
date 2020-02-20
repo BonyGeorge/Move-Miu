@@ -648,6 +648,10 @@ margin:0 10px;
 /* Responsive START */
 @media only screen and (max-width: 850px){
   /* Header Mobile START */
+  .chatbtn
+  {
+    margin-top: 1%;
+  }
   .menu-button-bar{
     display: block;
   }

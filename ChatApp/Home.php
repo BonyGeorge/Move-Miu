@@ -8,7 +8,7 @@ else
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="../css/all.css">
+<link rel="stylesheet" href="../../css/all.css">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" type="image/png" href="img/titleBar.png" />
 <meta charset="utf-8">
@@ -41,6 +41,13 @@ svg path,
 svg rect {
     fill: #46db33;
 }
+@media only screen and (max-width: 850px) {
+    .CB .chatbtn
+  {
+    margin-bottom: 80%;
+  }
+}
+
 </style>
 <script src="js/jQuery.js"></script>
 <script>
@@ -49,31 +56,6 @@ $(document).ready(function()
 
     {
 
-        /* $('#chat').keyup(function(e) {
-             if (e.keyCode == 13) {
-
-                 var chats = $('#chat').val();
-
-                 $.ajax({
-                     method: 'POST',
-                     url: 'pages/InsertChat.php',
-                     data: {
-                         chats: chats
-                     },
-                     success: function() {
-                         console.log('ok');
-                         $('#chat').val('');
-                     }
-                 })
-                 $('#text').load('pages/DisplayChat.php');
-                 setTimeout(function() {
-                     var objDiv = $('#text');
-                     if (objDiv.length > 0) {
-                         objDiv[0].scrollTop = objDiv[0].scrollHeight;
-                     }
-                 }, 500)
-             }
-         }) */
         $('button').click(function() {
 
             var chats = $('#chat').val();
@@ -205,12 +187,14 @@ if(isset($_SESSION['type']))
     </center>
 
     <div id='text'></div>
-
+    <br>
+    <br>
+    <br>
     <div id='container' style='width:100%; border:1px solid #87c197;'>
         <textarea class="form-control" id="chat" placeholder="Enter Your Reply..."
             style='border-style:none none  none; border-color:black; width:100%; display:block;box-sizing:border-box;border-width:1px; margin-bottom:1px;'></textarea>
-        <div style='position:relative;width:100%; height:22px; right:1%'>
-            <button style='float:right'><i class="fa fa-paper-plane read-more"></i>
+        <div style='position:relative;width:100%; height:22px; right:1%;margin-top:-1%' class="CB">
+            <button class="chatbtn" style='float:right;margin-top:-3%'><i class="fa fa-paper-plane read-more"></i>
             </button>
         </div>
     </div>
@@ -228,7 +212,5 @@ if(isset($_SESSION['type']))
     <br><br><br>
     <br><br>
 </body>
-
 </html>
-
 <?php include('../Template/footer.html');?>
