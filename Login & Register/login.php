@@ -28,7 +28,7 @@
              <div id="login">
                  <h1 id="headercss">Welcome Movers!</h1>
                  <span
-                     style="color:red; font-weight:bold; position:relative; bottom:15px;"><?php if( !empty( $_REQUEST['Message'] )){echo $_REQUEST['Message'];} ?></span>
+                     style="color:red; text-align: center;font-weight:bold; position:relative; bottom:15px;"><?php if( !empty( $_REQUEST['Message'] )){echo $_REQUEST['Message'];} ?></span>
                  <form action="login1.php" method="post">
                      <div class="field-wrap">
                          <label id="user">

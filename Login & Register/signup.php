@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 include('../DataBase/Database.php');
 $DB = new Database();
@@ -15,24 +15,27 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $DB->query($sql);
         $DB->execute();
         if($DB->numRows()==0)
-        {  
+        {
             $Message = "you are not a move member. ";
             header("Location:login.php?Message={$Message}");
         }
 
         else {
+                  $x=$DB->getdata();
+                  $team=$x[0]->team;
+                  $faculty=$x[0]->faculty;
 
             try{
 
-                $sql="insert into users(name,email,universityid,username,password,type)
-                  values('".$name."' ,  '".$email."' ,  '".$id."' , '".$username."' , '".sha1($_POST["password"])."','user' )";
+                $sql="insert into users(name,email,universityid,username,password,type,team,faculty)
+                  values('".$name."' ,  '".$email."' ,  '".$id."' , '".$username."' , '".sha1($_POST["password"])."','user','".$team."','".$faculty."' )";
                 $DB->query($sql);
                 $DB->execute();
                 header('Location:login.php?Message=signup complete');
             }
 
             catch (PDOException $e) {
-                header('Location:login.php');
+                header('Location:login.php?Message=account already exists.');
             }
 
 
