@@ -7,7 +7,7 @@ if(isset($_COOKIE['username']))
  $sql="SELECT * FROM users where username= '".$_COOKIE['username']."' and password = '".sha1($_COOKIE['password'])."';";
  $DB->query($sql);
  $DB->execute();
- if($DB->numRows()==0)
+ if($DB->numRows() == 0)
  {  
      $Message = "Opps...Wrong username or password. ";
  }

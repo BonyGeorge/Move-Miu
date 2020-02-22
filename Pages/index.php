@@ -99,8 +99,7 @@ echo "
         </div>
         <div class="team-members-cont">
             <div class="team-member">
-                <a href="#">
-                    <div class="team-member-img"><img src="../images/Nasr.jpeg"></div>
+                    <div class="team-member-img"><img src="../images/Prez.jpeg"></div>
                     <div class="team-member-text">
                         <h3>Omar Nasr</h3>
                         <p>President.</p>
@@ -109,8 +108,7 @@ echo "
             </div>
 
             <div class="team-member">
-                <a href="#">
-                    <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
+                    <div class="team-member-img"><img src="../images/VP.jpeg"></div>
                     <div class="team-member-text">
                         <h3>Essra Mahamed</h3>
                         <p>Vice President.</p>

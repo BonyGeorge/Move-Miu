@@ -13,7 +13,6 @@
     <title>Teams</title>
   </head>
   <body>
-
 <?php 
 if(isset($_SESSION["type"])){
         if($_SESSION["type"]=="admin"){
@@ -22,52 +21,53 @@ if(isset($_SESSION["type"])){
         else
         include("../Template/header.php");
 ?>  
-
 <!-- About Us START -->
 <div class="sec">
  <br>
 <div class="sec-text-cont" >
-<div class="h-text" id="TeamHead"style="left:260px;">Our Teams.</div>
+<div class="h-text" id="TeamHead"style="left:280px;">Our Teams.</div>
 <div class="team-members-cont">
     <div class="team-member">
-        <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
+        <div class="team-member-img"><img src="../images/Prez.jpeg"></div>
         <div class="team-member-text"><h3>Omar Nasr</h3><p>President.</p></div>
     </div>
     <div class="team-members-cont">
     <div class="team-member">
-        <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
+        <div class="team-member-img"><img src="../images/VP.jpeg"></div>
         <div class="team-member-text"><h3>Essra Mohamed</h3><p>Vice President.</p></div>
     </div></div>
   
     <div class="team-members-cont">
     <div class="team-member">
-        <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
-        <div class="team-member-text"><h3>Hajar Munir</h3><p>HR & IT Manager.</p></div>
-    </div>
-    <div class="team-member">
-        <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
-        <div class="team-member-text"><h3>Amr Khaled</h3><p>HR & IT Moderator.</p></div>
-    </div>
-    </div>
+        <div class="team-member-img"><img src="../images/Tarek.jpg"></div>
+        <div class="team-member-text"><h3>Mohamed Tarek</h3><p>Media Manager.</p></div>
+    </div></div>
+
     
     <div class="team-members-cont">
     <div class="team-member">
-        <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
-        <div class="team-member-text"><h3>Nourhan Magdy</h3><p>OS Manager.</p></div>
+        <div class="team-member-img"><img src="../images/OSMan.jpeg"></div>
+        <div class="team-member-text"><h3>Menna Yasser</h3><p>OS Manager.</p></div>
+    </div>
+
+    <div class="team-members-cont">
+    <div class="team-member">
+        <div class="team-member-img"><img src="../images/HRMan.jpeg"></div>
+        <div class="team-member-text"><h3>Hajar Munir</h3><p>HR & IT Manager.</p></div>
     </div>
     <div class="team-member">
-        <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
-        <div class="team-member-text"><h3>Menna Yasser</h3><p>OS Moderator.</p></div>
-        </div>
-        </div>
+        <div class="team-member-img"><img src="../images/HeadHR.jpeg"></div>
+        <div class="team-member-text"><h3>Amr Khaled</h3><p>HR & IT Moderator.</p></div>
+    </div>
+    </div>
    
     <div class="team-members-cont">
     <div class="team-member">
-        <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
+        <div class="team-member-img"><img src="../images/Shamro.jpg"></div>
         <div class="team-member-text"><h3>Omar Shamrookh</h3><p>OC Manager.</p></div>
     </div>
     <div class="team-member">
-        <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
+        <div class="team-member-img"><img src="../images/OCMod.jpeg"></div>
         <div class="team-member-text"><h3>Seif Mohamed</h3><p>OC Moderator.</p></div>
     </div><div class="team-member">
         <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
