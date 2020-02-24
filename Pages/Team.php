@@ -67,10 +67,10 @@ if(isset($_SESSION["type"])){
         <div class="team-member-text"><h3>Omar Shamrookh</h3><p>OC Manager.</p></div>
     </div>
     <div class="team-member">
-        <div class="team-member-img"><img src="../images/OCMod.jpeg"></div>
+        <div class="team-member-img"><img src="../images/O.jpeg"></div>
         <div class="team-member-text"><h3>Seif Mohamed</h3><p>OC Moderator.</p></div>
     </div><div class="team-member">
-        <div class="team-member-img"><img src="../images/emojis/sun_glasses.png"></div>
+        <div class="team-member-img"><img src="../images/OCMod2.jpeg"></div>
         <div class="team-member-text"><h3>Abdelrahman Nasser</h3><p>OC Moderator.</p></div>
     </div>
     </div>
