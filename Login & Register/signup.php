@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $DB->execute();
         if($DB->numRows()==0)
         {
-            $Message = "you are not a move member. ";
+            $Message = "You aren't a Move member. ";
             header("Location:login.php?Message={$Message}");
         }
 
@@ -31,24 +31,18 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                   values('".$name."' ,  '".$email."' ,  '".$id."' , '".$username."' , '".sha1($_POST["password"])."','user','".$team."','".$faculty."' )";
                 $DB->query($sql);
                 $DB->execute();
-                header('Location:login.php?Message=signup complete');
+                header('Location:login.php?Message=Signup complete');
             }
 
             catch (PDOException $e) {
-                header('Location:login.php?Message=account already exists.');
+                header('Location:login.php?Message=Account already exists.');
             }
-
-
         }
 
     }
     catch (PDOException $e) {
-        header('Location:login.php?Message=something gone wrong');
+        header('Location:login.php?Message=Something gone wrong!');
     }
-
-
-
-
 }
 else
 {

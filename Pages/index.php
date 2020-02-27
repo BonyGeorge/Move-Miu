@@ -15,6 +15,7 @@ $DB = new Database();
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="icon" sizes="128x128" href="../images/fav.png">
+    <meta name="google-site-verification" content="PLGm2De5VsP7uY5fIcNwVUnlHsy64_O7Q_10dMkA-ZQ" />
     <meta name="theme-color" content="#93ff91">
     <title>Move-Miu</title>
 </head>
@@ -40,7 +41,7 @@ $DB = new Database();
         <div class="sliders" id="sliders">
 
             <?php 
-                $conn = mysqli_connect('localhost', 'root', '', 'move');
+                $conn = mysqli_connect('server116.web-hosting.com', 'movegvka_admin', 'Admin2020', 'movegvka_move');
                 $query = "select *from event ORDER BY id DESC LIMIT 3;";
                 $result = mysqli_query($conn,$query);
 
@@ -130,7 +131,7 @@ echo "
         <div class="events-cont">
             <!-- <h1>unfortunately, We don't have any events right now.</h1> -->
             <?php 
-                $conn = mysqli_connect('localhost', 'root', '', 'move');
+                $conn = mysqli_connect('server116.web-hosting.com', 'movegvka_admin', 'Admin2020', 'movegvka_move');
                 $query = "select *from event ORDER BY id DESC LIMIT 1;";
                 $result = mysqli_query($conn,$query);
 

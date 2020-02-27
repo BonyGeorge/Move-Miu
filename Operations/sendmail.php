@@ -11,6 +11,7 @@ $DB = new Database();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="We're Movers">
+    <link rel="icon" sizes="128x128" href="../images/fav.png">
     <meta name="keywords" content="Move Club,Move,MIU Club,Movers">
     <title>Mailing</title>
     <link rel="stylesheet">

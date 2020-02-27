@@ -39,19 +39,6 @@ if(isset($_SESSION["type"])){
   
     <div class="team-members-cont">
     <div class="team-member">
-        <div class="team-member-img"><img src="../images/Tarek.jpg"></div>
-        <div class="team-member-text"><h3>Mohamed Tarek</h3><p>Media Manager.</p></div>
-    </div></div>
-
-    
-    <div class="team-members-cont">
-    <div class="team-member">
-        <div class="team-member-img"><img src="../images/OSMan.jpeg"></div>
-        <div class="team-member-text"><h3>Menna Yasser</h3><p>OS Manager.</p></div>
-    </div>
-
-    <div class="team-members-cont">
-    <div class="team-member">
         <div class="team-member-img"><img src="../images/HRMan.jpeg"></div>
         <div class="team-member-text"><h3>Hajar Munir</h3><p>HR & IT Manager.</p></div>
     </div>
@@ -60,7 +47,18 @@ if(isset($_SESSION["type"])){
         <div class="team-member-text"><h3>Amr Khaled</h3><p>HR & IT Moderator.</p></div>
     </div>
     </div>
-   
+
+    <div class="team-members-cont">
+    <div class="team-member">
+        <div class="team-member-img"><img src="../images/Tarek.jpg"></div>
+        <div class="team-member-text"><h3>Mohamed Tarek</h3><p>Media Manager.</p></div>
+    </div>
+    <div class="team-member">
+        <div class="team-member-img"><img src="../images/OSMan.jpeg"></div>
+        <div class="team-member-text"><h3>Menna Yasser</h3><p>OS Manager.</p></div>
+    </div>
+    </div>
+
     <div class="team-members-cont">
     <div class="team-member">
         <div class="team-member-img"><img src="../images/Shamro.jpg"></div>

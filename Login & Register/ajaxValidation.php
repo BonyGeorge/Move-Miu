@@ -59,9 +59,3 @@ if(isset($_POST['mail'])){
         echo"Invalid mail";
     }
 }
-
-
-
-
-
-
