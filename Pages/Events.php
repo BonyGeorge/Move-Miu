@@ -43,7 +43,7 @@ hr.botm-line {
 
                 <?php 
                 $conn = mysqli_connect('server116.web-hosting.com', 'movegvka_admin', 'Admin2020', 'movegvka_move');
-                $query = "SELECT * FROM event ORDER BY id DESC LIMIT 5";
+                $query = "SELECT * FROM event ORDER BY id DESC";
                 $result = mysqli_query($conn,$query);
 
                 $noOfEvents =  mysqli_num_rows($result);
