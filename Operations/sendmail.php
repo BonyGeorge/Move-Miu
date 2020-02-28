@@ -13,6 +13,7 @@ $DB = new Database();
     <meta name="description" content="We're Movers">
     <link rel="icon" sizes="128x128" href="../images/fav.png">
     <meta name="keywords" content="Move Club,Move,MIU Club,Movers">
+    <link rel="stylesheet" href="../css/all.css">
     <title>Mailing</title>
     <link rel="stylesheet">
     <style type="text/css">
@@ -72,27 +73,36 @@ $DB = new Database();
 
     .mbutton {
         width: 0%;
+        background-color: white;
         display: inline-flex;
         display: table;
         text-align: center;
         align: center;
         position: relative;
-        left: 40%
+        left: 43%
+    }
+
+    .send1 {
+        background-color: white
+    }
+
+    .send0 {
+        background-color: white
     }
 
     .mailer {
         position: relative;
-        left: 41%
+        left: 44.2%
     }
 
     @media only screen and (max-width: 850px) {
         .mbutton {
-            left: 25%;
+            left: 27.5%;
         }
 
         .mailer {
             position: relative;
-            left: 29%;
+            left: 31.2%;
         }
     }
     </style>
