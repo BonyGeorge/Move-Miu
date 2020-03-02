@@ -48,7 +48,7 @@ if (isset($_POST['send1'])){
     $mail->send();   
 }
 if (isset($_POST['send0'])){
-    $sql = "SELECT * FROM users";
+    $sql = "SELECT * FROM users where id <> '".$_SESSION['id']."'";
     $DB->query($sql);
     $DB->execute();
     $x=$DB->getdata();
