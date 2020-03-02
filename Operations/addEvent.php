@@ -1,6 +1,6 @@
 <?php
 $status = "";
-$conn = mysqli_connect("localhost", "root", "", "move");
+$conn = mysqli_connect('server116.web-hosting.com', 'movegvka_admin', 'Admin2020', 'movegvka_move');
 $query = "SELECT * from event"; 
 $result = mysqli_query($conn, $query) or die ( mysqli_error());
 $row = mysqli_fetch_assoc($result);
@@ -26,7 +26,7 @@ $details = $_POST['details'];
   $insert="INSERT INTO event (name, date, body,image) VALUES('$title', '$date', '$details','$s')";
   mysqli_query($conn, $insert); 
 $status = "Event Added Successfully. </br></br>
-<a href='../pages/Events.php'>View All Events</a>";
+<a href='../Pages/events.php'>View All Events</a>";
 echo '<p style="color:#FF0000;">'.$status.'</p>';
 }
 ?>

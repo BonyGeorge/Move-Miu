@@ -236,7 +236,7 @@ span.psw {
                 <!--  -->
             </div>
         </div>
-        <a href="../pages/Events.php">
+        <a href="../Pages/events.php">
             <div class="nav-button">Events <i class="fas fa-calendar"></i></div>
         </a>
         <a onclick="document.getElementById('id99').style.display='block'" style="width:auto;">
@@ -266,13 +266,13 @@ span.psw {
 <div class="marg"></div>
 <div class="sidebar" id="sidebar">
     <div class="nav-sidebar-buttons">
-        <a href="../pages/Team.php">
+        <a href="../Pages/team.php">
             <div class="nav-sidebar-button">Meet The Team <i class="fas fa-users"></i> </div>
         </a>
-        <a href="../pages/About.php">
+        <a href="../Pages/About.php">
             <div class="nav-sidebar-button">About The Club <i class="fas fa-info-circle"></i> </div>
         </a>
-        <a href="../pages/Events.php">
+        <a href="../Pages/Events.php">
             <div class="nav-sidebar-button">Our Events <i class="fas fa-calendar"></i> </div>
         </a>
         <a onclick="document.getElementById('id100').style.display='block'" style="width:auto;">
@@ -306,7 +306,7 @@ span.psw {
 
 
 <div id="id99" class="modal">
-    <form class="modal-content animate" method="POST" action="changeToAdmin.php">
+    <form class="modal-content animate" method="POST" action="../Operations/changeToAdmin.php">
         <div class="imgcontainer">
             <script>
             var modal = document.getElementById('id99');
@@ -330,8 +330,6 @@ span.psw {
             <input id="username" type="text" placeholder="Enter Username" name="username" required>
             <center><input type='submit' id='btn' name='submitAdmin' class='btn btn-appoint' value='ADD'></center>
         </div>
-
-
     </form>
 </div>
 
