@@ -3,10 +3,10 @@
 class database {
 
     //put your code here
-    private $server = "localhost";
-    private $user = 'root';
-    private $pass = '';
-    private $db = 'move_recruitment';
+    private $server = "server116.web-hosting.com";
+    private $user = 'movegvka_Move2020';
+    private $pass = 'Admin2020';
+    private $db = 'movegvka_move_recruitment';
     private $conn;
     private static $_instance;
 

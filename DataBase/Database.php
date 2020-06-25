@@ -2,11 +2,17 @@
 
 class Database
 {
+    private $host = 'localhost';
+    private $user = 'root';
+    private $pass = '';
+    private $dbName = 'move';
+
+    /*
     private $host = 'server116.web-hosting.com';
     private $user = 'movegvka_admin';
     private $pass = 'Admin2020';
     private $dbName = 'movegvka_move';
-
+    */
     private $dbh;
     private $stmt;
     private $error;

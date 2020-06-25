@@ -253,6 +253,9 @@ span.psw {
         <a href='../ChatApp/Home.php' style="width:auto;">
             <div class="nav-button">Chat room <i class="fas fa-comments"></i></div>
         </a>
+        <a href='../QRcode/Qrcode.php' style="width:auto;">
+            <div class="nav-button">view QR <i class="fas fa-qrcode"></i></div>
+        </a>
         <?php } ?>
     </div>
     <div class="menu-button" id="menu-button" onclick="menu()">
@@ -276,6 +279,9 @@ span.psw {
         <?php if(isset($_SESSION['username'])) { ?>
         <a href="../ChatApp/Home.php">
             <div class="nav-sidebar-button">Chat room<i class="fas fa-comments"></i> </div>
+        </a>
+        <a href='../QRcode/Qrcode.php' style="width:auto;">
+            <div class="nav-sidebar-button">View QR <i class="fas fa-qrcode"></i></div>
         </a>
         <?php } ?>
         <?php if (!isset($_SESSION["type"])){ ?>

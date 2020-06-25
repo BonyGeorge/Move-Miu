@@ -53,7 +53,6 @@ class html extends database implements crud {
     public function update(array $data) {
         
     }
-
     public function read_page($pageClassName) {
         $sql = "SELECT `html` FROM `html` WHERE `page_id`= (SELECT `id` FROM `pages` WHERE `class_name`='$pageClassName')";
         $result = $this->dataQuery($sql);

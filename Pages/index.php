@@ -18,6 +18,14 @@ $DB = new Database();
     <meta name="google-site-verification" content="PLGm2De5VsP7uY5fIcNwVUnlHsy64_O7Q_10dMkA-ZQ" />
     <meta name="theme-color" content="#93ff91">
     <title>Move-Miu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+    .fade {
+    opacity: 1;
+    }
+</style>
 </head>
 
 <body>
@@ -94,7 +102,7 @@ echo "
     <!-- About Us END -->
     <!--  -->
     <!-- Team START -->
-    <div class="sec-cont ">
+    <div class="sec-cont" data-aos="zoom-in-right">
         <div class="h-text">
             <div class="h-emoji-cont"><img src="../images/fav.png"></div>Meet The Team
         </div>
@@ -124,7 +132,7 @@ echo "
     </div>
     <!-- Team END -->
     <!-- Events START -->
-    <div class="sec-cont">
+    <div class="sec-cont" data-aos="zoom-in-left">
         <div class="h-text">
             <div class="h-emoji-cont"><img src="../images/fav.png"></div>Our Events
         </div>
@@ -165,9 +173,11 @@ echo"
 }?>
         </div>
     </div>
-
     </div>
-    <div class="sec">
+    <div class="sec" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
+    <br><br>
         <div class="h-text">
             <div class="h-emoji-cont"><img src="../images/fav.png"></div>Follow Us
         </div>
@@ -222,6 +232,9 @@ echo"
         ";
     }?>
     </script>
+<script>
+  AOS.init();
+</script>
 </body>
 
 </html>

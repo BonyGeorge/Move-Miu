@@ -176,7 +176,6 @@ span.psw {
 </style>
 
 <head>
-
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -194,48 +193,6 @@ span.psw {
         <a href="../Login%20&%20Register/logout.php">
             <div class="nav-button nav-button-sl">Logout</div>
         </a>
-        <div class="nav-button nav-button-about">About <i class="fas fa-user-tie"></i>
-            <div class="about-buttons-cont">
-                <!--  -->
-                <a href="../Pages/about.php">
-                    <div class="about-button">
-                        <div class="about-button-icon-cont">
-                            <div class="about-button-icon">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
-                        </div>
-                        <div class="about-button-text-cont">
-                            <div class="about-button-text">
-                                About Us<br>
-                                <div class="about-button-text-small">
-                                    Get to know about the club.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!--  -->
-                <!--  -->
-                <a href="../Pages/team.php">
-                    <div class="about-button">
-                        <div class="about-button-icon-cont">
-                            <div class="about-button-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                        </div>
-                        <div class="about-button-text-cont">
-                            <div class="about-button-text">
-                                Team<br>
-                                <div class="about-button-text-small">
-                                    Get to know about the club members.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!--  -->
-            </div>
-        </div>
         <a href="../Pages/events.php">
             <div class="nav-button">Events <i class="fas fa-calendar"></i></div>
         </a>
@@ -248,8 +205,14 @@ span.psw {
         <a href='../Operations/sendmail.php' style="width:auto;">
             <div class="nav-button">Send Mail <i class="fas fa fa-envelope"></i></div>
         </a>
+        <a href='../QRcode/Qrcode.php' style="width:auto;">
+            <div class="nav-button">View QR <i class="fas fa-qrcode"></i></div>
+        </a>
         <a href='../Operations/scanQR.php' style="width:auto;">
             <div class="nav-button">Take Attendance <i class="fas fa fa-qrcode"></i></div>
+        </a>
+        <a href='../MoveRecruitment/php/viewer/login.php' style="width:auto;">
+            <div class="nav-button">Recruitment<i class="fas fa-archive"></i></div>
         </a>
         <?php if(isset($_SESSION['type'])) { ?>
         <a href='../ChatApp/Home.php' style="width:auto;">
@@ -284,11 +247,17 @@ span.psw {
         <a href="../Operations/sendmail.php">
             <div class="nav-sidebar-button">Send Mail <i class="fas fa-envelope"></i> </div>
         </a>
+        <a href='../QRcode/Qrcode.php' style="width:auto;">
+            <div class="nav-sidebar-button">view QR <i class="fas fa-qrcode"></i></div>
+        </a>
         <a href='../Operations/scanQR.php' style="width:auto;">
             <div class="nav-sidebar-button">Take Attendance <i class="fas fa-qrcode"></i></div>
         </a>
         <a href="../ChatApp/Home.php">
             <div class="nav-sidebar-button">Chat room <i class="fas fa-comments"></i> </div>
+        </a>
+        <a href='../MoveRecruitment/php/viewer/login.php' style="width:auto;">
+            <div class="nav-sidebar-button">Recruitment<i class="fas fa-archive"></i></div>
         </a>
         <?php if (!isset($_SESSION["type"])){ ?>
         <a href="../Login & Register/login.php">
